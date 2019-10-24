@@ -10,19 +10,33 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let manager = CMMotionManager();
+    var player = SKSpriteNode(imageNamed: "ball.jpg");
+    var edge1 = SKSpriteNode();
     
+    func didBeginContact(contact: SKPhysicsContact){
+        let ballbody = contact.bodyA;
+        let edgebody = contact.bodyB;
+        
+        if (ballbody.categoryBitMask == 1 && edgebody.categoryBitMask == 2)||(ballbody.categoryBitMask == 2 && edgebody.categoryBitMask == 1){
+            //Game is over
+        }
+    }
     
     override func didMove(to view: SKView) {
+        self.physicsWorld.contactDelegate = self;
+        player = (self.childNode(withName: "player") as? SKSpriteNode)!;
+        edge1 = (self.childNode(withName: "edge1") as? SKSpriteNode)!;
         manager.startAccelerometerUpdates();
         manager.accelerometerUpdateInterval = 0.05;
         manager.startAccelerometerUpdates(to: OperationQueue.main){
             (data, err) in
             
-            self.physicsWorld.gravity = CGVector(dx: (data?.acceleration.x)!, dy: (data?.acceleration.y)!);
+            self.physicsWorld.gravity = CGVector(dx: (data?.acceleration.x)!*20, dy: (data?.acceleration.y)!*20);
         }
+        self.addChild(player);
     }
     //This was all of the default code that Xcode created
     /*var entities = [GKEntity]()
@@ -103,10 +117,10 @@ class GameScene: SKScene {
     }*/
     
     
-    override func update(_ currentTime: TimeInterval) {
+    /*override func update(_ currentTime: TimeInterval) {
         
         //Xcode default code
-        /*// Called before each frame is rendered
+        // Called before each frame is rendered
         
         // Initialize _lastUpdateTime if it has not already been
         if (self.lastUpdateTime == 0) {
@@ -121,6 +135,6 @@ class GameScene: SKScene {
             entity.update(deltaTime: dt)
         }
         
-        self.lastUpdateTime = currentTime*/
-    }
+        self.lastUpdateTime = currentTime
+    }*/
 }
