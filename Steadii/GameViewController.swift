@@ -17,18 +17,18 @@ class GameViewController: UIViewController {
         
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
-        if let scene = /*GK*/GameScene(fileNamed: "GameScene") {
-            let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+        if let view = view as? SKView {
+            let scene = GameScene(size: view.bounds.size)
+            view.showsFPS = true
+            view.showsNodeCount = true
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
+            view.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
             
-            skView.presentScene(scene)
+            view.presentScene(scene)
             //Something to do with gamescene, which I do not think we are using
             /*// Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {

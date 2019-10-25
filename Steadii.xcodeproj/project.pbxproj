@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D36689C23639A1900C56388 /* ballimg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6D36689B23639A1800C56388 /* ballimg.atlas */; };
 		6D7DB4B12360F7EF0027A2A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7DB4B02360F7EF0027A2A0 /* AppDelegate.swift */; };
-		6D7DB4B32360F7EF0027A2A0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6D7DB4B22360F7EF0027A2A0 /* GameScene.sks */; };
-		6D7DB4B52360F7EF0027A2A0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6D7DB4B42360F7EF0027A2A0 /* Actions.sks */; };
 		6D7DB4B72360F7EF0027A2A0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7DB4B62360F7EF0027A2A0 /* GameScene.swift */; };
 		6D7DB4B92360F7EF0027A2A0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7DB4B82360F7EF0027A2A0 /* GameViewController.swift */; };
 		6D7DB4BC2360F7EF0027A2A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7DB4BA2360F7EF0027A2A0 /* Main.storyboard */; };
@@ -37,10 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D36689B23639A1800C56388 /* ballimg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ballimg.atlas; sourceTree = "<group>"; };
 		6D7DB4AD2360F7EF0027A2A0 /* Steadii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steadii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7DB4B02360F7EF0027A2A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D7DB4B22360F7EF0027A2A0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		6D7DB4B42360F7EF0027A2A0 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		6D7DB4B62360F7EF0027A2A0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6D7DB4B82360F7EF0027A2A0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6D7DB4BB2360F7EF0027A2A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,10 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				6D7DB4B02360F7EF0027A2A0 /* AppDelegate.swift */,
-				6D7DB4B22360F7EF0027A2A0 /* GameScene.sks */,
-				6D7DB4B42360F7EF0027A2A0 /* Actions.sks */,
 				6D7DB4B62360F7EF0027A2A0 /* GameScene.swift */,
 				6D7DB4B82360F7EF0027A2A0 /* GameViewController.swift */,
+				6D36689B23639A1800C56388 /* ballimg.atlas */,
 				6D7DB4BA2360F7EF0027A2A0 /* Main.storyboard */,
 				6D7DB4BD2360F7F10027A2A0 /* Assets.xcassets */,
 				6D7DB4BF2360F7F10027A2A0 /* LaunchScreen.storyboard */,
@@ -239,10 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7DB4BC2360F7EF0027A2A0 /* Main.storyboard in Resources */,
-				6D7DB4B32360F7EF0027A2A0 /* GameScene.sks in Resources */,
 				6D7DB4BE2360F7F10027A2A0 /* Assets.xcassets in Resources */,
+				6D36689C23639A1900C56388 /* ballimg.atlas in Resources */,
 				6D7DB4C12360F7F10027A2A0 /* LaunchScreen.storyboard in Resources */,
-				6D7DB4B52360F7EF0027A2A0 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
