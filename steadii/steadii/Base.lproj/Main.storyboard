@@ -14,32 +14,85 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="steadii_logo" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-po-0LI">
-                                <rect key="frame" x="477" y="123" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="steadii_logo" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-po-0LI">
+                                <rect key="frame" x="355" y="24" width="484" height="280"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="STEADii" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAG-Jq-b7M">
-                                <rect key="frame" x="441" y="308" width="313" height="85"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEADii" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAG-Jq-b7M">
+                                <rect key="frame" x="441" y="288" width="313" height="84.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="65"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIl-Dy-h8C">
-                                <rect key="frame" x="457" y="613" width="281" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIl-Dy-h8C">
+                                <rect key="frame" x="457" y="673" width="281" height="77"/>
                                 <state key="normal" title="Button" image="login"/>
                                 <connections>
                                     <segue destination="luA-Bb-7YR" kind="show" id="7AO-Ft-kzr"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="64u-AW-7sr" userLabel="loginStackView">
+                                <rect key="frame" x="378" y="397.5" width="439" height="201"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" placeholder="Email" minimumFontSize="32" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NHJ-ut-UjP">
+                                        <rect key="frame" x="0.0" y="0.0" width="439" height="59"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="42"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 26" translatesAutoresizingMaskIntoConstraints="NO" id="CtX-S1-lUh">
+                                        <rect key="frame" x="0.0" y="86" width="439" height="1"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" placeholder="Password" minimumFontSize="32" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KQF-5U-6Of">
+                                        <rect key="frame" x="0.0" y="114" width="439" height="59"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="42"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 26" translatesAutoresizingMaskIntoConstraints="NO" id="FKx-Ch-FFf">
+                                        <rect key="frame" x="0.0" y="200" width="439" height="1"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KQF-5U-6Of" secondAttribute="trailing" id="duU-h2-sGv"/>
+                                    <constraint firstItem="KQF-5U-6Of" firstAttribute="leading" secondItem="64u-AW-7sr" secondAttribute="leading" id="t5Q-9e-9N2"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On5-vw-9jF">
+                                <rect key="frame" x="485" y="758" width="224" height="41"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <state key="normal" title="Create a new account">
+                                    <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WM7-po-0LI" secondAttribute="trailing" constant="274" id="0As-cg-pSm"/>
+                            <constraint firstAttribute="bottom" secondItem="WM7-po-0LI" secondAttribute="bottom" constant="195" id="20u-Ga-FbB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="On5-vw-9jF" secondAttribute="trailing" constant="465" id="3Io-Xx-XAp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="64u-AW-7sr" secondAttribute="trailing" constant="357" id="7ml-IQ-mpL"/>
+                            <constraint firstItem="PIl-Dy-h8C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="437" id="8PA-jC-jmb"/>
+                            <constraint firstItem="eAG-Jq-b7M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="264" id="Czw-vN-2fm"/>
+                            <constraint firstItem="PIl-Dy-h8C" firstAttribute="top" secondItem="64u-AW-7sr" secondAttribute="bottom" constant="74.5" id="GOe-cY-Y9H"/>
                             <constraint firstItem="WM7-po-0LI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="Gsy-ss-i1d"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="On5-vw-9jF" secondAttribute="bottom" constant="9" id="KK6-3B-bK0"/>
+                            <constraint firstItem="On5-vw-9jF" firstAttribute="top" secondItem="PIl-Dy-h8C" secondAttribute="bottom" constant="8" id="Njo-bQ-HYb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eAG-Jq-b7M" secondAttribute="trailing" constant="440" id="R7M-Ey-ges"/>
+                            <constraint firstItem="eAG-Jq-b7M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="441" id="S69-LW-LRv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PIl-Dy-h8C" secondAttribute="trailing" constant="436" id="TnO-Rp-M1b"/>
+                            <constraint firstItem="WM7-po-0LI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="UFa-7S-YUl"/>
+                            <constraint firstItem="64u-AW-7sr" firstAttribute="top" secondItem="eAG-Jq-b7M" secondAttribute="bottom" constant="25" id="XLR-5P-DS6"/>
+                            <constraint firstItem="On5-vw-9jF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="465" id="bIU-tK-ifZ"/>
+                            <constraint firstItem="WM7-po-0LI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="274" id="h3P-br-fku"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eAG-Jq-b7M" secondAttribute="trailing" constant="420" id="hnq-WF-jHk"/>
+                            <constraint firstItem="PIl-Dy-h8C" firstAttribute="top" secondItem="WM7-po-0LI" secondAttribute="bottom" constant="50" id="iLc-SJ-OSX"/>
+                            <constraint firstItem="eAG-Jq-b7M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="421" id="mCB-5e-xTm"/>
                             <constraint firstItem="eAG-Jq-b7M" firstAttribute="top" secondItem="WM7-po-0LI" secondAttribute="bottom" constant="57" id="owF-L0-MCg"/>
+                            <constraint firstItem="64u-AW-7sr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="358" id="wwp-DD-jIM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -118,6 +171,7 @@
     </scenes>
     <resources>
         <image name="Group 16" width="618" height="77"/>
+        <image name="Path 26" width="439" height="1"/>
         <image name="login" width="278" height="77"/>
         <image name="steadii_logo" width="1000" height="1000"/>
     </resources>
