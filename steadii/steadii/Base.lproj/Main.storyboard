@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="Corbel Bold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -49,13 +49,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-EG-dbe">
-                                <rect key="frame" x="360" y="588" width="183" height="25"/>
+                                <rect key="frame" x="360" y="583.5" width="197" height="29.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opt" translatesAutoresizingMaskIntoConstraints="NO" id="Ir7-ve-hYU">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="29.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
-                                        <rect key="frame" x="39" y="0.0" width="144" height="25"/>
+                                        <rect key="frame" x="39" y="0.0" width="158" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-4N-taJ">
-                                <rect key="frame" x="365" y="503" width="464" height="70"/>
+                                <rect key="frame" x="365" y="498.5" width="464" height="70"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-QH-KWK">
-                                <rect key="frame" x="365" y="418" width="464" height="70"/>
+                                <rect key="frame" x="365" y="413.5" width="464" height="70"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -115,9 +115,24 @@
             <point key="canvasLocation" x="41.708542713567837" y="26.618705035971225"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="mjj-1s-gM1">
+            <objects>
+                <viewController id="9fv-d2-uVi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tzm-eO-WG5">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cEL-nN-Wev"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fK0-X6-EZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-672"/>
+        </scene>
+        <!--Create View Controller-->
         <scene sceneID="Vgh-FO-zsA">
             <objects>
-                <viewController id="luA-Bb-7YR" sceneMemberID="viewController">
+                <viewController id="luA-Bb-7YR" customClass="CreateViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RLT-qr-nAS">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,6 +227,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
                                 <state key="normal" title="CREATE MY ACCOUNT"/>
+                                <connections>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="s0F-Ui-bLN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
