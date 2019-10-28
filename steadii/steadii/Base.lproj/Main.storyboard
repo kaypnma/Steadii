@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="Corbel Bold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -119,18 +119,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otv-hd-yY1" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="347" y="714" width="500" height="70"/>
-                                <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Kcv-Nz-CSF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="CREATE MY ACCOUNT"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="6HY-Do-uQk"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftB-22-hIe">
                                 <rect key="frame" x="365" y="594" width="464" height="70"/>
                                 <nil key="textColor"/>
@@ -195,6 +183,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otv-hd-yY1" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="347" y="714" width="500" height="70"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Kcv-Nz-CSF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="CREATE MY ACCOUNT"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6HY-Do-uQk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
