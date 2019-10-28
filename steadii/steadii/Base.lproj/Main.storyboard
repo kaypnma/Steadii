@@ -55,7 +55,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On5-vw-9jF">
-                                <rect key="frame" x="485" y="708" width="224" height="41"/>
+                                <rect key="frame" x="485" y="732" width="224" height="41"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                                 <state key="normal" title="Create a new account">
                                     <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,11 +65,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIl-Dy-h8C">
-                                <rect key="frame" x="457" y="623" width="281" height="77"/>
+                                <rect key="frame" x="457" y="647" width="281" height="77"/>
                                 <state key="normal" title="Button" image="login"/>
-                                <connections>
-                                    <segue destination="luA-Bb-7YR" kind="show" id="LP3-Kx-VhB"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,7 +105,7 @@
         <scene sceneID="Vgh-FO-zsA">
             <objects>
                 <viewController id="luA-Bb-7YR" customClass="ViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RLT-qr-nAS" customClass="UIButton">
+                    <view key="view" contentMode="scaleToFill" id="RLT-qr-nAS" customClass="radioButton" customModule="steadii" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -189,6 +186,16 @@
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="42"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jg6-98-Axn" customClass="radioButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="1014" y="404" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-fu-6Ck" customClass="radioButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="948" y="495" width="78" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Ellipse 1"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="832-AW-2EX"/>
@@ -218,16 +225,68 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e30-ar-rhg">
-                                <rect key="frame" x="91" y="209" width="446" height="442"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="NBc-6a-fpP">
+                                <rect key="frame" x="88" y="253" width="448" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Rectangle 4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1t-Pq-YIz">
-                                <rect key="frame" x="656" y="209" width="448" height="442"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="g5X-GR-Rza">
+                                <rect key="frame" x="658" y="297" width="448" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Rectangle 7"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVg-Kv-aLL">
+                                <rect key="frame" x="192" y="261" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Play Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYQ-Oh-8pE">
+                                <rect key="frame" x="762" y="261" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Play Button-1"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tilt Ball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnQ-Mr-LD4">
+                                <rect key="frame" x="812" y="197" width="141" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word Matching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfH-ed-ON7">
+                                <rect key="frame" x="170" y="189" width="285" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPm-Se-FY9">
+                                <rect key="frame" x="151" y="661" width="322" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Rectangle 13 (1)"/>
+                                <connections>
+                                    <segue destination="ni8-0Q-dbz" kind="show" id="gWl-Gk-Q7u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8y-NC-QhG">
+                                <rect key="frame" x="200" y="686" width="225" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R9-uh-tAy">
+                                <rect key="frame" x="720" y="661" width="325" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Rectangle 14 (1)"/>
+                                <connections>
+                                    <segue destination="kpw-Uv-Tau" kind="show" id="MDS-yu-4PY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5C-QA-IVk">
+                                <rect key="frame" x="770" y="688" width="225" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686270000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Hw2-dW-2Va"/>
@@ -237,17 +296,72 @@
             </objects>
             <point key="canvasLocation" x="757.7889447236181" y="791.36690647482021"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SuL-jl-dd7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Sp-7h-omv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="kpw-Uv-Tau" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NTu-II-VrV">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-FW-smM">
+                                <rect key="frame" x="51" y="42" width="48" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="back_arrow"/>
+                                <connections>
+                                    <segue destination="xSO-5l-S6L" kind="show" id="3Fr-mh-vQF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LYr-ij-igS"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1108" y="1488"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pim-mf-o5Z">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eZ-qG-xfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ni8-0Q-dbz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfZ-cZ-QPK">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-Lo-kr7">
+                                <rect key="frame" x="46" y="35" width="48" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="back_arrow"/>
+                                <connections>
+                                    <segue destination="xSO-5l-S6L" kind="showDetail" id="eMQ-eY-Hqq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VeP-X0-83F"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="316.5829145728643" y="1487.769784172662"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Ellipse 1" width="24" height="24"/>
         <image name="Group 16" width="618" height="77"/>
         <image name="Path 26" width="439" height="1"/>
+        <image name="Play Button" width="240" height="240"/>
+        <image name="Play Button-1" width="240" height="240"/>
+        <image name="Rectangle 13 (1)" width="337" height="106"/>
+        <image name="Rectangle 14 (1)" width="337" height="106"/>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
+        <image name="back_arrow" width="52" height="34"/>
         <image name="login" width="278" height="77"/>
         <image name="steadii_logo" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tMf-bQ-Oua"/>
+        <segue reference="TMM-dW-54O"/>
     </inferredMetricsTieBreakers>
 </document>

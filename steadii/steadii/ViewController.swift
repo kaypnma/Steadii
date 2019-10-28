@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var scrollViewController: ScrollViewController!
+    /*var scrollViewController: ScrollViewController!
     var visualEffectView:UIVisualEffectView!
     
     enum cardState {
@@ -27,19 +27,19 @@ class ViewController: UIViewController {
     
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted:CGFloat = 0
+ */
     
     
-    //Properties
-    //@IBOutlet weak var playerButton: UIButton!
-    //var sw = false
-
     //functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCard()
+        //setupCard()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+    //Following function is for a pull up view - may or may not be used
+    /*
     func setupCard() {
         visualEffectView = UIVisualEffectView()
         visualEffectView.frame = self.view.frame
@@ -158,18 +158,7 @@ class ViewController: UIViewController {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
-    
-/*
-    @IBAction func fillCircle(_ sender: UIButton) {
-        //Filling inside of button gray when chosen - fix lol
-        /*if sw == false {
-            self.playerButton.image = UIImage(named:"Ellipse 1.png")
-            sw = true
-        }else {
-            self.playerButton.image = UIImage(named:"selected_opt.png")
-            sw = false
-        }*/
-    }*/
+    */
  
 }
 

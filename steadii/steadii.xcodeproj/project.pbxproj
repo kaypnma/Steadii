@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5689FF1323669F5800AE28CB /* steadii in Resources */ = {isa = PBXBuildFile; fileRef = 5689FF1223669F5800AE28CB /* steadii */; };
+		5689FF172366A18100AE28CB /* radioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5689FF162366A18100AE28CB /* radioButton.swift */; };
 		56A28145236660D0005AEFFD /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A28143236660D0005AEFFD /* ScrollViewController.swift */; };
 		56A28146236660D0005AEFFD /* ScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56A28144236660D0005AEFFD /* ScrollViewController.xib */; };
 		824A703823651B3400C406B0 /* corbel in Resources */ = {isa = PBXBuildFile; fileRef = 824A703723651B3400C406B0 /* corbel */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5689FF1223669F5800AE28CB /* steadii */ = {isa = PBXFileReference; lastKnownFileType = folder; name = steadii; sourceTree = "<group>"; };
+		5689FF162366A18100AE28CB /* radioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radioButton.swift; sourceTree = "<group>"; };
 		56A28143236660D0005AEFFD /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		56A28144236660D0005AEFFD /* ScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewController.xib; sourceTree = "<group>"; };
 		824A703723651B3400C406B0 /* corbel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corbel; sourceTree = "<group>"; };
@@ -109,9 +113,11 @@
 				829E2B4F2364BB0C0064993B /* AppDelegate.swift */,
 				829E2B512364BB0C0064993B /* ViewController.swift */,
 				829E2B532364BB0C0064993B /* Main.storyboard */,
+				5689FF1223669F5800AE28CB /* steadii */,
 				829E2B562364BB130064993B /* Assets.xcassets */,
 				829E2B582364BB130064993B /* LaunchScreen.storyboard */,
 				829E2B5B2364BB130064993B /* Info.plist */,
+				5689FF162366A18100AE28CB /* radioButton.swift */,
 			);
 			path = steadii;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5689FF1323669F5800AE28CB /* steadii in Resources */,
 				829E2B5A2364BB130064993B /* LaunchScreen.storyboard in Resources */,
 				824A703823651B3400C406B0 /* corbel in Resources */,
 				56A28146236660D0005AEFFD /* ScrollViewController.xib in Resources */,
@@ -270,6 +277,7 @@
 				829E2B522364BB0C0064993B /* ViewController.swift in Sources */,
 				56A28145236660D0005AEFFD /* ScrollViewController.swift in Sources */,
 				829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */,
+				5689FF172366A18100AE28CB /* radioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
