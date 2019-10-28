@@ -49,13 +49,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-EG-dbe">
-                                <rect key="frame" x="360" y="583.5" width="189" height="29.5"/>
+                                <rect key="frame" x="360" y="588" width="183" height="25"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opt" translatesAutoresizingMaskIntoConstraints="NO" id="Ir7-ve-hYU">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
-                                        <rect key="frame" x="31" y="0.0" width="158" height="29.5"/>
+                                        <rect key="frame" x="39" y="0.0" width="144" height="25"/>
                                         <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -63,22 +63,22 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-4N-taJ">
-                                <rect key="frame" x="365" y="498.5" width="464" height="70"/>
+                                <rect key="frame" x="365" y="503" width="464" height="70"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-Kz-7hy">
-                                <rect key="frame" x="448" y="69" width="299" height="16"/>
+                                <rect key="frame" x="448" y="69" width="299" height="188"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEADii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKl-1x-yKe">
-                                <rect key="frame" x="488" y="110" width="218" height="76"/>
+                                <rect key="frame" x="488" y="282" width="218" height="76"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="65"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-QH-KWK">
-                                <rect key="frame" x="365" y="413.5" width="464" height="70"/>
+                                <rect key="frame" x="365" y="418" width="464" height="70"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -294,22 +294,13 @@
                     <view key="view" contentMode="scaleToFill" id="rct-AQ-S9h">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lmao i hate xcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgU-uP-IVO">
-                                <rect key="frame" x="623" y="294" width="134" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gVf-Sa-Ooz"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pB2-iJ-p4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="861"/>
+            <point key="canvasLocation" x="42" y="876"/>
         </scene>
     </scenes>
     <resources>
