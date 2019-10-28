@@ -121,13 +121,28 @@
                     <view key="view" contentMode="scaleToFill" id="Tzm-eO-WG5">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="ZAJ-zH-p8B">
+                                <rect key="frame" x="96" y="222" width="404" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="Uq9-dl-vVT">
+                                <rect key="frame" x="687" y="222" width="412" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-7Z-yU4">
+                                <rect key="frame" x="275" y="402" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cEL-nN-Wev"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK0-X6-EZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="-672"/>
+            <point key="canvasLocation" x="697.9899497487437" y="-672.66187050359713"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="Vgh-FO-zsA">
@@ -232,7 +247,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="otv-hd-yY1" firstAttribute="leading" secondItem="832-AW-2EX" secondAttribute="leading" constant="347" id="0HF-Sh-HR0"/>
                             <constraint firstItem="TVo-u8-jAf" firstAttribute="top" secondItem="832-AW-2EX" secondAttribute="top" constant="85" id="5Yc-mQ-g5C"/>
@@ -289,6 +304,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rectangle 4" width="446" height="442"/>
+        <image name="Rectangle 7" width="446" height="442"/>
         <image name="logo2" width="262" height="188"/>
         <image name="opt" width="24" height="24"/>
         <image name="selected_opt" width="24" height="24"/>
