@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564687B6236778E900C514AC /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 564687B5236778E900C514AC /* DLRadioButton.m */; };
 		5689FF192366B81C00AE28CB /* radioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5689FF182366B81C00AE28CB /* radioButton.swift */; };
 		824A703823651B3400C406B0 /* corbel in Resources */ = {isa = PBXBuildFile; fileRef = 824A703723651B3400C406B0 /* corbel */; };
 		829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B4F2364BB0C0064993B /* AppDelegate.swift */; };
@@ -38,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		564687B3236778E900C514AC /* steadii-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "steadii-Bridging-Header.h"; sourceTree = "<group>"; };
+		564687B4236778E900C514AC /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../../../../../Downloads/DLRadioButton.h; sourceTree = "<group>"; };
+		564687B5236778E900C514AC /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../../../../../Downloads/DLRadioButton.m; sourceTree = "<group>"; };
 		5689FF182366B81C00AE28CB /* radioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radioButton.swift; sourceTree = "<group>"; };
 		824A703723651B3400C406B0 /* corbel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corbel; sourceTree = "<group>"; };
 		829E2B4C2364BB0C0064993B /* steadii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steadii.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,8 +143,11 @@
 		829EBC21236660DF007F71D8 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				564687B4236778E900C514AC /* DLRadioButton.h */,
+				564687B5236778E900C514AC /* DLRadioButton.m */,
 				829EBC2223666252007F71D8 /* TextField.swift */,
 				829EBC2423668484007F71D8 /* LButton.swift */,
+				564687B3236778E900C514AC /* steadii-Bridging-Header.h */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 				TargetAttributes = {
 					829E2B4B2364BB0C0064993B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					829E2B5F2364BB130064993B = {
 						CreatedOnToolsVersion = 10.1;
@@ -278,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				829EBC2323666252007F71D8 /* TextField.swift in Sources */,
+				564687B6236778E900C514AC /* DLRadioButton.m in Sources */,
 				829E2B522364BB0C0064993B /* ViewController.swift in Sources */,
 				5689FF192366B81C00AE28CB /* radioButton.swift in Sources */,
 				829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */,
@@ -456,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = steadii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,6 +474,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iiStudio.steadii;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "steadii/CustomView/steadii-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = steadii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iiStudio.steadii;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "steadii/CustomView/steadii-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
