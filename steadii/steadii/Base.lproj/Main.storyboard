@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="Corbel Bold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -209,9 +209,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
                                 <state key="normal" title="CREATE MY ACCOUNT"/>
-                                <connections>
-                                    <segue destination="uZK-30-QAN" kind="show" id="ARj-tK-7an"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,21 +250,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kl3-St-fgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706.5326633165829" y="26.618705035971225"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="D4g-lT-t7x">
-            <objects>
-                <viewController id="uZK-30-QAN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Uvd-bf-Jn3">
-                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="FWA-fm-vOc"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wv-7y-G62" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="707" y="-679"/>
         </scene>
     </scenes>
     <resources>
