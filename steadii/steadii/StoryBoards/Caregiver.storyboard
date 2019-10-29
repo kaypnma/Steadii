@@ -40,23 +40,113 @@
                                 <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaV-SZ-BeP" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="653" y="208" width="445" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaV-SZ-BeP" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="659" y="179" width="445" height="125"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="dgL-kE-c4c"/>
+                                    <constraint firstAttribute="width" constant="445" id="phs-6E-Wbe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="John Qu">
+                                    <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBg-DT-VnX" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="90" y="-562" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="445" id="rlm-6E-AYt"/>
+                                    <constraint firstAttribute="height" constant="125" id="w4I-fb-LEI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
                                 <state key="normal" title="Kay Arellano">
-                                    <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APU-Yk-jUi" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="90" y="179" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="JtD-D5-C36"/>
+                                    <constraint firstAttribute="width" constant="445" id="MIm-DL-knl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Kay Arellano">
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-cn-co3" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="659" y="374" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="445" id="7F9-Q6-Rbm"/>
+                                    <constraint firstAttribute="height" constant="125" id="J0u-bI-Zke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Dustin Seah">
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tj-gn-Z1u" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="659" y="569" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="6oI-4g-uGF"/>
+                                    <constraint firstAttribute="width" constant="445" id="NIi-xK-xbi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Denyse Tran">
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7II-su-W9o" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="90" y="374" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Gm2-cz-APR"/>
+                                    <constraint firstAttribute="width" constant="445" id="S7u-58-mBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Jack Guo">
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ9-ma-88H" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="90" y="569" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="445" id="Se3-0g-aNh"/>
+                                    <constraint firstAttribute="height" constant="125" id="cML-XX-eo7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Chris Keilbart">
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EPL-jx-7iV" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="27" id="0C9-bR-xGH"/>
+                            <constraint firstItem="7II-su-W9o" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="21G-6Y-tVp"/>
+                            <constraint firstItem="pBg-DT-VnX" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="2n4-C5-eje"/>
+                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="kaV-SZ-BeP" secondAttribute="trailing" constant="90" id="4UW-0t-mGU"/>
+                            <constraint firstItem="APU-Yk-jUi" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="6aw-VF-Eel"/>
                             <constraint firstItem="EPL-jx-7iV" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="55" id="9Zi-ts-gyL"/>
+                            <constraint firstItem="APU-Yk-jUi" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="155" id="AcL-YE-yI7"/>
+                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="8Tj-gn-Z1u" secondAttribute="trailing" constant="90" id="Hu5-50-7tA"/>
                             <constraint firstItem="gDB-wc-MxB" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="25" id="Jau-4Y-AdW"/>
+                            <constraint firstItem="eZ9-ma-88H" firstAttribute="top" secondItem="7II-su-W9o" secondAttribute="bottom" constant="70" id="LiC-71-irB"/>
+                            <constraint firstItem="kaV-SZ-BeP" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="155" id="Oao-br-bfS"/>
+                            <constraint firstItem="pBg-DT-VnX" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="-586" id="VTr-cT-tsh"/>
+                            <constraint firstItem="eZ9-ma-88H" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="WUc-WJ-y6A"/>
+                            <constraint firstItem="7II-su-W9o" firstAttribute="top" secondItem="APU-Yk-jUi" secondAttribute="bottom" constant="70" id="XmS-hq-ICw"/>
                             <constraint firstItem="Df7-gt-C2y" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="537" id="Z8w-Am-gND"/>
+                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="OtG-cn-co3" secondAttribute="trailing" constant="90" id="cas-E8-NrT"/>
+                            <constraint firstItem="OtG-cn-co3" firstAttribute="top" secondItem="kaV-SZ-BeP" secondAttribute="bottom" constant="70" id="hse-hX-Us6"/>
                             <constraint firstItem="Df7-gt-C2y" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="60" id="jY6-L0-aYC"/>
+                            <constraint firstItem="8Tj-gn-Z1u" firstAttribute="top" secondItem="OtG-cn-co3" secondAttribute="bottom" constant="70" id="o54-yz-a2w"/>
+                            <constraint firstItem="kaV-SZ-BeP" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="659" id="tKk-Ms-PgH"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="Df7-gt-C2y" secondAttribute="trailing" constant="536" id="tUb-JK-6NT"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="gDB-wc-MxB" secondAttribute="trailing" constant="55" id="uH4-BD-CnM"/>
                         </constraints>
@@ -67,9 +157,255 @@
             </objects>
             <point key="canvasLocation" x="-20" y="21"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Y73-hH-B2Y">
+            <objects>
+                <viewController id="XLc-Ji-cjO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jf6-Tk-nAp">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maF-fq-u5E">
+                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Lg9-Ga-npd"/>
+                                    <constraint firstAttribute="width" constant="52" id="vnh-HR-9nJ"/>
+                                </constraints>
+                                <state key="normal" image="back_arrow"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denyse Tran's statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onj-J8-agd">
+                                <rect key="frame" x="407" y="84" width="380" height="40"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUk-uB-h9a">
+                                <rect key="frame" x="263" y="182" width="156" height="57"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="40"/>
+                                <state key="normal" title="monthly">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZK-4V-bRH">
+                                <rect key="frame" x="775" y="182" width="128" height="57"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <state key="normal" title="weekly">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opt" translatesAutoresizingMaskIntoConstraints="NO" id="e9m-nC-gUh">
+                                <rect key="frame" x="590" y="203" width="14" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="DAE-tn-vIV"/>
+                                    <constraint firstAttribute="height" constant="14" id="hQp-zA-zzL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graphs" translatesAutoresizingMaskIntoConstraints="NO" id="SOF-6e-cXb">
+                                <rect key="frame" x="136" y="322" width="410" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="410" id="Ovm-os-lWo"/>
+                                    <constraint firstAttribute="height" constant="300" id="XMC-MZ-Yfk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graphs" translatesAutoresizingMaskIntoConstraints="NO" id="yWg-xO-g2U">
+                                <rect key="frame" x="648" y="322" width="410" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ON1-a2-dbl"/>
+                                    <constraint firstAttribute="width" constant="410" id="zn8-3e-7om"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8hg-QW-TTg" firstAttribute="trailing" secondItem="SOF-6e-cXb" secondAttribute="trailing" constant="648" id="3Ud-K9-SRr"/>
+                            <constraint firstItem="e9m-nC-gUh" firstAttribute="top" secondItem="onj-J8-agd" secondAttribute="bottom" constant="79" id="C8Y-wt-bwH"/>
+                            <constraint firstItem="ZZK-4V-bRH" firstAttribute="leading" secondItem="e9m-nC-gUh" secondAttribute="trailing" constant="171" id="HkJ-0L-7VG"/>
+                            <constraint firstItem="yWg-xO-g2U" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="648" id="KcX-wF-kuO"/>
+                            <constraint firstItem="onj-J8-agd" firstAttribute="top" secondItem="8hg-QW-TTg" secondAttribute="top" constant="60" id="NVk-lX-TZ6"/>
+                            <constraint firstItem="e9m-nC-gUh" firstAttribute="leading" secondItem="DUk-uB-h9a" secondAttribute="trailing" constant="171" id="OB9-ck-IQi"/>
+                            <constraint firstItem="maF-fq-u5E" firstAttribute="top" secondItem="8hg-QW-TTg" secondAttribute="top" constant="30" id="Ss9-4H-3gS"/>
+                            <constraint firstItem="8hg-QW-TTg" firstAttribute="bottom" secondItem="yWg-xO-g2U" secondAttribute="bottom" constant="192" id="THX-Ku-iQ1"/>
+                            <constraint firstItem="8hg-QW-TTg" firstAttribute="trailing" secondItem="onj-J8-agd" secondAttribute="trailing" constant="407" id="WQg-gs-yS3"/>
+                            <constraint firstItem="DUk-uB-h9a" firstAttribute="top" secondItem="onj-J8-agd" secondAttribute="bottom" constant="58" id="YTT-3U-qsM"/>
+                            <constraint firstItem="maF-fq-u5E" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="40" id="Zv4-PK-I9Z"/>
+                            <constraint firstItem="onj-J8-agd" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="407" id="d1Q-xq-IQs"/>
+                            <constraint firstItem="ZZK-4V-bRH" firstAttribute="top" secondItem="onj-J8-agd" secondAttribute="bottom" constant="58" id="dhR-gy-Ahd"/>
+                            <constraint firstItem="8hg-QW-TTg" firstAttribute="bottom" secondItem="SOF-6e-cXb" secondAttribute="bottom" constant="192" id="lvb-e1-eXT"/>
+                            <constraint firstItem="e9m-nC-gUh" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="590" id="mV0-V5-x0u"/>
+                            <constraint firstItem="8hg-QW-TTg" firstAttribute="trailing" secondItem="yWg-xO-g2U" secondAttribute="trailing" constant="136" id="uJH-gE-LOp"/>
+                            <constraint firstItem="SOF-6e-cXb" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="136" id="uPt-ix-nsw"/>
+                            <constraint firstItem="8hg-QW-TTg" firstAttribute="trailing" secondItem="e9m-nC-gUh" secondAttribute="trailing" constant="590" id="xT7-zt-HQq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hg-QW-TTg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNq-bD-ge3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20.100502512562816" y="757.55395683453241"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eyV-dC-zhN">
+            <objects>
+                <viewController id="kmB-pj-Ay8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vd0-1x-ecq">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY5-GF-bxE">
+                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="juX-9F-IQh"/>
+                                    <constraint firstAttribute="width" constant="52" id="kLC-0N-2jq"/>
+                                </constraints>
+                                <state key="normal" image="back_arrow"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjB-cf-H32">
+                                <rect key="frame" x="494" y="84" width="207" height="40"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-Ud-9SJ">
+                                <rect key="frame" x="633" y="182" width="131.5" height="70"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add player" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5p-fd-dpB">
+                                <rect key="frame" x="313" y="182" width="248" height="70"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJQ-BS-wXf" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="507" y="570" width="180" height="80"/>
+                                <color key="backgroundColor" red="0.88627450980392153" green="0.90588235294117647" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HR6-ow-my8"/>
+                                    <constraint firstAttribute="width" constant="180" id="z6b-PF-Xqi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="I8Q-Ud-9SJ" secondAttribute="trailing" constant="429.5" id="484-iR-QkC"/>
+                            <constraint firstItem="LJQ-BS-wXf" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="507" id="7PS-HK-jGG"/>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="a5p-fd-dpB" secondAttribute="trailing" constant="633" id="BpW-FB-kAG"/>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="LJQ-BS-wXf" secondAttribute="trailing" constant="507" id="K1Z-cY-xqP"/>
+                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="top" secondItem="VjB-cf-H32" secondAttribute="bottom" constant="58" id="TVw-Ev-ebv"/>
+                            <constraint firstItem="BY5-GF-bxE" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="40" id="U2f-4V-Lla"/>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="bottom" secondItem="LJQ-BS-wXf" secondAttribute="bottom" constant="164" id="XKY-cS-0Wb"/>
+                            <constraint firstItem="a5p-fd-dpB" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="313" id="Y6G-Ir-xjC"/>
+                            <constraint firstItem="VjB-cf-H32" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="494" id="el5-fN-dZb"/>
+                            <constraint firstItem="VjB-cf-H32" firstAttribute="top" secondItem="Qg5-iM-j4j" secondAttribute="top" constant="60" id="ljv-bm-Tsr"/>
+                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="633" id="rrb-CQ-vwG"/>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="VjB-cf-H32" secondAttribute="trailing" constant="493" id="ul3-YG-cch"/>
+                            <constraint firstItem="a5p-fd-dpB" firstAttribute="top" secondItem="VjB-cf-H32" secondAttribute="bottom" constant="58" id="yJy-oe-Ggh"/>
+                            <constraint firstItem="BY5-GF-bxE" firstAttribute="top" secondItem="Qg5-iM-j4j" secondAttribute="top" constant="30" id="zeI-yY-kPS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qg5-iM-j4j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQT-zm-84A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702.51256281407041" y="757.55395683453241"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Igs-HU-oTl">
+            <objects>
+                <viewController id="J0P-TV-JIU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tyw-vk-9fd">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIJ-Sd-Mw2">
+                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0w0-dQ-V2B"/>
+                                    <constraint firstAttribute="width" constant="52" id="LoI-0e-ldQ"/>
+                                </constraints>
+                                <state key="normal" image="back_arrow"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzL-dj-Khp">
+                                <rect key="frame" x="528" y="84" width="138" height="40"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Player" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggv-Rx-2cD">
+                                <rect key="frame" x="216" y="182" width="345" height="70"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-Pj-OUs">
+                                <rect key="frame" x="633" y="182" width="131.5" height="70"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7G-5h-ry2" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="457" y="338" width="280" height="80"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AWm-j9-kQt"/>
+                                    <constraint firstAttribute="width" constant="280" id="l1A-fQ-pgi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="REMOVE">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1c-k1-afm" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="472" y="624" width="250" height="80"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="edg-lm-Z7G"/>
+                                    <constraint firstAttribute="height" constant="80" id="j5l-ir-SWI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ggv-Rx-2cD" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="216" id="2qK-D8-U9b"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="bottom" secondItem="J1c-k1-afm" secondAttribute="bottom" constant="110" id="7ez-bU-HGV"/>
+                            <constraint firstItem="6bM-Pj-OUs" firstAttribute="top" secondItem="GzL-dj-Khp" secondAttribute="bottom" constant="58" id="BwR-mC-zd2"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="GzL-dj-Khp" secondAttribute="trailing" constant="528" id="Snw-WL-Zz7"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="6bM-Pj-OUs" secondAttribute="trailing" constant="429.5" id="TF7-Kg-rlP"/>
+                            <constraint firstItem="GzL-dj-Khp" firstAttribute="top" secondItem="sA8-we-4i4" secondAttribute="top" constant="60" id="WkG-Hz-TUD"/>
+                            <constraint firstItem="d7G-5h-ry2" firstAttribute="top" secondItem="Ggv-Rx-2cD" secondAttribute="bottom" constant="86" id="Y5v-2m-55Y"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="Ggv-Rx-2cD" secondAttribute="trailing" constant="633" id="aZu-g2-cBe"/>
+                            <constraint firstItem="gIJ-Sd-Mw2" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="40" id="dQt-eC-86r"/>
+                            <constraint firstItem="6bM-Pj-OUs" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="633" id="jSj-22-nPo"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="J1c-k1-afm" secondAttribute="trailing" constant="472" id="koc-V7-zdE"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="d7G-5h-ry2" secondAttribute="trailing" constant="457" id="lIr-mf-Ulq"/>
+                            <constraint firstItem="J1c-k1-afm" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="472" id="lIt-IH-iQa"/>
+                            <constraint firstItem="Ggv-Rx-2cD" firstAttribute="top" secondItem="GzL-dj-Khp" secondAttribute="bottom" constant="58" id="nI0-Ht-pVg"/>
+                            <constraint firstItem="d7G-5h-ry2" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="457" id="oaQ-cD-IAi"/>
+                            <constraint firstItem="GzL-dj-Khp" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="528" id="pPk-iZ-4uB"/>
+                            <constraint firstItem="gIJ-Sd-Mw2" firstAttribute="top" secondItem="sA8-we-4i4" secondAttribute="top" constant="30" id="ssh-Cd-wT8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sA8-we-4i4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WX2-jZ-k1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="1542"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Icon feather-plus" width="39" height="39"/>
+        <image name="back_arrow" width="52" height="34"/>
+        <image name="graphs" width="362" height="236"/>
+        <image name="opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
     </resources>
 </document>
