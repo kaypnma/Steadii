@@ -11,6 +11,7 @@
 		564687BA2367924F00C514AC /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564687B82367924F00C514AC /* CreateViewController.xib */; };
 		567C720A2367B7BD0021271A /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 567C72092367B7BD0021271A /* DLRadioButton.m */; };
 		5689FF192366B81C00AE28CB /* radioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5689FF182366B81C00AE28CB /* radioButton.swift */; };
+		822D765123680341002B56B2 /* Caregiver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822D765023680341002B56B2 /* Caregiver.storyboard */; };
 		824A703823651B3400C406B0 /* corbel in Resources */ = {isa = PBXBuildFile; fileRef = 824A703723651B3400C406B0 /* corbel */; };
 		829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B4F2364BB0C0064993B /* AppDelegate.swift */; };
 		829E2B522364BB0C0064993B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B512364BB0C0064993B /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		567C72092367B7BD0021271A /* DLRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		567C720C2367B8960021271A /* DLRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		5689FF182366B81C00AE28CB /* radioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radioButton.swift; sourceTree = "<group>"; };
+		822D765023680341002B56B2 /* Caregiver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Caregiver.storyboard; sourceTree = "<group>"; };
 		824A703723651B3400C406B0 /* corbel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corbel; sourceTree = "<group>"; };
 		829E2B4C2364BB0C0064993B /* steadii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steadii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829E2B4F2364BB0C0064993B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		822D764F236802E1002B56B2 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				822D765023680341002B56B2 /* Caregiver.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		829E2B432364BB0C0064993B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		829E2B4E2364BB0C0064993B /* steadii */ = {
 			isa = PBXGroup;
 			children = (
+				822D764F236802E1002B56B2 /* StoryBoards */,
 				829EBC21236660DF007F71D8 /* CustomView */,
 				824A703723651B3400C406B0 /* corbel */,
 				829E2B4F2364BB0C0064993B /* AppDelegate.swift */,
@@ -264,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				829E2B5A2364BB130064993B /* LaunchScreen.storyboard in Resources */,
+				822D765123680341002B56B2 /* Caregiver.storyboard in Resources */,
 				564687BA2367924F00C514AC /* CreateViewController.xib in Resources */,
 				824A703823651B3400C406B0 /* corbel in Resources */,
 				829E2B572364BB130064993B /* Assets.xcassets in Resources */,
