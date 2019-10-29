@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CORBEL.TTF">
+            <string>Corbel</string>
+        </array>
+        <array key="CORBELB.TTF">
+            <string>Corbel-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Zh3-Q4-hl6">
+            <objects>
+                <viewController id="lp7-4X-f7B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ew1-bA-5wX">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPL-jx-7iV">
+                                <rect key="frame" x="55" y="51" width="54" height="22"/>
+                                <state key="normal" image="settings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-wc-MxB">
+                                <rect key="frame" x="1100" y="49" width="39" height="39"/>
+                                <state key="normal" image="Icon feather-plus"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df7-gt-C2y">
+                                <rect key="frame" x="537" y="84" width="121" height="40"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaV-SZ-BeP" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="653" y="208" width="445" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Kay Arellano">
+                                    <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EPL-jx-7iV" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="27" id="0C9-bR-xGH"/>
+                            <constraint firstItem="EPL-jx-7iV" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="55" id="9Zi-ts-gyL"/>
+                            <constraint firstItem="gDB-wc-MxB" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="25" id="Jau-4Y-AdW"/>
+                            <constraint firstItem="Df7-gt-C2y" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="537" id="Z8w-Am-gND"/>
+                            <constraint firstItem="Df7-gt-C2y" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="60" id="jY6-L0-aYC"/>
+                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="Df7-gt-C2y" secondAttribute="trailing" constant="536" id="tUb-JK-6NT"/>
+                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="gDB-wc-MxB" secondAttribute="trailing" constant="55" id="uH4-BD-CnM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZYP-eF-lJG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rt-Pl-nis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon feather-plus" width="39" height="39"/>
+        <image name="settings" width="54" height="11"/>
+    </resources>
+</document>
