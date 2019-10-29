@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--CaregiverMainVC-->
         <scene sceneID="Zh3-Q4-hl6">
             <objects>
-                <viewController id="lp7-4X-f7B" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CaregiverMainVC" id="lp7-4X-f7B" userLabel="CaregiverMainVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ew1-bA-5wX">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-20" y="21"/>
         </scene>
-        <!--View Controller-->
+        <!--PlayerStatsVC-->
         <scene sceneID="Y73-hH-B2Y">
             <objects>
-                <viewController id="XLc-Ji-cjO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerStatsVC" id="XLc-Ji-cjO" userLabel="PlayerStatsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jf6-Tk-nAp">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,10 +243,10 @@
             </objects>
             <point key="canvasLocation" x="-20.100502512562816" y="757.55395683453241"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPlayerVC-->
         <scene sceneID="eyV-dC-zhN">
             <objects>
-                <viewController id="kmB-pj-Ay8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPlayerVC" id="kmB-pj-Ay8" userLabel="AddPlayerVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vd0-1x-ecq">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="702.51256281407041" y="757.55395683453241"/>
         </scene>
-        <!--View Controller-->
+        <!--CaregiverSettingsVC-->
         <scene sceneID="Igs-HU-oTl">
             <objects>
-                <viewController id="J0P-TV-JIU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CaregiverSettingsVC" id="J0P-TV-JIU" userLabel="CaregiverSettingsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tyw-vk-9fd">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
