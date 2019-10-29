@@ -123,22 +123,76 @@
                                 <rect key="frame" x="69" y="68" width="46" height="34"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="tGy-Ke-T3m"/>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="ZfO-qu-PKS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afn-xO-bTM">
+                                <rect key="frame" x="682" y="269" width="432" height="477"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">By tilting your device you can move the ball in the direction of the tilt.
+
+
+
+
+Keep the ball within the bue area as it moves. Once the ball goes beyond this area the game is over.
+
+Watch out as the game may get hard as the blue circle moves and gets smaller!</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="moving_ball_tut1" translatesAutoresizingMaskIntoConstraints="NO" id="8UU-eR-91D">
+                                <rect key="frame" x="230" y="245" width="240" height="240"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play Ball Tilt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-fU-vcO">
+                                <rect key="frame" x="430" y="56" width="334" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="trj-cK-LBM">
+                                <rect key="frame" x="468" y="206" width="240" height="6"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK9-0V-JOg">
+                                <rect key="frame" x="208" y="125" width="778" height="81"/>
+                                <string key="text">Keep the ball within the confinement by tilting your device to move the ball to stay within the blue bounds
+</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moving_ball_tut2" translatesAutoresizingMaskIntoConstraints="NO" id="O6R-aq-FhV">
+                                <rect key="frame" x="230" y="486" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="3g1-Gq-x2M"/>
+                                    <constraint firstAttribute="width" constant="260" id="TZr-Xw-Nfx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="esV-jg-BYD" firstAttribute="leading" secondItem="vBC-ke-AxE" secondAttribute="leading" constant="69" id="1Di-RE-VVv"/>
+                            <constraint firstItem="vBC-ke-AxE" firstAttribute="trailing" secondItem="RK9-0V-JOg" secondAttribute="trailing" constant="208" id="6aA-F4-0GX"/>
+                            <constraint firstItem="RK9-0V-JOg" firstAttribute="leading" secondItem="vBC-ke-AxE" secondAttribute="leading" constant="208" id="CcZ-UL-FNW"/>
+                            <constraint firstItem="kq1-fU-vcO" firstAttribute="leading" secondItem="vBC-ke-AxE" secondAttribute="leading" constant="430" id="EG2-4h-LqX"/>
+                            <constraint firstItem="RK9-0V-JOg" firstAttribute="top" secondItem="vBC-ke-AxE" secondAttribute="top" constant="101" id="MUy-eL-H5v"/>
+                            <constraint firstItem="vBC-ke-AxE" firstAttribute="trailing" secondItem="trj-cK-LBM" secondAttribute="trailing" constant="486" id="O8j-pa-Ij7"/>
+                            <constraint firstItem="O6R-aq-FhV" firstAttribute="top" secondItem="8UU-eR-91D" secondAttribute="bottom" constant="43" id="SFP-cD-5y0"/>
+                            <constraint firstItem="8UU-eR-91D" firstAttribute="leading" secondItem="vBC-ke-AxE" secondAttribute="leading" constant="230" id="T5q-eS-lI6"/>
                             <constraint firstItem="esV-jg-BYD" firstAttribute="top" secondItem="vBC-ke-AxE" secondAttribute="top" constant="44" id="YyQ-et-z1f"/>
+                            <constraint firstItem="vBC-ke-AxE" firstAttribute="trailing" secondItem="kq1-fU-vcO" secondAttribute="trailing" constant="430" id="dXk-TK-4D0"/>
+                            <constraint firstItem="kq1-fU-vcO" firstAttribute="top" secondItem="vBC-ke-AxE" secondAttribute="top" constant="32" id="ifA-fz-aer"/>
+                            <constraint firstItem="trj-cK-LBM" firstAttribute="leading" secondItem="vBC-ke-AxE" secondAttribute="leading" constant="468" id="p5q-3M-JoB"/>
                             <constraint firstItem="vBC-ke-AxE" firstAttribute="trailing" secondItem="esV-jg-BYD" secondAttribute="trailing" constant="1079" id="rVT-IY-ZBE"/>
+                            <constraint firstItem="vBC-ke-AxE" firstAttribute="bottom" secondItem="O6R-aq-FhV" secondAttribute="bottom" constant="68" id="taN-ME-m9t"/>
+                            <constraint firstItem="trj-cK-LBM" firstAttribute="top" secondItem="RK9-0V-JOg" secondAttribute="bottom" id="v97-Rr-PJp"/>
+                            <constraint firstItem="O6R-aq-FhV" firstAttribute="leading" secondItem="vBC-ke-AxE" secondAttribute="leading" constant="230" id="yBx-bT-ZOe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vBC-ke-AxE"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2u-5j-hx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="-1363"/>
+            <point key="canvasLocation" x="1092.964824120603" y="-1363.3093525179856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MW7-iV-zYX">
@@ -152,22 +206,81 @@
                                 <rect key="frame" x="69" y="68" width="54" height="34"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="f11-68-Vs4"/>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="q03-3O-Rue"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 40 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="0du-9h-1h6">
+                                <rect key="frame" x="83" y="398" width="532" height="326"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASKETBALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-5W-2rg">
+                                <rect key="frame" x="197" y="295" width="305.5" height="53"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="53"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsL-on-6ow">
+                                <rect key="frame" x="673" y="251" width="473" height="535"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The word of interest will be displayed in the middle of the screen.
+
+
+Pick one of the three categories the world belongs in.
+
+
+
+If it is right, the category pressed will be indicated in green with a check.
+
+
+
+If it is wrong, it will be indicated in red with a cross.
+</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play Word Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfT-Rm-5B4">
+                                <rect key="frame" x="391" y="56" width="412" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-RZ-TzC">
+                                <rect key="frame" x="477" y="188" width="240" height="6"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-bb-6GO">
+                                <rect key="frame" x="188" y="126" width="818" height="54"/>
+                                <string key="text">Match a word to its corresponding category and try to get as many correct within 2 minutes. Keep trying until you get the answer right!</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="Qtd-RZ-TzC" secondAttribute="trailing" constant="477" id="2lS-pa-pig"/>
+                            <constraint firstItem="Qtd-RZ-TzC" firstAttribute="top" secondItem="JEG-bb-6GO" secondAttribute="bottom" constant="8" id="2z4-h9-Rsn"/>
                             <constraint firstItem="QQ6-o4-dfO" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="44" id="4gN-b6-G3L"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="JfT-Rm-5B4" secondAttribute="trailing" constant="391" id="5Og-rC-HFs"/>
+                            <constraint firstItem="Jzb-5W-2rg" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="197" id="6ZP-xK-SUO"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="Qtd-RZ-TzC" secondAttribute="trailing" constant="477" id="AjL-nL-bBg"/>
+                            <constraint firstItem="JfT-Rm-5B4" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="32" id="Bdi-IV-gVH"/>
                             <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="QQ6-o4-dfO" secondAttribute="trailing" constant="1071" id="F0I-jJ-7ez"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="JEG-bb-6GO" secondAttribute="trailing" constant="188" id="Llg-dh-2oY"/>
+                            <constraint firstItem="0du-9h-1h6" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="83" id="QaU-vh-bTS"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="0du-9h-1h6" secondAttribute="trailing" constant="579" id="VD3-EB-iLT"/>
+                            <constraint firstItem="JEG-bb-6GO" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="188" id="ZhF-1t-FH3"/>
                             <constraint firstItem="QQ6-o4-dfO" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="69" id="bDl-hs-zcl"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="bottom" secondItem="0du-9h-1h6" secondAttribute="bottom" constant="90" id="dz7-gg-M8B"/>
+                            <constraint firstItem="JEG-bb-6GO" firstAttribute="top" secondItem="JfT-Rm-5B4" secondAttribute="bottom" constant="24" id="f4v-24-ObE"/>
+                            <constraint firstItem="0du-9h-1h6" firstAttribute="top" secondItem="Jzb-5W-2rg" secondAttribute="bottom" constant="50" id="hLs-KT-0fT"/>
+                            <constraint firstItem="Qtd-RZ-TzC" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="477" id="ywK-Dk-y4U"/>
+                            <constraint firstItem="JfT-Rm-5B4" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="391" id="zDf-JR-Z4n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L5O-Fq-LW0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjp-WZ-hLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="-1369"/>
+            <point key="canvasLocation" x="324.62311557788945" y="-1369.064748201439"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mjj-1s-gM1">
@@ -191,7 +304,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KlD-Di-QNN" kind="show" id="5PQ-aE-9jX"/>
+                                    <segue destination="KlD-Di-QNN" kind="show" id="C63-Tx-DpU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0We-VA-767" customClass="LButton" customModule="steadii" customModuleProvider="target">
@@ -202,7 +315,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vps-An-Yg3" kind="show" id="U20-rA-WGo"/>
+                                    <segue destination="Vps-An-Yg3" kind="show" id="NPk-v8-zeD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZS-um-01l">
@@ -210,28 +323,28 @@
                                 <state key="normal" image="Play Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-ZE-rhT">
-                                <rect key="frame" x="746" y="323" width="244" height="240"/>
+                                <rect key="frame" x="746" y="323" width="251" height="240"/>
                                 <state key="normal" image="Play Button-1"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-qJ-9zQ">
-                                <rect key="frame" x="220" y="269" width="220" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Tilt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H19-AF-ZLM">
-                                <rect key="frame" x="804" y="270" width="137" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <rect key="frame" x="220" y="269" width="220" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-YS-Evi">
                                 <rect key="frame" x="463" y="117" width="269" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-rn-3t0">
                                 <rect key="frame" x="69" y="68" width="54" height="22"/>
                                 <state key="normal" image="settings"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ball Tilt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H19-AF-ZLM">
+                                <rect key="frame" x="809" y="269" width="122" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -241,7 +354,7 @@
                             <constraint firstItem="VtQ-e8-7I1" firstAttribute="top" secondItem="Q7B-ly-tZY" secondAttribute="bottom" constant="39" id="53G-jp-zOC"/>
                             <constraint firstItem="VqK-YS-Evi" firstAttribute="leading" secondItem="cEL-nN-Wev" secondAttribute="leading" constant="463" id="5VF-1R-84n"/>
                             <constraint firstItem="0We-VA-767" firstAttribute="top" secondItem="IOR-WX-lTa" secondAttribute="bottom" constant="39" id="5YO-ls-J5U"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="8l7-ZE-rhT" secondAttribute="trailing" constant="204" id="6LT-6C-i6d"/>
+                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="8l7-ZE-rhT" secondAttribute="trailing" constant="197" id="6IU-vl-2Y1"/>
                             <constraint firstItem="0We-VA-767" firstAttribute="top" secondItem="8l7-ZE-rhT" secondAttribute="bottom" constant="118" id="8zY-G7-OTh"/>
                             <constraint firstItem="H19-AF-ZLM" firstAttribute="leading" secondItem="cEL-nN-Wev" secondAttribute="leading" constant="804" id="Gbd-t9-LLa"/>
                             <constraint firstItem="H19-AF-ZLM" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="246" id="HHt-Ve-bpu"/>
@@ -276,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK0-X6-EZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697.9899497487437" y="-672.66187050359713"/>
+            <point key="canvasLocation" x="720.6030150753769" y="-660.43165467625909"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="Vgh-FO-zsA">
@@ -377,7 +490,7 @@
                                 <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
                                 <state key="normal" title="CREATE MY ACCOUNT"/>
                                 <connections>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="s0F-Ui-bLN"/>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="BTa-KW-sXG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -423,17 +536,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 40 (1)" width="430" height="326"/>
         <image name="Play Button" width="240" height="240"/>
         <image name="Play Button-1" width="240" height="240"/>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
         <image name="back_arrow" width="52" height="34"/>
         <image name="logo2" width="262" height="188"/>
+        <image name="moving_ball_tut1" width="217" height="217"/>
+        <image name="moving_ball_tut2" width="241" height="217"/>
         <image name="opt" width="24" height="24"/>
         <image name="selected_opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
+        <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s0F-Ui-bLN"/>
+        <segue reference="q03-3O-Rue"/>
     </inferredMetricsTieBreakers>
 </document>
