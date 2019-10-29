@@ -21,8 +21,8 @@ class LButton: UIButton {
     }
     
     private func setupButton() {
-//        titleLabel?.font    = UIFont(name: "Corbel-Bold", size: 40)
-        titleLabel?.font = UIFont.init(name: "EuphemiaUCAS-Bold", size: 40)
+//        titleLabel?.font    = UIFont(name: "Corbel Bold", size: 40)
+//        titleLabel?.font = UIFont.init(name: "EuphemiaUCAS-Bold", size: 40)
         let titleColor      = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1)
         setTitleColor(titleColor, for: .normal)
 //        titleLabel?.font    = UIFont(name: "Corbel-Bold", size: 40)
