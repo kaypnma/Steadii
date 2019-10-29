@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		564687B6236778E900C514AC /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 564687B5236778E900C514AC /* DLRadioButton.m */; };
 		564687B92367924F00C514AC /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564687B72367924F00C514AC /* CreateViewController.swift */; };
 		564687BA2367924F00C514AC /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564687B82367924F00C514AC /* CreateViewController.xib */; };
+		567C720A2367B7BD0021271A /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 567C72092367B7BD0021271A /* DLRadioButton.m */; };
 		5689FF192366B81C00AE28CB /* radioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5689FF182366B81C00AE28CB /* radioButton.swift */; };
 		824A703823651B3400C406B0 /* corbel in Resources */ = {isa = PBXBuildFile; fileRef = 824A703723651B3400C406B0 /* corbel */; };
 		829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B4F2364BB0C0064993B /* AppDelegate.swift */; };
@@ -42,10 +42,10 @@
 
 /* Begin PBXFileReference section */
 		564687B3236778E900C514AC /* steadii-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "steadii-Bridging-Header.h"; sourceTree = "<group>"; };
-		564687B4236778E900C514AC /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../../../../../Downloads/DLRadioButton.h; sourceTree = "<group>"; };
-		564687B5236778E900C514AC /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../../../../../Downloads/DLRadioButton.m; sourceTree = "<group>"; };
 		564687B72367924F00C514AC /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		564687B82367924F00C514AC /* CreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateViewController.xib; sourceTree = "<group>"; };
+		567C72092367B7BD0021271A /* DLRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		567C720C2367B8960021271A /* DLRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		5689FF182366B81C00AE28CB /* radioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radioButton.swift; sourceTree = "<group>"; };
 		824A703723651B3400C406B0 /* corbel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corbel; sourceTree = "<group>"; };
 		829E2B4C2364BB0C0064993B /* steadii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steadii.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,11 +149,11 @@
 		829EBC21236660DF007F71D8 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				564687B4236778E900C514AC /* DLRadioButton.h */,
-				564687B5236778E900C514AC /* DLRadioButton.m */,
+				567C72092367B7BD0021271A /* DLRadioButton.m */,
 				829EBC2223666252007F71D8 /* TextField.swift */,
 				829EBC2423668484007F71D8 /* LButton.swift */,
 				564687B3236778E900C514AC /* steadii-Bridging-Header.h */,
+				567C720C2367B8960021271A /* DLRadioButton.h */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "Kay Arellano";
+				ORGANIZATIONNAME = iiStudio;
 				TargetAttributes = {
 					829E2B4B2364BB0C0064993B = {
 						CreatedOnToolsVersion = 10.1;
@@ -293,8 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				829EBC2323666252007F71D8 /* TextField.swift in Sources */,
-				564687B6236778E900C514AC /* DLRadioButton.m in Sources */,
 				564687B92367924F00C514AC /* CreateViewController.swift in Sources */,
+				567C720A2367B7BD0021271A /* DLRadioButton.m in Sources */,
 				829E2B522364BB0C0064993B /* ViewController.swift in Sources */,
 				5689FF192366B81C00AE28CB /* radioButton.swift in Sources */,
 				829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */,
