@@ -1,0 +1,6 @@
+framework module Pods_steadii {
+  umbrella header "Pods-steadii-umbrella.h"
+
+  export *
+  module * { export * }
+}
