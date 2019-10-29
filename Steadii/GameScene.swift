@@ -6,12 +6,12 @@
 //  Copyright © 2019 ii Studio. All rights reserved.
 //
 
-struct PhysicsCategory {
+/*struct PhysicsCategory {
     static let none : UInt32 = 0;
     static let all : UInt32 = UInt32.max;
     static let player : UInt32 = 0b10;
     static let edge : UInt32 = 0b1;
-}
+}*/
 
 import SpriteKit
 import GameplayKit
@@ -21,16 +21,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let manager = CMMotionManager();
     var player = SKSpriteNode();
-    var edge1 = SKSpriteNode();
+    //var edge1 = SKSpriteNode();
     
     var prevTime:TimeInterval = 0
-    
-    var planeRadiusStart = 200.0;
+    let starttime = Date();
+    let planeRadiusStart = 200.0;
     var planeRadius = 200;
     var planeScale = 1.0;
     let plane = SKShapeNode(circleOfRadius: 200);
-    let planeDx = -10 + Int.random(in: 0 ..< 20);
-    let planeDy = -10 + Int.random(in: 0 ..< 20);
+    let planeDx = Bool.random() ? Int.random(in: -10...(-5)) : Int.random(in: 5...10);//Guaranteed to be not zero
+    let planeDy = Bool.random() ? Int.random(in: -10...(-5)) : Int.random(in: 5...10);
     
     var playerRadius = 64;
     var minimumGap = 5;
@@ -47,9 +47,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.setScale(0.5)
         player.position = CGPoint(x: 0, y: 0);
         
-        let dimensionsedges = CGSize(width: 10, height: 10);
+        /*let dimensionsedges = CGSize(width: 10, height: 10);
         edge1 = SKSpriteNode(color: UIColor.red, size: dimensionsedges);
-        edge1.position = CGPoint(x: 0, y: -size.height/2);
+        edge1.position = CGPoint(x: 0, y: -size.height/2);*/
  
         plane.name = "plane";
         plane.position = CGPoint(x: 0, y: 0);
@@ -67,34 +67,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width/2);
         player.physicsBody!.affectedByGravity = false;
-        player.physicsBody?.categoryBitMask = PhysicsCategory.player;
-        player.physicsBody?.contactTestBitMask = PhysicsCategory.edge;//Collides with edges
-        player.physicsBody?.collisionBitMask = PhysicsCategory.none;//Cannot bounce off of anything
+        //player.physicsBody?.categoryBitMask = PhysicsCategory.player;
+        //player.physicsBody?.contactTestBitMask = PhysicsCategory.edge;//Collides with edges
+        player.physicsBody?.collisionBitMask = 0;//Cannot bounce off of anything, this line must be in otherwise the ball freaks out
         //player.physicsBody?.usesPreciseCollisionDetection = true;
         
         //this is fake gravity because real gravity moves too fast when I test on an iMac
-        player.physicsBody!.velocity = CGVector(dx: -10, dy: 0);
+        player.physicsBody!.velocity = CGVector(dx: 0, dy: 0);
         
-        edge1.physicsBody = SKPhysicsBody(rectangleOf: edge1.size);
+        /*edge1.physicsBody = SKPhysicsBody(rectangleOf: edge1.size);
         edge1.physicsBody?.isDynamic = false;
         edge1.physicsBody?.categoryBitMask = PhysicsCategory.edge;
         edge1.physicsBody?.contactTestBitMask = PhysicsCategory.edge;//Collides with edges
         edge1.physicsBody?.collisionBitMask = PhysicsCategory.none;//Cannot bounce off of anything
-        edge1.physicsBody?.usesPreciseCollisionDetection = true;
+        edge1.physicsBody?.usesPreciseCollisionDetection = true;*/
  
         plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius));
         plane.physicsBody!.affectedByGravity = false;
         plane.physicsBody!.linearDamping = 0;
         plane.physicsBody!.mass = 0.0;
-        plane.physicsBody!.velocity = CGVector(dx: planeDx, dy: planeDx);
+        plane.physicsBody!.velocity = CGVector(dx: planeDx, dy: planeDy);
         
         self.addChild(player);
-        self.addChild(edge1);
+        //self.addChild(edge1);
         self.addChild(plane);
     }
     
     
-    //Function that is called when there is suspected contact
+    /*//Function that is called when there is suspected contact
     func didBegin(_ contact: SKPhysicsContact){
         var body1: SKPhysicsBody//Sorted to be the player
         var body2: SKPhysicsBody//Sorted to be an edge
@@ -110,7 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //we have contact, game over
             /*player.removeFromParent();//Just to see if it works*/
         }
-    }
+    }*/
  
 
     //Used to bounce the plane off of screen edges
@@ -143,16 +143,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let distanceR = sqrt(pow(distanceX,2) + pow(distanceY,2));
             
             if distanceR > CGFloat(planeRadius - playerRadius) {
+                //sometimes the ball and plane make a sudden jump at the end of the game
                 plane.physicsBody?.isDynamic = false;
                 player.physicsBody?.isDynamic = false;
-                print ("YOU LOSE"); //display duration survived instead?
+                print ("YOU LOSE");
+                print ("Time: ",-starttime.timeIntervalSinceNow);
                 return;
             }
             
             if planeRadius > (playerRadius + minimumGap) {
                 let currentVelocity = CGVector(dx: plane.physicsBody!.velocity.dx, dy: plane.physicsBody!.velocity.dy);
                 // Any function you put here will execute every second
-                planeScale = planeScale - 0.001;
+                planeScale -= 0.0001;
                 planeRadius = Int(planeScale*planeRadiusStart);
                 plane.setScale(CGFloat(planeScale));
                 plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius));
