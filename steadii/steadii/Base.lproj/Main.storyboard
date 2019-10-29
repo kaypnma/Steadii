@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="Corbel Bold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -151,82 +151,7 @@
                     <view key="view" contentMode="scaleToFill" id="Tzm-eO-WG5">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="ZAJ-zH-p8B">
-                                <rect key="frame" x="112" y="200" width="404" height="390"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="Uq9-dl-vVT">
-                                <rect key="frame" x="671" y="200" width="412" height="390"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaR-Aj-kcg">
-                                <rect key="frame" x="194" y="275" width="240" height="240"/>
-                                <state key="normal" image="Play Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-Fc-eV1">
-                                <rect key="frame" x="757" y="275" width="240" height="240"/>
-                                <state key="normal" image="Play Button-1"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEK-Jd-sPt">
-                                <rect key="frame" x="204" y="221" width="220" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Tilt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfE-D5-B3X">
-                                <rect key="frame" x="809" y="222" width="137" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRd-DC-acc">
-                                <rect key="frame" x="463" y="107" width="269" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
-                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQy-AD-EUz" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="92" y="662" width="445" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82352941176470584" green="0.90588235294117647" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
-                                <state key="normal" title="How to Play">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="KlD-Di-QNN" kind="show" id="f8E-9u-W0Z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZj-IE-Hpu" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="655" y="662" width="445" height="125"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.81176470588235294" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
-                                <state key="normal" title="How to Play">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Vps-An-Yg3" kind="show" id="8aZ-l7-UFj"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="PZj-IE-Hpu" firstAttribute="top" secondItem="Uq9-dl-vVT" secondAttribute="bottom" constant="72" id="00A-4x-O1h"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="HRd-DC-acc" secondAttribute="trailing" constant="462" id="02C-gI-odb"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="bottom" secondItem="PZj-IE-Hpu" secondAttribute="bottom" constant="27" id="08K-4X-fne"/>
-                            <constraint firstItem="HRd-DC-acc" firstAttribute="leading" secondItem="cEL-nN-Wev" secondAttribute="leading" constant="463" id="3Ic-Gg-F4x"/>
-                            <constraint firstItem="HRd-DC-acc" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="83" id="6Pc-gv-3VY"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="PZj-IE-Hpu" secondAttribute="trailing" constant="94" id="Beq-5C-Pg1"/>
-                            <constraint firstItem="ZAJ-zH-p8B" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="176" id="EJP-rN-yJ8"/>
-                            <constraint firstItem="kaR-Aj-kcg" firstAttribute="top" secondItem="TEK-Jd-sPt" secondAttribute="bottom" constant="9" id="FqO-az-cf7"/>
-                            <constraint firstItem="ZAJ-zH-p8B" firstAttribute="leading" secondItem="cEL-nN-Wev" secondAttribute="leading" constant="112" id="HDd-IM-A0x"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="lfE-D5-B3X" secondAttribute="trailing" constant="248" id="Hm5-BI-CwA"/>
-                            <constraint firstItem="dfK-Fc-eV1" firstAttribute="top" secondItem="lfE-D5-B3X" secondAttribute="bottom" constant="8" id="Ily-3V-1nb"/>
-                            <constraint firstItem="TEK-Jd-sPt" firstAttribute="leading" secondItem="cEL-nN-Wev" secondAttribute="leading" constant="204" id="NUH-nc-cd2"/>
-                            <constraint firstItem="lfE-D5-B3X" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="198" id="TZg-8u-NUs"/>
-                            <constraint firstItem="TEK-Jd-sPt" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="197" id="b0J-Xl-DGp"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="dfK-Fc-eV1" secondAttribute="trailing" constant="197" id="isA-12-ZnA"/>
-                            <constraint firstItem="Uq9-dl-vVT" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="176" id="m5a-zQ-iK9"/>
-                            <constraint firstItem="kaR-Aj-kcg" firstAttribute="leading" secondItem="cEL-nN-Wev" secondAttribute="leading" constant="194" id="mm9-iG-dBP"/>
-                            <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" secondItem="Uq9-dl-vVT" secondAttribute="trailing" constant="111" id="xdW-wc-FMB"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cEL-nN-Wev"/>
                     </view>
                 </viewController>
@@ -454,10 +379,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Play Button" width="240" height="240"/>
-        <image name="Play Button-1" width="240" height="240"/>
-        <image name="Rectangle 4" width="446" height="442"/>
-        <image name="Rectangle 7" width="446" height="442"/>
         <image name="logo2" width="262" height="188"/>
         <image name="opt" width="24" height="24"/>
         <image name="selected_opt" width="24" height="24"/>
