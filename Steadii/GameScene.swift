@@ -145,7 +145,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if distanceR > CGFloat(planeRadius - playerRadius) {
                 plane.physicsBody?.isDynamic = false;
                 player.physicsBody?.isDynamic = false;
-                print ("YOU LOSE");
+                print ("YOU LOSE"); //display duration survived instead?
                 return;
             }
             
