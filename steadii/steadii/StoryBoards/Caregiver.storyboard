@@ -29,17 +29,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPL-jx-7iV">
                                 <rect key="frame" x="55" y="51" width="54" height="22"/>
                                 <state key="normal" image="settings"/>
+                                <connections>
+                                    <segue destination="J0P-TV-JIU" kind="show" id="ZXw-WB-a56"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-wc-MxB">
                                 <rect key="frame" x="1100" y="49" width="39" height="39"/>
                                 <state key="normal" image="Icon feather-plus"/>
+                                <connections>
+                                    <segue destination="kmB-pj-Ay8" kind="show" id="jIN-xD-zAs"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df7-gt-C2y">
-                                <rect key="frame" x="537" y="84" width="121" height="40"/>
-                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
-                                <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaV-SZ-BeP" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="659" y="179" width="445" height="125"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,6 +51,9 @@
                                 <state key="normal" title="John Qu">
                                     <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="ggR-hR-Az7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBg-DT-VnX" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="90" y="-562" width="445" height="125"/>
@@ -75,6 +78,9 @@
                                 <state key="normal" title="Kay Arellano">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="VrN-Tx-ESC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-cn-co3" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="659" y="374" width="445" height="125"/>
@@ -87,6 +93,9 @@
                                 <state key="normal" title="Dustin Seah">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="D1C-Mp-EGI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tj-gn-Z1u" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="659" y="569" width="445" height="125"/>
@@ -99,6 +108,9 @@
                                 <state key="normal" title="Denyse Tran">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="Wkv-V7-KZs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7II-su-W9o" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="90" y="374" width="445" height="125"/>
@@ -111,6 +123,9 @@
                                 <state key="normal" title="Jack Guo">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="U2I-Xb-8Km"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ9-ma-88H" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="90" y="569" width="445" height="125"/>
@@ -123,7 +138,20 @@
                                 <state key="normal" title="Chris Keilbart">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="AcZ-b3-cFu"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIC-T9-XBT">
+                                <rect key="frame" x="537" y="84" width="121" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QD8-Fm-nyX"/>
+                                    <constraint firstAttribute="width" constant="121" id="gxI-3x-0YC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -136,19 +164,20 @@
                             <constraint firstItem="APU-Yk-jUi" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="155" id="AcL-YE-yI7"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="8Tj-gn-Z1u" secondAttribute="trailing" constant="90" id="Hu5-50-7tA"/>
                             <constraint firstItem="gDB-wc-MxB" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="25" id="Jau-4Y-AdW"/>
+                            <constraint firstItem="EIC-T9-XBT" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="537" id="LKC-ma-bcV"/>
                             <constraint firstItem="eZ9-ma-88H" firstAttribute="top" secondItem="7II-su-W9o" secondAttribute="bottom" constant="70" id="LiC-71-irB"/>
                             <constraint firstItem="kaV-SZ-BeP" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="155" id="Oao-br-bfS"/>
+                            <constraint firstItem="gDB-wc-MxB" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="trailing" constant="-94" id="TBX-ww-8Lo"/>
                             <constraint firstItem="pBg-DT-VnX" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="-586" id="VTr-cT-tsh"/>
                             <constraint firstItem="eZ9-ma-88H" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="WUc-WJ-y6A"/>
                             <constraint firstItem="7II-su-W9o" firstAttribute="top" secondItem="APU-Yk-jUi" secondAttribute="bottom" constant="70" id="XmS-hq-ICw"/>
-                            <constraint firstItem="Df7-gt-C2y" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="537" id="Z8w-Am-gND"/>
+                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="EIC-T9-XBT" secondAttribute="trailing" constant="536" id="bG5-r2-qX8"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="OtG-cn-co3" secondAttribute="trailing" constant="90" id="cas-E8-NrT"/>
                             <constraint firstItem="OtG-cn-co3" firstAttribute="top" secondItem="kaV-SZ-BeP" secondAttribute="bottom" constant="70" id="hse-hX-Us6"/>
-                            <constraint firstItem="Df7-gt-C2y" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="60" id="jY6-L0-aYC"/>
                             <constraint firstItem="8Tj-gn-Z1u" firstAttribute="top" secondItem="OtG-cn-co3" secondAttribute="bottom" constant="70" id="o54-yz-a2w"/>
                             <constraint firstItem="kaV-SZ-BeP" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="659" id="tKk-Ms-PgH"/>
-                            <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="Df7-gt-C2y" secondAttribute="trailing" constant="536" id="tUb-JK-6NT"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="gDB-wc-MxB" secondAttribute="trailing" constant="55" id="uH4-BD-CnM"/>
+                            <constraint firstItem="EIC-T9-XBT" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="60" id="xsw-H8-ppO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZYP-eF-lJG"/>
                     </view>
@@ -172,6 +201,9 @@
                                     <constraint firstAttribute="width" constant="52" id="vnh-HR-9nJ"/>
                                 </constraints>
                                 <state key="normal" image="back_arrow"/>
+                                <connections>
+                                    <segue destination="lp7-4X-f7B" kind="show" id="DLY-ur-UU0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denyse Tran's statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onj-J8-agd">
                                 <rect key="frame" x="407" y="84" width="380" height="40"/>
@@ -258,6 +290,9 @@
                                     <constraint firstAttribute="width" constant="52" id="kLC-0N-2jq"/>
                                 </constraints>
                                 <state key="normal" image="back_arrow"/>
+                                <connections>
+                                    <segue destination="lp7-4X-f7B" kind="show" id="itv-D2-n2A"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjB-cf-H32">
                                 <rect key="frame" x="494" y="84" width="207" height="40"/>
@@ -329,6 +364,9 @@
                                     <constraint firstAttribute="width" constant="52" id="LoI-0e-ldQ"/>
                                 </constraints>
                                 <state key="normal" image="back_arrow"/>
+                                <connections>
+                                    <segue destination="lp7-4X-f7B" kind="show" id="A7z-YL-llJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzL-dj-Khp">
                                 <rect key="frame" x="528" y="84" width="138" height="40"/>
@@ -408,4 +446,9 @@
         <image name="opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZXw-WB-a56"/>
+        <segue reference="U2I-Xb-8Km"/>
+        <segue reference="A7z-YL-llJ"/>
+    </inferredMetricsTieBreakers>
 </document>

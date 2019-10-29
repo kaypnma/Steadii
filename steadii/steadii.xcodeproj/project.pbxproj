@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		564687B92367924F00C514AC /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564687B72367924F00C514AC /* CreateViewController.swift */; };
 		564687BA2367924F00C514AC /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564687B82367924F00C514AC /* CreateViewController.xib */; };
-		566DC44C23680989002FC0B9 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566DC44B23680989002FC0B9 /* Games.storyboard */; };
+		566DC44C23680989002FC0B9 /* BallGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566DC44B23680989002FC0B9 /* BallGame.storyboard */; };
 		567C720A2367B7BD0021271A /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 567C72092367B7BD0021271A /* DLRadioButton.m */; };
 		5689FF192366B81C00AE28CB /* radioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5689FF182366B81C00AE28CB /* radioButton.swift */; };
 		822D765123680341002B56B2 /* Caregiver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822D765023680341002B56B2 /* Caregiver.storyboard */; };
+		822D765323682F4E002B56B2 /* WordGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822D765223682F4E002B56B2 /* WordGame.storyboard */; };
 		824A703823651B3400C406B0 /* corbel in Resources */ = {isa = PBXBuildFile; fileRef = 824A703723651B3400C406B0 /* corbel */; };
 		829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B4F2364BB0C0064993B /* AppDelegate.swift */; };
 		829E2B522364BB0C0064993B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B512364BB0C0064993B /* ViewController.swift */; };
@@ -46,11 +47,12 @@
 		564687B3236778E900C514AC /* steadii-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "steadii-Bridging-Header.h"; sourceTree = "<group>"; };
 		564687B72367924F00C514AC /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		564687B82367924F00C514AC /* CreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateViewController.xib; sourceTree = "<group>"; };
-		566DC44B23680989002FC0B9 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
+		566DC44B23680989002FC0B9 /* BallGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BallGame.storyboard; sourceTree = "<group>"; };
 		567C72092367B7BD0021271A /* DLRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		567C720C2367B8960021271A /* DLRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		5689FF182366B81C00AE28CB /* radioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radioButton.swift; sourceTree = "<group>"; };
 		822D765023680341002B56B2 /* Caregiver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Caregiver.storyboard; sourceTree = "<group>"; };
+		822D765223682F4E002B56B2 /* WordGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordGame.storyboard; sourceTree = "<group>"; };
 		824A703723651B3400C406B0 /* corbel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corbel; sourceTree = "<group>"; };
 		829E2B4C2364BB0C0064993B /* steadii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steadii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829E2B4F2364BB0C0064993B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +102,8 @@
 				829E2B532364BB0C0064993B /* Main.storyboard */,
 				829E2B582364BB130064993B /* LaunchScreen.storyboard */,
 				822D765023680341002B56B2 /* Caregiver.storyboard */,
-				566DC44B23680989002FC0B9 /* Games.storyboard */,
+				566DC44B23680989002FC0B9 /* BallGame.storyboard */,
+				822D765223682F4E002B56B2 /* WordGame.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -277,10 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822D765323682F4E002B56B2 /* WordGame.storyboard in Resources */,
 				829E2B5A2364BB130064993B /* LaunchScreen.storyboard in Resources */,
 				822D765123680341002B56B2 /* Caregiver.storyboard in Resources */,
 				564687BA2367924F00C514AC /* CreateViewController.xib in Resources */,
-				566DC44C23680989002FC0B9 /* Games.storyboard in Resources */,
+				566DC44C23680989002FC0B9 /* BallGame.storyboard in Resources */,
 				824A703823651B3400C406B0 /* corbel in Resources */,
 				829E2B572364BB130064993B /* Assets.xcassets in Resources */,
 				829E2B552364BB0C0064993B /* Main.storyboard in Resources */,
