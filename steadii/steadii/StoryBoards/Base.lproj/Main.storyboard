@@ -123,9 +123,36 @@
                                 <rect key="frame" x="69" y="68" width="46" height="34"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="tGy-Ke-T3m"/>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="ZfO-qu-PKS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moving_ball_tut1" translatesAutoresizingMaskIntoConstraints="NO" id="8UU-eR-91D">
+                                <rect key="frame" x="162" y="231" width="253" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moving_ball_tut2" translatesAutoresizingMaskIntoConstraints="NO" id="O6R-aq-FhV">
+                                <rect key="frame" x="162" y="491" width="253" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afn-xO-bTM">
+                                <rect key="frame" x="648" y="187" width="432" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The word of interest will be displayed in the middle of the screen
+
+
+Pick one of the three categories the world belongs in
+
+
+
+If it is right, the category pressed will be indicated in green with a check 
+
+
+
+If it is wrong, it will be indicated in red with a cross.</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -138,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2u-5j-hx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="-1363"/>
+            <point key="canvasLocation" x="1092.964824120603" y="-1363.3093525179856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MW7-iV-zYX">
@@ -152,22 +179,88 @@
                                 <rect key="frame" x="69" y="68" width="54" height="34"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="f11-68-Vs4"/>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="q03-3O-Rue"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Group 40 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="0du-9h-1h6">
+                                <rect key="frame" x="83" y="346" width="532" height="378"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="BASKETBALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-5W-2rg">
+                                <rect key="frame" x="197" y="251" width="305.5" height="45"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="53"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsL-on-6ow">
+                                <rect key="frame" x="673" y="251" width="432" height="460"/>
+                                <string key="text">The word of interest will be displayed in the middle of the screen
+
+
+Pick one of the three categories the world belongs in
+
+
+
+If it is right, the category pressed will be indicated in green with a check 
+
+
+
+If it is wrong, it will be indicated in red with a cross.</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play Word Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfT-Rm-5B4">
+                                <rect key="frame" x="391" y="56" width="412" height="63"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-bb-6GO">
+                                <rect key="frame" x="203" y="114" width="789" height="54"/>
+                                <string key="text">Match a word to its corresponding category and try to get as many correct within 2 minutes. Keep trying until you get the answer right!</string>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-RZ-TzC">
+                                <rect key="frame" x="477" y="191" width="240" height="6"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="Qtd-RZ-TzC" secondAttribute="trailing" constant="477" id="2lS-pa-pig"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="QsL-on-6ow" secondAttribute="trailing" constant="89" id="3Wt-ia-fCq"/>
                             <constraint firstItem="QQ6-o4-dfO" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="44" id="4gN-b6-G3L"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="JfT-Rm-5B4" secondAttribute="trailing" constant="391" id="5Og-rC-HFs"/>
+                            <constraint firstItem="Jzb-5W-2rg" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="197" id="6ZP-xK-SUO"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="Qtd-RZ-TzC" secondAttribute="trailing" constant="477" id="AjL-nL-bBg"/>
+                            <constraint firstItem="JfT-Rm-5B4" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="32" id="Bdi-IV-gVH"/>
                             <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="QQ6-o4-dfO" secondAttribute="trailing" constant="1071" id="F0I-jJ-7ez"/>
+                            <constraint firstItem="QsL-on-6ow" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="673" id="HFW-gp-yyb"/>
+                            <constraint firstItem="JEG-bb-6GO" firstAttribute="top" secondItem="JfT-Rm-5B4" secondAttribute="bottom" constant="-5" id="K6W-Ss-W4d"/>
+                            <constraint firstItem="QsL-on-6ow" firstAttribute="leading" secondItem="Jzb-5W-2rg" secondAttribute="trailing" constant="170.5" id="Pg5-AP-yOn"/>
+                            <constraint firstItem="0du-9h-1h6" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="83" id="QaU-vh-bTS"/>
+                            <constraint firstItem="JEG-bb-6GO" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="203" id="S2t-Ea-gsh"/>
+                            <constraint firstItem="Jzb-5W-2rg" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="227" id="TV8-kh-j2K"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="0du-9h-1h6" secondAttribute="trailing" constant="579" id="VD3-EB-iLT"/>
+                            <constraint firstItem="JEG-bb-6GO" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="90" id="YsH-W8-ob6"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="trailing" secondItem="JEG-bb-6GO" secondAttribute="trailing" constant="202" id="Yw3-mf-SfG"/>
                             <constraint firstItem="QQ6-o4-dfO" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="69" id="bDl-hs-zcl"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="bottom" secondItem="0du-9h-1h6" secondAttribute="bottom" constant="90" id="dz7-gg-M8B"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="bottom" secondItem="QsL-on-6ow" secondAttribute="bottom" constant="103" id="eYW-68-b9c"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="bottom" secondItem="Qtd-RZ-TzC" secondAttribute="bottom" constant="617" id="gSg-1z-5yR"/>
+                            <constraint firstItem="Qtd-RZ-TzC" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="167" id="gbc-Jl-Xkw"/>
+                            <constraint firstItem="0du-9h-1h6" firstAttribute="top" secondItem="Jzb-5W-2rg" secondAttribute="bottom" constant="50" id="hLs-KT-0fT"/>
+                            <constraint firstItem="QsL-on-6ow" firstAttribute="top" secondItem="L5O-Fq-LW0" secondAttribute="top" constant="227" id="npV-3r-NnY"/>
+                            <constraint firstItem="L5O-Fq-LW0" firstAttribute="bottom" secondItem="JEG-bb-6GO" secondAttribute="bottom" constant="646" id="pmT-uy-BYm"/>
+                            <constraint firstItem="Qtd-RZ-TzC" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="477" id="ywK-Dk-y4U"/>
+                            <constraint firstItem="JfT-Rm-5B4" firstAttribute="leading" secondItem="L5O-Fq-LW0" secondAttribute="leading" constant="391" id="zDf-JR-Z4n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L5O-Fq-LW0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjp-WZ-hLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="-1369"/>
+            <point key="canvasLocation" x="324.62311557788945" y="-1369.064748201439"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mjj-1s-gM1">
@@ -191,7 +284,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KlD-Di-QNN" kind="show" id="5PQ-aE-9jX"/>
+                                    <segue destination="KlD-Di-QNN" kind="show" id="C63-Tx-DpU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0We-VA-767" customClass="LButton" customModule="steadii" customModuleProvider="target">
@@ -202,7 +295,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vps-An-Yg3" kind="show" id="U20-rA-WGo"/>
+                                    <segue destination="Vps-An-Yg3" kind="show" id="NPk-v8-zeD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZS-um-01l">
@@ -214,18 +307,18 @@
                                 <state key="normal" image="Play Button-1"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-qJ-9zQ">
-                                <rect key="frame" x="220" y="269" width="220" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <rect key="frame" x="220" y="269" width="220" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Tilt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H19-AF-ZLM">
-                                <rect key="frame" x="804" y="270" width="137" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <rect key="frame" x="804" y="270" width="137" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-YS-Evi">
                                 <rect key="frame" x="463" y="117" width="269" height="45"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-rn-3t0">
@@ -276,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK0-X6-EZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697.9899497487437" y="-672.66187050359713"/>
+            <point key="canvasLocation" x="720.6030150753769" y="-660.43165467625909"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="Vgh-FO-zsA">
@@ -377,7 +470,7 @@
                                 <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
                                 <state key="normal" title="CREATE MY ACCOUNT"/>
                                 <connections>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="s0F-Ui-bLN"/>
+                                    <segue destination="9fv-d2-uVi" kind="show" id="BTa-KW-sXG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -423,17 +516,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 40 (1)" width="430" height="326"/>
         <image name="Play Button" width="240" height="240"/>
         <image name="Play Button-1" width="240" height="240"/>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
         <image name="back_arrow" width="52" height="34"/>
         <image name="logo2" width="262" height="188"/>
+        <image name="moving_ball_tut1" width="217" height="217"/>
+        <image name="moving_ball_tut2" width="241" height="217"/>
         <image name="opt" width="24" height="24"/>
         <image name="selected_opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
+        <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s0F-Ui-bLN"/>
+        <segue reference="ZfO-qu-PKS"/>
     </inferredMetricsTieBreakers>
 </document>
