@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 //        let ref = Database.database().reference()
 //            ref.child("carer/name").setValue("new value")
 //        ref.childByAutoId().setValue(["name":"Jack"])
-//        }
+        }
     
 
 

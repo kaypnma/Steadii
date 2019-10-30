@@ -20,7 +20,7 @@ class CreateViewController: UIViewController {
            // ref.childByAutoId().setValue(["name":"Jack"])
 //                ref.child("player").observeSingleEvent(of: .value){(snapshot)in let playerdata = snapshot.value as? [String : Any]}
         let ref2 = Database.database().reference()
-        let updates = ["carer/name":"back to Dustin","player/name":"new john"]
+        let updates = ["carer/name":"back to Dustin","player/FirstName":"new john"]
         ref2.updateChildValues(updates)
         ref.child("score/date").removeValue()
     }
