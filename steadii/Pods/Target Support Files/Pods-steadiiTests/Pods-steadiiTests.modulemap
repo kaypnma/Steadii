@@ -1,0 +1,6 @@
+framework module Pods_steadiiTests {
+  umbrella header "Pods-steadiiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
