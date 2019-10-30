@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+<<<<<<< HEAD
 //        let ref = Database.database().reference()
 //            ref.child("carer/name").setValue("new value")
 //        ref.childByAutoId().setValue(["name":"Jack"])
@@ -21,5 +22,8 @@ class ViewController: UIViewController {
     
 
 
+=======
+    }
+>>>>>>> UInew
 }
 
