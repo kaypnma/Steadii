@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CreateViewController: UIViewController {
 
@@ -14,8 +15,15 @@ class CreateViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+            let ref = Database.database().reference()
+                ref.child("carer/name").setValue("new value")
+           // ref.childByAutoId().setValue(["name":"Jack"])
+//                ref.child("player").observeSingleEvent(of: .value){(snapshot)in let playerdata = snapshot.value as? [String : Any]}
+        let ref2 = Database.database().reference()
+        let updates = ["carer/name":"back to Dustin","player/FirstName":"new john"]
+        ref2.updateChildValues(updates)
+        ref.child("score/date").removeValue()
     }
-
 
     /*
     // MARK: - Navigation
