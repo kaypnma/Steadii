@@ -18,11 +18,11 @@ class CreateViewController: UIViewController {
             let ref = Database.database().reference()
                 ref.child("carer/name").setValue("new value")
            // ref.childByAutoId().setValue(["name":"Jack"])
-                ref.child("player").observeSingleEvent(of: .value){(snapshot)in let playerdata = snapshot.value as? [String : Any]}
-            
+//                ref.child("player").observeSingleEvent(of: .value){(snapshot)in let playerdata = snapshot.value as? [String : Any]}
+        let ref2 = Database.database().reference()
         let updates = ["carer/name":"back to Dustin","player/name":"new john"]
-        ref.updateChildValues(updates)
-        ref.child("carer/score").removeValue()
+        ref2.updateChildValues(updates)
+        ref.child("score/date").removeValue()
     }
 
     /*
