@@ -6,13 +6,6 @@
 //  Copyright © 2019 ii Studio. All rights reserved.
 //
 
-/*struct PhysicsCategory {
-    static let none : UInt32 = 0;
-    static let all : UInt32 = UInt32.max;
-    static let player : UInt32 = 0b10;
-    static let edge : UInt32 = 0b1;
-}*/
-
 import SpriteKit
 import GameplayKit
 import CoreMotion
@@ -26,10 +19,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let tiltsensitivity = 4.0;
     var prevTime:TimeInterval = 0
     let starttime = Date();
-    let planeRadiusStart = 300.0;
-    var planeRadius = 300;
+    let planeRadiusStart = 150.0;
+    var planeRadius = 150;
     var planeScale = 1.0;
-    let plane = SKShapeNode(circleOfRadius: 300);
+    let plane = SKShapeNode(circleOfRadius: 150);
     let planeDx = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14);//Guaranteed to be not zero
     let planeDy = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14);
     var playerRadius = 32;
@@ -43,7 +36,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Creating Objects
         let textr = SKTexture(imageNamed: "tempball2");
         player = SKSpriteNode(texture: textr);
-        //player.position = CGPoint(x: frame.midX, y: 2*frame.midY);
         player.setScale(0.25)
         player.position = CGPoint(x: 0, y: 0);
  
@@ -60,19 +52,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width/2);
         player.physicsBody!.affectedByGravity = true;
         player.physicsBody?.collisionBitMask = 0;//Cannot bounce off of anything, this line must be in otherwise the ball freaks out
-        //player.physicsBody?.usesPreciseCollisionDetection = true;
         
         //this is fake gravity because real gravity moves too fast when I test on an iMac
         //player.physicsBody!.velocity = CGVector(dx: 0, dy: 0);
  
         plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius));
-        plane.physicsBody!.isDynamic = false;
+        plane.physicsBody!.affectedByGravity = false;
         plane.physicsBody!.linearDamping = 0;
         plane.physicsBody!.mass = 0.0;
         plane.physicsBody!.velocity = CGVector(dx: planeDx, dy: planeDy);
+        plane.physicsBody?.collisionBitMask = 0;
         
         self.addChild(player);
-        //self.addChild(edge1);
         self.addChild(plane);
     }
 
@@ -94,6 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
  
+    //Used to monitor gravity
     //Used to change the size of the plane
     //Used to test detection
     override func update(_ currentTime: CFTimeInterval) {
@@ -109,31 +101,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let distanceY = player.position.y - plane.position.y;
             let distanceR = sqrt(pow(distanceX,2) + pow(distanceY,2));
             
+            //Detect game over condition
             if distanceR > CGFloat(planeRadius - playerRadius) {
                 //sometimes the ball and plane make a sudden jump at the end of the game
                 plane.physicsBody?.isDynamic = false;
                 player.physicsBody?.isDynamic = false;
                 print ("YOU LOSE");
-                print ("Time: ",-starttime.timeIntervalSinceNow);
+                print ("Time: ", Double(round(1000*(-starttime.timeIntervalSinceNow))/1000));
+                self.isPaused = true;
                 return;
             }
             
+            //Normal gameplay difficulty increase via plane radius decrease
             if planeRadius > (playerRadius + minimumGap) {
                 let currentVelocity = CGVector(dx: plane.physicsBody!.velocity.dx, dy: plane.physicsBody!.velocity.dy);
                 // Any function you put here will execute every second
                 planeScale *= 0.999;
                 planeRadius = Int(planeScale*planeRadiusStart);
                 plane.setScale(CGFloat(planeScale));
-                plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius));                plane.physicsBody!.affectedByGravity = false;
+                plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius));
+                plane.physicsBody!.affectedByGravity = false;
                 plane.physicsBody!.linearDamping = 0;
                 plane.physicsBody!.mass = 0.0;
                 plane.physicsBody!.velocity = currentVelocity;
+                plane.physicsBody!.collisionBitMask = 0;
                 //print("size:", planeRadius);
             }
             
             //print ("x: ", player.anchorPoint.x, " | ", distanceX, " | ", plane.position.x);
             //print ("y: ", player.anchorPoint.y, " | ", distanceY, " | ", plane.position.y);
-            //print ("r: ", distanceX, " | ", distanceY, " | ", distanceR);
+            print ("r: ", distanceX, " | ", distanceY, " | ", distanceR);
+            print ("lose distance: ", CGFloat(planeRadius - playerRadius));
         }
     }
  
