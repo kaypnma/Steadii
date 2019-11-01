@@ -1,10 +1,26 @@
-//
-//  GameScene.swift
+//  CMPT 275 Fall 2019 Group 2
 //  Steadii
-//  Ball tilt game, currently has one edge and one ball that correctly detect when they collide, gravity must be tested.
-//  Created by ckeilbar on 10/23/19.
+
+//  GameScene.swift
+//  Implementation of Ball Tilt Game
+//  Created by ckeilbar on 10/23/19
+//  Last Updated by /*Name(s)*/ on /*Date*/
+/*  
+    - Collision is correctly detected
+    - 
+*/
+
+//  Known Bugs:
+/*
+    - Timer still goes on even after the player has lost
+*/
+
+//  To do:
+/*
+    - Test Gravity
+*/
+
 //  Copyright © 2019 ii Studio. All rights reserved.
-//
 
 import SpriteKit
 import GameplayKit
