@@ -30,7 +30,7 @@
 		829EBC2323666252007F71D8 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829EBC2223666252007F71D8 /* TextField.swift */; };
 		829EBC2523668484007F71D8 /* LButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829EBC2423668484007F71D8 /* LButton.swift */; };
 		99BA9684101F45B2A3DB9D7D /* Pods_steadii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D78AB461145AC308473AD9 /* Pods_steadii.framework */; };
-		BA425E37236CED66003FF941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA425E36236CED66003FF941 /* GoogleService-Info.plist */; };
+		BA425E39236CEE82003FF941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA425E38236CEE82003FF941 /* GoogleService-Info.plist */; };
 		D821343D5AC8A66F7573269A /* Pods_steadii_steadiiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AE1559F39BE4AFD409C430 /* Pods_steadii_steadiiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +87,7 @@
 		8BE1D78B22990C4B4AA4EFB2 /* Pods-steadii-steadiiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii-steadiiUITests.release.xcconfig"; path = "Target Support Files/Pods-steadii-steadiiUITests/Pods-steadii-steadiiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		902BABBD6BD7CCBB735A9511 /* Pods-steadiiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadiiTests.release.xcconfig"; path = "Target Support Files/Pods-steadiiTests/Pods-steadiiTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8D78AB461145AC308473AD9 /* Pods_steadii.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steadii.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA425E36236CED66003FF941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA425E38236CEE82003FF941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5FF0DC53E942C6E4A3D835C /* Pods-steadiiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadiiTests.debug.xcconfig"; path = "Target Support Files/Pods-steadiiTests/Pods-steadiiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5207B6B75451BFA76C4BC79 /* Pods-steadii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii.release.xcconfig"; path = "Target Support Files/Pods-steadii/Pods-steadii.release.xcconfig"; sourceTree = "<group>"; };
 		FCE0703C2231E81DB980F36A /* Pods-steadii-steadiiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii-steadiiUITests.debug.xcconfig"; path = "Target Support Files/Pods-steadii-steadiiUITests/Pods-steadii-steadiiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		829E2B4E2364BB0C0064993B /* steadii */ = {
 			isa = PBXGroup;
 			children = (
-				BA425E36236CED66003FF941 /* GoogleService-Info.plist */,
+				BA425E38236CEE82003FF941 /* GoogleService-Info.plist */,
 				6DC6151E236CDE1200F0F69E /* Ballgame */,
 				822D764F236802E1002B56B2 /* StoryBoards */,
 				829EBC21236660DF007F71D8 /* CustomView */,
@@ -356,7 +356,7 @@
 				566DC44C23680989002FC0B9 /* BallGame.storyboard in Resources */,
 				824A703823651B3400C406B0 /* corbel in Resources */,
 				822D766723684546002B56B2 /* Settings.storyboard in Resources */,
-				BA425E37236CED66003FF941 /* GoogleService-Info.plist in Resources */,
+				BA425E39236CEE82003FF941 /* GoogleService-Info.plist in Resources */,
 				829E2B572364BB130064993B /* Assets.xcassets in Resources */,
 				829E2B552364BB0C0064993B /* Main.storyboard in Resources */,
 			);
