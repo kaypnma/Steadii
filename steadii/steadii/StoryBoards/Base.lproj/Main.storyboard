@@ -614,6 +614,10 @@ If it is wrong, it will be indicated in red with a cross.
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="q03-3O-Rue"/>
+=======
+        <segue reference="ZfO-qu-PKS"/>
+>>>>>>> 0fc84a37ea4e958af2674911d2d70c8e0b08bd0e
     </inferredMetricsTieBreakers>
 </document>
