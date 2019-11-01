@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="CorbelBold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esV-jg-BYD">
-                                <rect key="frame" x="69" y="68" width="46" height="34"/>
+                                <rect key="frame" x="69" y="68" width="46" height="22"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="9fv-d2-uVi" kind="show" id="ZfO-qu-PKS"/>
@@ -163,10 +163,10 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="trj-cK-LBM">
-                                <rect key="frame" x="468" y="206" width="240" height="6"/>
+                                <rect key="frame" x="468" y="219.5" width="240" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK9-0V-JOg">
-                                <rect key="frame" x="208" y="125" width="778" height="81"/>
+                                <rect key="frame" x="208" y="125" width="778" height="94.5"/>
                                 <string key="text">Keep the ball within the confinement by tilting your device to move the ball to stay within the blue bounds
 </string>
                                 <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
@@ -216,17 +216,17 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-o4-dfO">
-                                <rect key="frame" x="69" y="68" width="54" height="34"/>
+                                <rect key="frame" x="69" y="68" width="54" height="22"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="9fv-d2-uVi" kind="show" id="q03-3O-Rue"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 40 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="0du-9h-1h6">
-                                <rect key="frame" x="83" y="398" width="532" height="326"/>
+                                <rect key="frame" x="83" y="708" width="532" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASKETBALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-5W-2rg">
-                                <rect key="frame" x="197" y="295" width="305.5" height="53"/>
+                                <rect key="frame" x="197" y="596" width="333" height="62"/>
                                 <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="53"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -257,10 +257,10 @@ If it is wrong, it will be indicated in red with a cross.
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-RZ-TzC">
-                                <rect key="frame" x="477" y="188" width="240" height="6"/>
+                                <rect key="frame" x="477" y="197" width="240" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-bb-6GO">
-                                <rect key="frame" x="188" y="126" width="818" height="54"/>
+                                <rect key="frame" x="188" y="126" width="818" height="63"/>
                                 <string key="text">Match a word to its corresponding category and try to get as many correct within 2 minutes. Keep trying until you get the answer right!</string>
                                 <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -338,6 +338,9 @@ If it is wrong, it will be indicated in red with a cross.
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-ZE-rhT">
                                 <rect key="frame" x="746" y="323" width="251" height="240"/>
                                 <state key="normal" image="Play Button-1"/>
+                                <connections>
+                                    <segue destination="Uv1-On-1UU" kind="show" id="5ta-Fv-L5F"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-qJ-9zQ">
                                 <rect key="frame" x="220" y="269" width="220" height="46"/>
@@ -560,6 +563,14 @@ If it is wrong, it will be indicated in red with a cross.
             </objects>
             <point key="canvasLocation" x="301" y="-906"/>
         </scene>
+        <!--BallGameVC-->
+        <scene sceneID="afc-QI-RHk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="BallGameVC" storyboardName="BallGame" referencedIdentifier="BallGameVC" id="Uv1-On-1UU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mW7-pQ-6g2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="-632"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Group 40 (1)" width="430" height="326"/>
@@ -567,7 +578,7 @@ If it is wrong, it will be indicated in red with a cross.
         <image name="Play Button-1" width="240" height="240"/>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
-        <image name="back_arrow" width="52" height="34"/>
+        <image name="back_arrow" width="52" height="34.5"/>
         <image name="logo2" width="262" height="188"/>
         <image name="moving_ball_tut1" width="217" height="217"/>
         <image name="moving_ball_tut2" width="241" height="217"/>

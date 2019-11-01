@@ -43,7 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let planeDy = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14);
     var playerRadius = 32;
     var minimumGap = 5;
-    
+    	
     override func didMove(to view: SKView) {
         
         //actually center the scene to have the origin at the centre of the screen
