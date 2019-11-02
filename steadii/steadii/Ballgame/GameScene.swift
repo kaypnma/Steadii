@@ -35,10 +35,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let tiltsensitivity = 4.0;
     var prevTime:TimeInterval = 0
     let starttime = Date();
-    let planeRadiusStart = 300.0;
-    var planeRadius = 300;
+    let planeRadiusStart = 150.0;
+    var planeRadius = 150;
     var planeScale = 1.0;
-    let plane = SKShapeNode(circleOfRadius: 300);
+    let plane = SKShapeNode(circleOfRadius: 150);
     let planeDx = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14);//Guaranteed to be not zero
     let planeDy = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14);
     var playerRadius = 32;
@@ -48,7 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //actually center the scene to have the origin at the centre of the screen
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5);
-        backgroundColor = UIColor(red: 250/255, green: 207/255, blue: 142/255, alpha: 1);
+        
         //Creating Objects
         let textr = SKTexture(imageNamed: "tempball2");
         player = SKSpriteNode(texture: textr);
@@ -57,7 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
  
         plane.name = "plane";
         plane.position = CGPoint(x: 0, y: 0);
-        plane.fillColor = UIColor(red: 210/255, green: 231/255, blue: 230/255, alpha: 1);
+        plane.fillColor = SKColor.green;
         
         //Accelerometer/Gravity
         manager.startAccelerometerUpdates();
