@@ -1,10 +1,33 @@
-//
+//  ii Studio will be adhering to Swift’s API Design guidelines in our source code. 
+//  The guidelines are defined here: https://swift.org/documentation/api-design-guidelines/
+
+//  The following header should be on the top of all source files, simply replace things in /* */
+
+//  CMPT 275 Fall 2019 Group 2
+//  Steadii
+
 //  DLRadioButton.h
-//  steadii
-//
-//  Created by Denyse Tran on 2019-10-28.
-//  Copyright © 2019 iiStudio. All rights reserved.
-//
+//  Logic for radio button.
+
+//  Created by Denyse Tran on 10/28/2019
+
+//  Last Updated by Dustin Seah on 11/01/2019
+/*  
+    Added Header
+*/
+
+//  Known Bugs:
+/*
+    None
+*/
+
+//  To do:
+/*
+    None
+*/
+
+//  Copyright © 2019 ii Studio. All rights reserved.
+
 
 #ifndef DLRadioButton_h
 #define DLRadioButton_h
