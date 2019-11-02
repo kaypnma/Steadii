@@ -5,8 +5,9 @@
 //  Defines the Button and calls button constructor
 
 //  Created by Kay Arellano on 10/27/19
-
 //  Last Updated by Dustin Seah on 11/01/2019
+
+//  Updates from Previous Commit:
 /*  
     Added Header
 */
