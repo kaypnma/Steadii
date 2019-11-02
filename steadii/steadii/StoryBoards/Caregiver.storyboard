@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CorbelBold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -454,6 +454,7 @@
         <image name="settings" width="54" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ZXw-WB-a56"/>
         <segue reference="U2I-Xb-8Km"/>
         <segue reference="A7z-YL-llJ"/>
     </inferredMetricsTieBreakers>

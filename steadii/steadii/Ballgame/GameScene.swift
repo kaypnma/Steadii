@@ -34,6 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let manager = CMMotionManager()
     var player = SKSpriteNode()
     //var edge1 = SKSpriteNode()
+    var GameOver:SKLabelNode!
     
     let tiltSensitivity = 4.0
     var prevTime:TimeInterval = 0
@@ -128,6 +129,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print ("YOU LOSE")
                 print ("Time: ", Double(round(1000*(-startTime.timeIntervalSinceNow))/1000))
                 self.isPaused = true
+                
+                
+                GameOver = SKLabelNode(text: "GAME OVER")
+                GameOver.fontSize = 100
+                GameOver.fontName = "Corbel-Bold"
+                GameOver.fontColor = UIColor.black
+                
+                self.addChild(GameOver)
+                
                 return
             }
             
