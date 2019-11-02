@@ -6,7 +6,7 @@
 //  Description/Purpose: Implementation of Ball Tilt Game
 
 //  Created by ckeilbar on 10/23/19
-//  Last Updated by Dustin Seah on 11/01/2019
+//  Last Updated by Denyse Tran on 11/02/2019
 
 //  Updates from Previous Commit:
 /*
@@ -29,7 +29,12 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
+
+protocol gameOverDelegate : class {
+    func gameIsOver()
+}
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    //@IBOutlet weak var exitbutton: UIButton!
     
     let manager = CMMotionManager()
     var player = SKSpriteNode()
@@ -108,6 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Used to monitor gravity
     //Used to change the size of the plane
     //Used to test detection
+    
     override func update(_ currentTime: CFTimeInterval) {
         
         if let tiltdata = manager.accelerometerData {
@@ -130,13 +136,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print ("Time: ", Double(round(1000*(-startTime.timeIntervalSinceNow))/1000))
                 self.isPaused = true
                 
-                
+                //Outputs a game over sign when the game ends
                 GameOver = SKLabelNode(text: "GAME OVER")
                 GameOver.fontSize = 100
                 GameOver.fontName = "Corbel-Bold"
                 GameOver.fontColor = UIColor.black
                 
                 self.addChild(GameOver)
+                
+                //notification for the exit button to appear when the game ends
+            NotificationCenter.default.post(name:NSNotification.Name("ExitButtonNotification"), object:nil)
                 
                 return
             }

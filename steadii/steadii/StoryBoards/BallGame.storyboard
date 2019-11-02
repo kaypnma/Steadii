@@ -31,13 +31,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="exit"/>
                                 <connections>
-                                    <segue destination="bZf-2a-jaI" kind="show" id="GPH-K5-alL"/>
+                                    <segue destination="bZf-2a-jaI" kind="show" id="59l-rf-4is"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="adw-SO-2sJ"/>
                     </view>
+                    <connections>
+                        <outlet property="ExitBallGame" destination="64J-bn-E6w" id="Cn7-sJ-gUu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLk-j2-HJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

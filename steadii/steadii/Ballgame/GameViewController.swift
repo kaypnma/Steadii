@@ -6,7 +6,7 @@
 //  Description/Purpose: Takes care of gyroscope input for ball game
 
 //  Created by ckeilbar on 10/23/19
-//  Last Updated by Dustin Seah on 11/01/2019
+//  Last Updated by Denyse Tran on 11/02/2019
 
 //  Updates from Previous Commit:
 /*  
@@ -29,11 +29,19 @@ import UIKit
 import SpriteKit
 //import GameplayKit
 
+
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var ExitBallGame: UIButton!
     override func viewDidLoad() {
+        self.ExitBallGame.isHidden = true
         super.viewDidLoad()
         
+        //Will display the exit button when the game ends
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "ExitButtonNotification"), object:nil, queue: nil) { notification in
+            self.ExitBallGame.isHidden = false
+        }
+
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let view = view as? SKView {
@@ -68,9 +76,11 @@ class GameViewController: UIViewController {
                     view.showsFPS = true
                     view.showsNodeCount = true
                 }*/
+  
             }
-        }
 
+        }
+    
     override var shouldAutorotate: Bool {
         return true
     }
@@ -86,4 +96,5 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
 }
