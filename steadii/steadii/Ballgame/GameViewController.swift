@@ -7,7 +7,7 @@
 //  Steadii
 
 //  GameViewController.swift
-//  /*Brief Descripton/Purpose of this file*/
+//  Takes care of gyroscope input for ball game
 
 //  Created by ckeilbar on 10/23/19
 
