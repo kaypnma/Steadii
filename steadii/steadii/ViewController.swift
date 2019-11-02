@@ -1,10 +1,29 @@
-//
+//  CMPT 275 Fall 2019 Group 2
+//  Steadii
+
 //  ViewController.swift
-//  steadii
-//
-//  Created by Kay Arellano on 2019-10-26.
-//  Copyright © 2019 Kay Arellano. All rights reserved.
-//
+
+//  Description/Purpose: defines view controller
+
+//  Created by Kay Arellano on 10/26/19
+//  Last Updated by Dustin Seah on 11/01/2019
+
+//  Updates from Previous Commit:
+/*
+ -  Added Header
+*/
+
+//  Known Bugs:
+/*
+    None
+*/
+
+//  To do:
+/*
+    None
+*/
+
+//  Copyright © 2019 ii Studio. All rights reserved.
 
 import UIKit
 
