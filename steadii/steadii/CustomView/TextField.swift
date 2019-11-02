@@ -2,7 +2,7 @@
 //  Steadii
 
 //  TextField.swift
-//  Constructs the text field and alters it's appearance
+//  Description/Purpose: Constructs the text field and alters it's appearance
 
 //  Created by Kay Arellano on 10/27/19
 //  Last Updated by Dustin Seah on 11/01/2019
