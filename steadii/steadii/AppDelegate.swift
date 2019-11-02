@@ -6,8 +6,9 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Kay Arellano on 10/26/19
-
 //  Last Updated by Dustin Seah on 11/01/2019
+
+//  Updates from Previous Commit:
 /*  
     Added Header
 */
