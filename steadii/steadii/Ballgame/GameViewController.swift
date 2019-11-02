@@ -5,8 +5,9 @@
 //  Takes care of gyroscope input for ball game
 
 //  Created by ckeilbar on 10/23/19
-
 //  Last Updated by Dustin Seah on 11/01/2019
+
+//  Updates from Previous Commit:
 /*  
     Added Header
 */
