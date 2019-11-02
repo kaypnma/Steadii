@@ -1,0 +1,29 @@
+//  ii Studio will be adhering to Swift’s API Design guidelines in our source code for Steadii. 
+//  The guidelines are defined here: https://swift.org/documentation/api-design-guidelines/
+
+//  The following header should be on the top of all source files and kept updated through each commit - /* */ are placeholders
+
+//  CMPT 275 Fall 2019 Group 2
+//  Steadii
+
+//  /*fileName*/./*fileType*/
+//  /*Brief Descripton/Purpose of this file*/
+
+//  Created by /*Name(s)*/ on /*Date*/
+
+//  Last Updated by /*Name(s)*/ on /*Date*/
+/*  
+    List of Updates from previous version
+*/
+
+//  Known Bugs:
+/*
+    List of Known Bugs
+*/
+
+//  To do:
+/*
+    List of things to do for future commits
+*/
+
+//  Copyright © 2019 ii Studio. All rights reserved.
