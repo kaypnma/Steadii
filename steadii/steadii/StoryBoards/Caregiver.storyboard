@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="CorbelBold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPL-jx-7iV">
-                                <rect key="frame" x="55" y="51" width="54" height="22"/>
+                                <rect key="frame" x="40" y="59" width="54" height="22"/>
                                 <state key="normal" image="settings"/>
                                 <connections>
                                     <segue destination="J0P-TV-JIU" kind="show" id="ZXw-WB-a56"/>
@@ -155,13 +155,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EPL-jx-7iV" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="27" id="0C9-bR-xGH"/>
                             <constraint firstItem="7II-su-W9o" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="21G-6Y-tVp"/>
                             <constraint firstItem="pBg-DT-VnX" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="2n4-C5-eje"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="kaV-SZ-BeP" secondAttribute="trailing" constant="90" id="4UW-0t-mGU"/>
                             <constraint firstItem="APU-Yk-jUi" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="6aw-VF-Eel"/>
-                            <constraint firstItem="EPL-jx-7iV" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="55" id="9Zi-ts-gyL"/>
                             <constraint firstItem="APU-Yk-jUi" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="155" id="AcL-YE-yI7"/>
+                            <constraint firstItem="EPL-jx-7iV" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="35" id="HpS-cz-gEN"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="8Tj-gn-Z1u" secondAttribute="trailing" constant="90" id="Hu5-50-7tA"/>
                             <constraint firstItem="gDB-wc-MxB" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="25" id="Jau-4Y-AdW"/>
                             <constraint firstItem="R0L-sR-Dss" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="452" id="LhS-D5-AJB"/>
@@ -175,7 +174,7 @@
                             <constraint firstItem="OtG-cn-co3" firstAttribute="top" secondItem="kaV-SZ-BeP" secondAttribute="bottom" constant="70" id="hse-hX-Us6"/>
                             <constraint firstItem="R0L-sR-Dss" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="50" id="i8b-tb-sHf"/>
                             <constraint firstItem="8Tj-gn-Z1u" firstAttribute="top" secondItem="OtG-cn-co3" secondAttribute="bottom" constant="70" id="o54-yz-a2w"/>
-                            <constraint firstItem="kaV-SZ-BeP" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="659" id="tKk-Ms-PgH"/>
+                            <constraint firstItem="EPL-jx-7iV" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="40" id="svr-hP-ynR"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="gDB-wc-MxB" secondAttribute="trailing" constant="55" id="uH4-BD-CnM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZYP-eF-lJG"/>
