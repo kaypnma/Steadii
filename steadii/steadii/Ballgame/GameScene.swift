@@ -2,23 +2,27 @@
 //  Steadii
 
 //  GameScene.swift
-//  Implementation of Ball Tilt Game
+
+//  Description/Purpose: Implementation of Ball Tilt Game
+
 //  Created by ckeilbar on 10/23/19
-//  Last Updated by /*Name(s)*/ on /*Date*/
+//  Last Updated by Dustin Seah on 11/01/2019
+
+//  Updates from Previous Commit:
 /*
- - Collision is correctly detected
- -
- */
+ -  Collision is correctly detected
+ -  Added Header
+*/
 
 //  Known Bugs:
 /*
- - Timer still goes on even after the player has lost
- */
+    None
+*/
 
 //  To do:
 /*
  - Test Gravity
- */
+*/
 
 //  Copyright © 2019 ii Studio. All rights reserved.
 
