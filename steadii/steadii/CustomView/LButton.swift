@@ -1,8 +1,3 @@
-//  ii Studio will be adhering to Swift’s API Design guidelines in our source code. 
-//  The guidelines are defined here: https://swift.org/documentation/api-design-guidelines/
-
-//  The following header should be on the top of all source files, simply replace things in /* */
-
 //  CMPT 275 Fall 2019 Group 2
 //  Steadii
 
