@@ -1,10 +1,32 @@
-//
-//  GameViewController.swift
+//  ii Studio will be adhering to Swift’s API Design guidelines in our source code. 
+//  The guidelines are defined here: https://swift.org/documentation/api-design-guidelines/
+
+//  The following header should be on the top of all source files, simply replace things in /* */
+
+//  CMPT 275 Fall 2019 Group 2
 //  Steadii
-//
-//  Created by ckeilbar on 10/23/19.
+
+//  GameViewController.swift
+//  /*Brief Descripton/Purpose of this file*/
+
+//  Created by ckeilbar on 10/23/19
+
+//  Last Updated by Dustin Seah on 11/01/2019
+/*  
+    Added Header
+*/
+
+//  Known Bugs:
+/*
+    None
+*/
+
+//  To do:
+/*
+    None
+*/
+
 //  Copyright © 2019 ii Studio. All rights reserved.
-//
 
 import UIKit
 import SpriteKit
