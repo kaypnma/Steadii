@@ -6,11 +6,11 @@
 //  Description/Purpose: Defines the Button and calls button constructor
 
 //  Created by Kay Arellano on 10/27/19
-//  Last Updated by Dustin Seah on 11/01/2019
+//  Last Updated by Kay Arellano on 11/02/2019
 
 //  Updates from Previous Commit:
 /*  
-    Added Header
+    Fixed constraint of mainpage of player
 */
 
 //  Known Bugs:
@@ -40,11 +40,9 @@ class LButton: UIButton {
     }
     
     private func setupButton() {
-//        titleLabel?.font    = UIFont(name: "Corbel Bold", size: 40)
-//        titleLabel?.font = UIFont.init(name: "EuphemiaUCAS-Bold", size: 40)
-        let titleColor      = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1)
+        let titleColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1)
         setTitleColor(titleColor, for: .normal)
-//        titleLabel?.font    = UIFont(name: "Corbel-Bold", size: 40)
-        layer.cornerRadius  = frame.size.height/2
+        titleLabel?.font    = UIFont(name: "AvenirNext-DemiBold", size: 40)
+        layer.cornerRadius = frame.size.height/2
     }
 }
