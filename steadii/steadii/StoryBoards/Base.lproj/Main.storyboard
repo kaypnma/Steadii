@@ -57,13 +57,13 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-4N-taJ">
-                                <rect key="frame" x="365" y="497.5" width="464" height="70"/>
+                                <rect key="frame" x="365" y="513.5" width="464" height="54"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-QH-KWK">
-                                <rect key="frame" x="365" y="426.5" width="464" height="56"/>
+                                <rect key="frame" x="365" y="442.5" width="464" height="56"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -74,7 +74,7 @@
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2-1" translatesAutoresizingMaskIntoConstraints="NO" id="lmG-h3-ZQL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steadii" translatesAutoresizingMaskIntoConstraints="NO" id="lmG-h3-ZQL">
                                 <rect key="frame" x="472" y="43" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="CvI-Id-iPl"/>
@@ -428,12 +428,20 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <segue destination="Vps-An-Yg3" kind="show" id="NPk-v8-zeD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-oO-8s4">
+                                <rect key="frame" x="471.5" y="84" width="251" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <color key="textColor" white="0.2347377232" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IOR-WX-lTa" firstAttribute="centerY" secondItem="Tzm-eO-WG5" secondAttribute="centerY" id="4TT-HR-BEx"/>
                             <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="VtQ-e8-7I1" secondAttribute="trailing" constant="750" id="5F4-SY-5v9"/>
+                            <constraint firstItem="OO1-oO-8s4" firstAttribute="centerX" secondItem="Tzm-eO-WG5" secondAttribute="centerX" id="5qB-AL-UeK"/>
                             <constraint firstItem="VqK-YS-Evi" firstAttribute="centerX" secondItem="Tzm-eO-WG5" secondAttribute="centerX" id="ClK-3T-kKc"/>
+                            <constraint firstItem="OO1-oO-8s4" firstAttribute="top" secondItem="cEL-nN-Wev" secondAttribute="top" constant="60" id="Efk-pZ-LO8"/>
                             <constraint firstItem="H19-AF-ZLM" firstAttribute="centerX" secondItem="Tzm-eO-WG5" secondAttribute="centerX" constant="271.25" id="FKs-dC-ti1"/>
                             <constraint firstItem="cEL-nN-Wev" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0We-VA-767" secondAttribute="trailing" constant="300" id="FQ3-KW-BrT"/>
                             <constraint firstItem="8l7-ZE-rhT" firstAttribute="centerX" secondItem="Tzm-eO-WG5" secondAttribute="centerX" constant="273" id="JQz-VX-xVH"/>
@@ -477,7 +485,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <constraint firstAttribute="height" constant="56" id="Wew-Mi-zva"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AtU-AG-wbD">
@@ -486,7 +494,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <constraint firstAttribute="height" constant="56" id="xHy-Dc-XVb"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVD-24-Y2F">
@@ -495,7 +503,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <constraint firstAttribute="height" constant="56" id="ZEf-tl-G8o"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFF-x4-4Pl">
@@ -504,7 +512,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <constraint firstAttribute="height" constant="56" id="Yx8-US-LQQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13E-5C-Rmp">
@@ -513,7 +521,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <constraint firstAttribute="height" constant="56" id="5X8-Dp-2WW"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92u-um-2wM">
@@ -650,12 +658,12 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
         <image name="back_arrow" width="52" height="34"/>
-        <image name="logo2-1" width="1024" height="1024"/>
         <image name="moving_ball_tut1" width="217" height="217"/>
         <image name="moving_ball_tut2" width="241" height="217"/>
         <image name="opt" width="24" height="24"/>
         <image name="selected_opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
+        <image name="steadii" width="1024" height="1024"/>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>

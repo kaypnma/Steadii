@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="439" id="th1-04-ekn"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2-2" translatesAutoresizingMaskIntoConstraints="NO" id="lir-fT-VJm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steadii" translatesAutoresizingMaskIntoConstraints="NO" id="lir-fT-VJm">
                                 <rect key="frame" x="445" y="86" width="304" height="204"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="DKN-wy-sPp"/>
@@ -60,6 +60,6 @@
     </scenes>
     <resources>
         <image name="iistudio_logo" width="1500" height="250"/>
-        <image name="logo2-2" width="1024" height="1024"/>
+        <image name="steadii" width="1024" height="1024"/>
     </resources>
 </document>
