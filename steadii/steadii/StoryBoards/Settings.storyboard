@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,90 +27,96 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile and Settings" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYA-xV-3kG">
-                                <rect key="frame" x="368.5" y="62" width="458.5" height="70"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="442" y="84" width="310.5" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ya-so-59u">
-                                <rect key="frame" x="67.5" y="60" width="52" height="34"/>
+                                <rect key="frame" x="40" y="54" width="52" height="34"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="euq-HG-gbY" kind="show" id="HGD-Yv-Ub9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSx-Xl-HvL">
-                                <rect key="frame" x="458" y="762" width="278" height="22"/>
-                                <state key="normal" image="logout"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="nhC-Ut-jws">
-                                <rect key="frame" x="692" y="368" width="86" height="340"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="nhC-Ut-jws">
+                                <rect key="frame" x="690" y="194" width="86" height="413"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfP-jv-TLr">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="53"/>
                                         <state key="normal" image="connect_acc"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-PM-2Ij">
-                                        <rect key="frame" x="0.0" y="106" width="86" height="22"/>
+                                        <rect key="frame" x="0.0" y="117" width="86" height="58"/>
                                         <state key="normal" image="Icon feather-volume-x"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrf-kY-pxi">
-                                        <rect key="frame" x="0.0" y="212" width="86" height="22"/>
+                                        <rect key="frame" x="0.0" y="239" width="86" height="53"/>
                                         <state key="normal" image="stats"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvD-Ix-Xff">
-                                        <rect key="frame" x="0.0" y="318" width="86" height="22"/>
+                                        <rect key="frame" x="0.0" y="356" width="86" height="57"/>
                                         <state key="normal" image="notification_bell"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-dF-dlh">
-                                <rect key="frame" x="207" y="180" width="361.5" height="474"/>
+                                <rect key="frame" x="207" y="190" width="298.5" height="417"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Account" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXE-sA-0db">
-                                        <rect key="frame" x="0.0" y="0.0" width="361.5" height="63"/>
-                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="298.5" height="54"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nf8-e4-7K3">
-                                        <rect key="frame" x="0.0" y="130" width="361.5" height="70"/>
-                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                        <rect key="frame" x="0.0" y="121" width="298.5" height="54"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Stats" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhO-g8-R6B">
-                                        <rect key="frame" x="0.0" y="267" width="361.5" height="70"/>
-                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                        <rect key="frame" x="0.0" y="242" width="298.5" height="54"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-Ac-M3P">
-                                        <rect key="frame" x="0.0" y="404" width="361.5" height="70"/>
-                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="50"/>
+                                        <rect key="frame" x="0.0" y="363" width="298.5" height="54"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrY-6f-umi" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="450" y="690" width="294" height="70"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="syd-BC-tzg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0Ya-so-59u" firstAttribute="top" secondItem="0h2-g5-DHa" secondAttribute="top" constant="36" id="03w-AU-Sxn"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="0Ya-so-59u" secondAttribute="bottom" constant="720" id="15L-3B-nVF"/>
-                            <constraint firstItem="nhC-Ut-jws" firstAttribute="leading" secondItem="ox9-dF-dlh" secondAttribute="trailing" constant="123.5" id="2Bw-XB-Esh"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" secondItem="uYA-xV-3kG" secondAttribute="trailing" constant="367" id="6LN-gT-lW2"/>
-                            <constraint firstItem="0Ya-so-59u" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="67.5" id="98F-1A-Bvh"/>
-                            <constraint firstItem="KSx-Xl-HvL" firstAttribute="top" secondItem="nhC-Ut-jws" secondAttribute="bottom" constant="54" id="F1c-l9-YPT"/>
+                            <constraint firstItem="0Ya-so-59u" firstAttribute="top" secondItem="0h2-g5-DHa" secondAttribute="top" constant="30" id="03w-AU-Sxn"/>
+                            <constraint firstItem="0Ya-so-59u" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="40" id="98F-1A-Bvh"/>
+                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" secondItem="nhC-Ut-jws" secondAttribute="trailing" constant="418" id="AHj-zU-vCf"/>
+                            <constraint firstItem="xrY-6f-umi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="450" id="HFx-tQ-f8B"/>
                             <constraint firstItem="ox9-dF-dlh" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="207" id="JaN-6i-igY"/>
-                            <constraint firstItem="ox9-dF-dlh" firstAttribute="top" secondItem="uYA-xV-3kG" secondAttribute="bottom" constant="48" id="KuN-yh-rjE"/>
-                            <constraint firstItem="KSx-Xl-HvL" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="458" id="MtC-df-jeC"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="KSx-Xl-HvL" secondAttribute="bottom" constant="30" id="aEd-Kb-ghD"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="ox9-dF-dlh" secondAttribute="bottom" constant="160" id="gA0-Bg-p0F"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" secondItem="nhC-Ut-jws" secondAttribute="trailing" constant="416" id="k50-e1-pDg"/>
-                            <constraint firstItem="uYA-xV-3kG" firstAttribute="leading" secondItem="0Ya-so-59u" secondAttribute="trailing" constant="249" id="nZp-Xi-rVk"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" secondItem="KSx-Xl-HvL" secondAttribute="trailing" constant="458" id="tpo-9O-xBa"/>
-                            <constraint firstItem="uYA-xV-3kG" firstAttribute="top" secondItem="0h2-g5-DHa" secondAttribute="top" constant="38" id="xgZ-KN-Gju"/>
+                            <constraint firstItem="nhC-Ut-jws" firstAttribute="leading" secondItem="ox9-dF-dlh" secondAttribute="trailing" constant="184.5" id="Mcd-nd-D0C"/>
+                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="xrY-6f-umi" secondAttribute="bottom" constant="54" id="Mlq-Tf-s14"/>
+                            <constraint firstItem="uYA-xV-3kG" firstAttribute="centerX" secondItem="ssH-3B-Unl" secondAttribute="centerX" id="QMv-3H-K7X"/>
+                            <constraint firstItem="xrY-6f-umi" firstAttribute="centerX" secondItem="ssH-3B-Unl" secondAttribute="centerX" id="Qy2-mB-js2"/>
+                            <constraint firstItem="rfP-jv-TLr" firstAttribute="top" secondItem="uYA-xV-3kG" secondAttribute="bottom" constant="64" id="cge-Pb-AGI"/>
+                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xrY-6f-umi" secondAttribute="trailing" constant="450" id="ggF-Vs-992"/>
+                            <constraint firstItem="ox9-dF-dlh" firstAttribute="top" secondItem="uYA-xV-3kG" secondAttribute="bottom" constant="60" id="sxu-lR-TlQ"/>
+                            <constraint firstItem="rfP-jv-TLr" firstAttribute="leading" secondItem="zXE-sA-0db" secondAttribute="trailing" constant="184.5" id="zBa-tI-5XD"/>
+                            <constraint firstItem="uYA-xV-3kG" firstAttribute="top" secondItem="0h2-g5-DHa" secondAttribute="top" constant="60" id="zDl-Gh-fGd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0h2-g5-DHa"/>
                     </view>
@@ -122,9 +128,8 @@
     </scenes>
     <resources>
         <image name="Icon feather-volume-x" width="86" height="58"/>
-        <image name="back_arrow" width="52" height="34.5"/>
-        <image name="connect_acc" width="76.5" height="53.5"/>
-        <image name="logout" width="278" height="77"/>
+        <image name="back_arrow" width="52" height="34"/>
+        <image name="connect_acc" width="76" height="53"/>
         <image name="notification_bell" width="47" height="57"/>
         <image name="stats" width="49" height="53"/>
     </resources>
