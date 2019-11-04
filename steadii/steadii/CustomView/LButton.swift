@@ -6,7 +6,7 @@
 //  Description/Purpose: Defines the Button and calls button constructor
 
 //  Created by Kay Arellano on 10/27/19
-//  Last Updated by Kay Arellano on 11/02/2019
+//  Last Updated by Chris Keilbart on 11/03/2019
 //  Worked on by Kay Arellano, Dustin Seah, and Chris Keilbart
 
 //  Updates from Previous Commit:
