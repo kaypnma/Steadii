@@ -5,13 +5,12 @@
 
 //  Description/Purpose: Implementation of Ball Tilt Game
 
-//  Created by ckeilbar on 10/23/19
-//  Last Updated by John Qu and Dustin Seah on 11/03/2019
+//  Created by Chris Keilbart on 10/23/19
+//  Last Updated by Chris Keilbart on 11/03/2019
 
 //  Updates from Previous Commit:
 /*
- -  made game more modular
- -  Added per-function description
+ -  Reworded and added comments
 */
 
 //  Known Bugs:
@@ -21,7 +20,7 @@
 
 //  To do:
 /*
-    None
+    Add optional sound
 */
 
 //  Copyright © 2019 ii Studio. All rights reserved.
@@ -59,7 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var playerRadius:Double
     var minimumGap:Double
     
-    // initializing the starting sizes of game elements
+    // Initializes the starting sizes of game elements
     init (  size: CGSize,
             PtiltSensitivity: Double = 4.0,
             planeRadiusStart: Double = 300.0,
@@ -76,9 +75,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         plane = SKShapeNode(circleOfRadius: CGFloat(planeRadiusStart))
         
-        // Randomizing the movement of the moving plane
+        // Randomizing the movement of the moving plane, can be adjusted to tune difficulty
         if planeDxDyRandom {
-            planeDx = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14)//Guaranteed to be not zero
+            planeDx = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14)
             planeDy = Bool.random() ? 3*Int.random(in: -14...(-8)) : 3*Int.random(in: 8...14)
         }
         else {
@@ -92,19 +91,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         super.init(size: size)
     }
     
-    // checks if the needed values have been initialized
+    // Checks if the needed values have been initialized
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // initializing what the user is able to see on screen. and starts the physics
+    // Initializes the game display and constructs the physics environment
     override func didMove(to view: SKView) {
         
         //actually center the scene to have the origin at the centre of the screen
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         backgroundColor = UIColor(red: 250/255, green: 207/255, blue: 142/255, alpha: 1)
-        //Creating Objects
         
+        //Creating display objects
         initializePlayer()
         initializePlane(planePosition: CGPoint(x: 0, y: 0))
         
@@ -116,6 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         initializePlanePhysics(planePhysicsVelocity: CGVector(dx: planeDx, dy: planeDy))
         
+        //Display
         self.addChild(player)
         self.addChild(plane)
     }
@@ -131,7 +131,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Used to change the size of the plane
     //Used to test detection
     
-    // constantly check for game conditions(has the user lost yet, position of the ball, gyroscope readings)
+    // Updates the game state by moving the ball, changing the plane size, and detecting if the game is over
     override func update(_ currentTime: CFTimeInterval) {
         
         if let tiltdata = manager.accelerometerData {
@@ -150,17 +150,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 return
             }
             
-            //Normal gameplay difficulty increase via plane radius decrease
-            
+            //Decrease the plane size to force the game to eventually end
             updatePlaneSize()
             
+            //Debug code
             //print ("x: ", player.anchorPoint.x, " | ", distanceX, " | ", plane.position.x)
             //print ("y: ", player.anchorPoint.y, " | ", distanceY, " | ", plane.position.y)
             //print ("r: ", distanceX, " | ", distanceY, " | ", distanceR)
         }
     }
     
-    // checks if the plane has collided with the edge of the screen
+    // Checks if the plane has collided with the edge of the screen, and if it has it bounces it off
     func checkEdgeCollision (plane: SKNode){
         if (plane.position.x > (size.width/2.0 - CGFloat(planeRadius)) &&
             plane.physicsBody!.velocity.dx > 0) ||
@@ -176,17 +176,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    // intakes the gyroscope reading and changing the ball speed, acceleration accordingly
+    // Reads from the gyroscope and changes the physics environment's gravity, which moves the ball
     func updateTileData (tiltdata: CMAccelerometerData) {
-        physicsWorld.gravity = CGVector(dx: -tiltdata.acceleration.y * tiltSensitivity, dy: tiltdata.acceleration.x * tiltSensitivity)//Swaped because of landscape
+        physicsWorld.gravity = CGVector(dx: -tiltdata.acceleration.y * tiltSensitivity, dy: tiltdata.acceleration.x * tiltSensitivity)//Swapped and negated because of landscape
     }
     
-    // checks if any part of the user controlled ball is out of the plane 
+    // Checks if any part of the user controlled ball is overlapping the plane
     func gameOver (distanceR: CGFloat) -> Bool {
         if distanceR > CGFloat(planeRadius - playerRadius) {
+            //Game has ended
             plane.physicsBody?.isDynamic = false
             player.physicsBody?.isDynamic = false
-            //print ("YOU LOSE")
             //print ("Time: ", Double(round(1000*(-startTime.timeIntervalSinceNow))/1000))
             self.isPaused = true
             
@@ -209,11 +209,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    // shrinks the plane size
+    // Shrinks the plane size
     func updatePlaneSize() {
         if planeRadius > (playerRadius + minimumGap) {
             let currentVelocity = CGVector(dx: plane.physicsBody!.velocity.dx, dy: plane.physicsBody!.velocity.dy)
-            planeScale *= 0.999
+            planeScale *= 0.999 //Can be adjusted to control the length of the game
             planeRadius = planeScale*planeRadiusStart
             plane.setScale(CGFloat(planeScale))
             plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius))
@@ -225,27 +225,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    // visually show the ball on screen according to its position 
+    // Display the ball on screen according to its position 
     func initializePlayer(textr: SKTexture = SKTexture(imageNamed: "tempball2")) {
         player = SKSpriteNode(texture: textr)
         player.setScale(0.25)
         player.position = CGPoint(x: 0, y: 0)
     }
     
-    // visually show the plane on screen according to it's position
+    // Display the plane on screen according to it's position
     func initializePlane(planePosition: CGPoint = CGPoint(x:0, y:0)) {
         plane.name = "plane"
         plane.position = planePosition
         plane.fillColor = UIColor(red: 210/255, green: 231/255, blue: 230/255, alpha: 1)
     }
     
-    // initialize the plane's physics (it's movement, collision, and size values)
+    // Initialize the plane's physics (it's movement, collision, and size values)
     func initializePlanePhysics(planePhysicsVelocity: CGVector = CGVector(dx: 0, dy: 0)) {
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width/2)
         player.physicsBody!.affectedByGravity = true
-        player.physicsBody?.collisionBitMask = 0//Cannot bounce off of anything, this line must be in otherwise the ball freaks out
+        player.physicsBody?.collisionBitMask = 0//This in combination with the other bitmask fixes issue 1
         
-        //this is fake gravity because real gravity moves too fast when I test on an iMac
+        //Control the ball's motion without gravity, useful for simulating the game
         //player.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
         
         plane.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(planeRadius))
