@@ -7,7 +7,7 @@
 
 //  Created by Chris Keilbart on 10/23/19
 //  Last Updated by Chris Keilbart on 11/03/2019
-//  Worked on by Chris Keilbart, Dustin Seah, Denyse Tran
+//  Worked on by Chris Keilbart, John Qu, Dustin Seah, Denyse Tran
 
 //  Updates from Previous Commit:
 /*  
