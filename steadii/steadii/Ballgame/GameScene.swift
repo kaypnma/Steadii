@@ -29,7 +29,7 @@
 import SpriteKit
 import GameplayKit
 import CoreMotion
-
+import FirebaseDatabase
 
 protocol gameOverDelegate : class {
     func gameIsOver()
@@ -202,7 +202,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //notification for the exit button to apear when the game ends
             NotificationCenter.default.post(name:NSNotification.Name("ExitButtonNotification"), object:nil)
-        
+           
+            //databse component, need to construct a function for future
+            let ref = Database.database().reference()
+            ref.child("score/performance1").setValue(Double(round(1000*(-startTime.timeIntervalSinceNow))))
+            //
             return true
         }
         else {
