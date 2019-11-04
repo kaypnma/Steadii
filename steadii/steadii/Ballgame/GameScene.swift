@@ -7,10 +7,11 @@
 
 //  Created by Chris Keilbart on 10/23/19
 //  Last Updated by Chris Keilbart on 11/03/2019
+//  Worked on by Chris Keilbart, John Qu, Dustin Seah, Denyse Tran
 
 //  Updates from Previous Commit:
 /*
- -  Reworded and added comments
+ -  New header
 */
 
 //  Known Bugs:
