@@ -6,7 +6,7 @@
 //  Description/Purpose: Logic for radio button
 
 //  Created by Denyse Tran on 10/27/19
-//  Last Updated by Dustin Seah on 11/01/2019
+//  Last Updated by Chris Keilbart on 11/03/2019
 //  Worked on by Denyse Tran, Kay Arellano, Dustin Seah, and Chris Keilbart
 
 //  Updates from Previous Commit:
@@ -164,5 +164,3 @@ public class radioButton: UIButton {
         // Drawing code
     }
     */
-
-
