@@ -3,14 +3,14 @@
 
 //  GameViewController.swift
 
-//  Description/Purpose: Takes care of gyroscope input for ball game
+//  Description/Purpose: Handles the presentation and display of the ball game
 
-//  Created by ckeilbar on 10/23/19
-//  Last Updated by Denyse Tran on 11/02/2019
+//  Created by Chris Keilbart on 10/23/19
+//  Last Updated by Chris Keilbart on 11/03/2019
 
 //  Updates from Previous Commit:
 /*  
-    Added Header
+    Deleted old code and added comments
 */
 
 //  Known Bugs:
@@ -27,7 +27,6 @@
 
 import UIKit
 import SpriteKit
-//import GameplayKit
 
 
 class GameViewController: UIViewController {
@@ -43,11 +42,11 @@ class GameViewController: UIViewController {
         }
 
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
+        // including entities and graphs, this is default generated Xcode code
         if let view = view as? SKView {
             let scene = GameScene(size: view.bounds.size)
-            view.showsFPS = true
-            view.showsNodeCount = true
+            view.showsFPS = false
+            view.showsNodeCount = false
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             view.ignoresSiblingOrder = true
@@ -56,30 +55,10 @@ class GameViewController: UIViewController {
             scene.scaleMode = .aspectFill
             
             view.presentScene(scene)
-            //Something to do with gamescene, which I do not think we are using
-            /*// Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! GameScene? {
-                
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-                
-                // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
-                
-                // Present the scene
-                if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
-                    
-                    view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
-                }*/
-  
             }
-
         }
+    
+    //General game view preferences
     
     override var shouldAutorotate: Bool {
         return true
