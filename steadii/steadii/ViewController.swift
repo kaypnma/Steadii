@@ -7,6 +7,7 @@
 
 //  Created by Kay Arellano on 10/26/19
 //  Last Updated by Dustin Seah on 11/01/2019
+//  Worked on by Kay Arellano, Dustin Seah, Jack Guo, Denyse Tran, and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
