@@ -192,21 +192,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.isPaused = true
             
             //Outputs a game over sign when the game ends
-            GameOver = SKLabelNode(text: "GAME OVER\nDURATION: " + String(Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)) + " seconds")
+            var gtime = 0.0
+            gtime = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
+            GameOver = SKLabelNode(text: "GAME OVER\nDURATION: " + String(gtime) + " seconds")
             GameOver.numberOfLines = 0
             GameOver.fontSize = 100
             GameOver.fontName = "Corbel-Bold"
             GameOver.fontColor = UIColor.black
+            //databse component, need to construct a function for future
+            let ref = Database.database().reference()
+            ref.child("score").child("player/bscore").setValue(gtime)
+            ////
             
             self.addChild(GameOver)
             
             //notification for the exit button to apear when the game ends
             NotificationCenter.default.post(name:NSNotification.Name("ExitButtonNotification"), object:nil)
            
-            //databse component, need to construct a function for future
-            let ref = Database.database().reference()
-            ref.child("score/performance1").setValue(Double(round(1000*(-startTime.timeIntervalSinceNow))))
-            //
+           
+            
+            
             return true
         }
         else {
