@@ -3,14 +3,14 @@
 
 //  steadiiTests.swift
 
-//  Description/Purpose: Used to automate testing of Steadii
+//  Description/Purpose: Used in automated unit tests for Steadii
 
 //  Created by Kay Arellano on 10/26/19
-//  Last Updated by Dustin Seah on 11/01/2019
+//  Last Updated by Chris Keilbart on 11/03/2019
 
 //  Updates from Previous Commit:
 /*
- -  Added Header
+ -  Added some comments
 */
 
 //  Known Bugs:
@@ -20,7 +20,7 @@
 
 //  To do:
 /*
-    None
+    Update this file with tests for the word association game
 */
 
 //  Copyright © 2019 ii Studio. All rights reserved.
@@ -35,6 +35,7 @@ class steadiiTests: XCTestCase {
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        //Examines the ball game
         super.setUp()
         sut = GameScene(size: CGSize(width: 1000, height: 1000),
                         planeDxDyRandom: false)
@@ -46,6 +47,7 @@ class steadiiTests: XCTestCase {
         super.tearDown()
     }
 
+    //Tests to see if the plane correctly bounces off of the edges of the screen
     func testCheckEdgeCollision() {
         // Given
         let initialVelocity = CGVector(dx: sut.planeDx, dy: sut.planeDy)
@@ -65,6 +67,7 @@ class steadiiTests: XCTestCase {
         XCTAssert(checkDx && checkDy)
     }
     
+    //Tests to see if the game ends when overlap of the ball and plane occurs
     func testGameOver() {
         // Given
         sut.initializePlayer()
@@ -83,6 +86,7 @@ class steadiiTests: XCTestCase {
         XCTAssert(checkGameOver)
     }
     
+    //Tests to see if the moving plane is correctly changing size
     func testUpdatePlaneSize() {
         // Given
         sut.initializePlayer()
