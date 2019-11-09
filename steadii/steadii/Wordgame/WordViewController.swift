@@ -31,7 +31,7 @@ class WordViewController: UIViewController {
         
         wordQuestions = [wordQuestion(wordQuestion: "randomowdsfsdord", categories: ["cat1","cat2","cat3"], answerInt: 0),
                          wordQuestion(wordQuestion: "randomowfsdfsord", categories: ["cat1","cat2","cat3"], answerInt: 1),
-                         wordQuestion(wordQuestion: "randomodsaword", categories: ["cat1","cat2","cat3"], answerInt: 2),]
+                         wordQuestion(wordQuestion: "randomodsaword", categories: ["cat1","cat2","cat3"], answerInt: 2),] //needs editing
         
     }
     
@@ -43,7 +43,7 @@ class WordViewController: UIViewController {
             answerNumber = wordQuestions[wordNumber].answerInt
             
             for i in 0..<catButtons.count{
-            catButtons[i].setTitle(wordQuestions[wordNumber].categories[i], for: .normal)
+            catButtons[i].setTitle(wordQuestions[wordNumber].categories[i], for: .normal) //needs editing
             }
             wordQuestions.remove(at: wordNumber)
             
