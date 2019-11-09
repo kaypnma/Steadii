@@ -1,7 +1,76 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Word View Controller-->
+        <scene sceneID="cvl-Sq-9dO">
+            <objects>
+                <viewController storyboardIdentifier="WordVC" id="xIE-S5-p5z" customClass="WordViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZ8-4L-dtY">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-yf-WHv">
+                                <rect key="frame" x="576" y="227" width="42" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-rS-ItW" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="160" y="496" width="211" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Category1Action:" destination="xIE-S5-p5z" eventType="touchUpInside" id="GLp-gr-Uuo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efG-ua-aD9" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="501" y="496" width="211" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Category2Action:" destination="xIE-S5-p5z" eventType="touchUpInside" id="N5R-Z9-22t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-Cu-5l9" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="824" y="496" width="211" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Category3Action:" destination="xIE-S5-p5z" eventType="touchUpInside" id="Oli-g1-a4K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="S8b-oX-KAM"/>
+                    </view>
+                    <connections>
+                        <outlet property="Category1" destination="Ake-rS-ItW" id="tEi-kO-dy7"/>
+                        <outlet property="Category2" destination="efG-ua-aD9" id="BUs-WT-WRj"/>
+                        <outlet property="Category3" destination="CPX-Cu-5l9" id="tmw-l8-JZm"/>
+                        <outlet property="GivenWord" destination="D1b-yf-WHv" id="uKF-hk-Dda"/>
+                        <outlet property="catButtons" destination="CPX-Cu-5l9" id="RMU-R8-QZy"/>
+                        <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="bHB-ei-aW2"/>
+                        <outletCollection property="catButtons" destination="efG-ua-aD9" collectionClass="NSMutableArray" id="fTn-yu-8zU"/>
+                        <outletCollection property="catButtons" destination="CPX-Cu-5l9" collectionClass="NSMutableArray" id="1H3-fB-WCw"/>
+                        <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="Z6t-qp-pYj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxX-un-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202.01005025125627" y="27.338129496402878"/>
+        </scene>
+    </scenes>
 </document>
