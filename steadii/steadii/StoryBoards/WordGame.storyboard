@@ -13,7 +13,7 @@
         <!--Word View Controller-->
         <scene sceneID="cvl-Sq-9dO">
             <objects>
-                <viewController storyboardIdentifier="WordVC" id="xIE-S5-p5z" customClass="WordViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordGameVC" id="xIE-S5-p5z" customClass="WordViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZ8-4L-dtY">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,31 +25,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-rS-ItW" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-rS-ItW">
                                 <rect key="frame" x="160" y="496" width="211" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="Category1Action:" destination="xIE-S5-p5z" eventType="touchUpInside" id="GLp-gr-Uuo"/>
+                                    <action selector="Cat1Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="t5S-hE-MsV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efG-ua-aD9" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efG-ua-aD9">
                                 <rect key="frame" x="501" y="496" width="211" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="Category2Action:" destination="xIE-S5-p5z" eventType="touchUpInside" id="N5R-Z9-22t"/>
+                                    <action selector="Cat2Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="pfQ-Ib-NzZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-Cu-5l9" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-Cu-5l9">
                                 <rect key="frame" x="824" y="496" width="211" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="Category3Action:" destination="xIE-S5-p5z" eventType="touchUpInside" id="Oli-g1-a4K"/>
+                                    <action selector="Cat3Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="Gsu-Ul-HHv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,15 +57,11 @@
                         <viewLayoutGuide key="safeArea" id="S8b-oX-KAM"/>
                     </view>
                     <connections>
-                        <outlet property="Category1" destination="Ake-rS-ItW" id="tEi-kO-dy7"/>
-                        <outlet property="Category2" destination="efG-ua-aD9" id="BUs-WT-WRj"/>
-                        <outlet property="Category3" destination="CPX-Cu-5l9" id="tmw-l8-JZm"/>
-                        <outlet property="GivenWord" destination="D1b-yf-WHv" id="uKF-hk-Dda"/>
-                        <outlet property="catButtons" destination="CPX-Cu-5l9" id="RMU-R8-QZy"/>
+                        <outlet property="wordLabel" destination="D1b-yf-WHv" id="mlj-27-OeQ"/>
                         <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="bHB-ei-aW2"/>
                         <outletCollection property="catButtons" destination="efG-ua-aD9" collectionClass="NSMutableArray" id="fTn-yu-8zU"/>
                         <outletCollection property="catButtons" destination="CPX-Cu-5l9" collectionClass="NSMutableArray" id="1H3-fB-WCw"/>
-                        <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="Z6t-qp-pYj"/>
+                        <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="8D7-1R-O12"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxX-un-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>

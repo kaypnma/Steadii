@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CorbelBold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -367,6 +367,9 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <constraint firstAttribute="width" constant="244" id="HmM-jy-eTF"/>
                                 </constraints>
                                 <state key="normal" image="Play Button"/>
+                                <connections>
+                                    <segue destination="JAg-28-k1L" kind="show" id="W4j-X3-8Yl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-ZE-rhT">
                                 <rect key="frame" x="745" y="292" width="250" height="250"/>
@@ -642,6 +645,14 @@ If it is wrong, it will be indicated in red with a cross.</string>
             </objects>
             <point key="canvasLocation" x="301" y="-906"/>
         </scene>
+        <!--WordGameVC-->
+        <scene sceneID="hRk-yv-YNx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordGame" referencedIdentifier="WordGameVC" id="JAg-28-k1L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29y-DY-WQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="-647"/>
+        </scene>
         <!--BallGameVC-->
         <scene sceneID="afc-QI-RHk">
             <objects>
@@ -667,6 +678,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="C63-Tx-DpU"/>
         <segue reference="q03-3O-Rue"/>
     </inferredMetricsTieBreakers>
 </document>

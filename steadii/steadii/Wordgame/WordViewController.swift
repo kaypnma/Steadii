@@ -18,18 +18,20 @@ struct wordQuestion {
 class WordViewController: UIViewController {
     var wordQuestions = [wordQuestion]()
     var wordNumber = Int()
+    var answerNumber = Int()
+    
+    @IBOutlet var catButtons: [UIButton]!
+    
     
     @IBOutlet weak var wordLabel: UILabel!
-    
-    @IBOutlet var catButtons: [LButton]!
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wordQuestions = [wordQuestion(wordQuestion: "randomoword", categories: ["cat1","cat2","cat3"], answerInt: 1)]
-        
+        wordQuestions = [wordQuestion(wordQuestion: "randomowdsfsdord", categories: ["cat1","cat2","cat3"], answerInt: 0),
+                         wordQuestion(wordQuestion: "randomowfsdfsord", categories: ["cat1","cat2","cat3"], answerInt: 1),
+                         wordQuestion(wordQuestion: "randomodsaword", categories: ["cat1","cat2","cat3"], answerInt: 2),]
         
     }
     
@@ -37,11 +39,49 @@ class WordViewController: UIViewController {
         if wordQuestions.count > 0 {
             wordNumber = 0
             wordLabel.text=wordQuestions[wordNumber].wordQuestion
-            //for i in 0..
             
+            answerNumber = wordQuestions[wordNumber].answerInt
+            
+            for i in 0..<catButtons.count{
+            catButtons[i].setTitle(wordQuestions[wordNumber].categories[i], for: .normal)
+            }
+            wordQuestions.remove(at: wordNumber)
+            
+        }
+        else {
+            //probably change the button image to correct (green) and add a checkmark
+            NSLog("Done!")
         }
     }
     
+    
+    @IBAction func Cat1Button(_ sender: Any) {
+        if answerNumber == 0 {
+            pickWord()
+        }
+        else {
+            //change the button image to wrong (red) and add an x
+            NSLog("Wrong!")
+        }
+        
+    }
+    @IBAction func Cat2Button(_ sender: Any) {
+        if answerNumber == 1 {
+            pickWord()
+        }
+        else {
+            NSLog("Wrong!")
+        }
+    }
+
+    @IBAction func Cat3Button(_ sender: Any) {
+        if answerNumber == 2 {
+            pickWord()
+        }
+        else {
+            NSLog("Wrong!")
+        }
+    }
     
     
     /*func randomWord(){
@@ -51,7 +91,6 @@ class WordViewController: UIViewController {
         switch(randomNumber) {
         case 1:
             GivenWord.text = "This is a word 1"
-            Category1.setTitle("randomcat1", for: UIControl.State.normal)
             break
         case 2:
             GivenWord.text = "This is a word 1"
@@ -69,12 +108,6 @@ class WordViewController: UIViewController {
         
     //}
     
-    @IBAction func Category1Action(_ sender: Any) {
-    }
-    @IBAction func Category2Action(_ sender: Any) {
-    }
-    @IBAction func Category3Action(_ sender: Any) {
-    }
     /*
     // MARK: - Navigation
 
