@@ -150,7 +150,7 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "70's Music"
-        listOfWords = ["Dancing Queen", "Stayin' Alive", "Jolene", "You're So Vain", "We Will Rock You", "Band On the Run", "Go Your Own Way", "Born to Run", "Stairway To Heaven", "My Sharona"]
+        listOfWords = ["Dancing Queen", "Stayin' Alive", "Hotel California", "You're So Vain", "We Will Rock You", "Band On the Run", "Go Your Own Way", "Born to Run", "Stairway To Heaven", "My Sharona"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
