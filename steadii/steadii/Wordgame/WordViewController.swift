@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
-    Created file
+    Added delay and timer
 */
 
 //  Known Bugs:
@@ -105,7 +105,7 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Trees"
-        listOfWords = ["Spruce", "Fir", "Evergreen", "Oak", "Cedar", "Willow", "Conifer", "Walnut", "Birch", "Beech"]
+        listOfWords = ["Spruce", "Fir", "Evergreen", "Oak", "Cedar", "Willow", "Conifer", "Sycamore", "Birch", "Beech"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
@@ -160,12 +160,12 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Dance"
-        listOfWords = ["Swing", "Foxtrot", "Ballroom", "Ballet", "Charleston", "Folk", "Square", "Line", "Tap", "The Twist"]
+        listOfWords = ["Swing", "Foxtrot", "Ballroom", "Ballet", "The Charleston", "Folk", "Square", "Line", "Tap", "The Twist"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
         catName = "Art"
-        listOfWords = ["Painting", "Sculpture", "Contemporary", "Abstract", "Nouveau", "Deco", "Pottery", "Renaissance", "Drawing", "Pastel"]
+        listOfWords = ["Painting", "Sculpture", "Creative", "Abstract", "Nouveau", "Deco", "Pottery", "Renaissance", "Drawing", "Pastel"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
     }
@@ -222,6 +222,8 @@ class WordViewController: UIViewController {
     var answerNumber = Int()
     let numQuestions = 15
     let startTime = Date()
+    var numWrong = 0;
+    let delay = 0.65
     
     @IBOutlet var catButtons: [UIButton]!
     
@@ -260,7 +262,13 @@ class WordViewController: UIViewController {
         }
     }
     
+    //Handles what happens when the left button is tapped
     @IBAction func Cat1Button(_ sender: Any) {
+        //Prevents user interaction for the specified delay
+        self.view.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now()+delay){
+            self.view.isUserInteractionEnabled = true
+        }
         if answerNumber == 0 {
             //make green/play sound etc
             if !dispNewWord(){
@@ -270,11 +278,18 @@ class WordViewController: UIViewController {
         }
         else {
             //change the button image to wrong (red) and add an x
+            numWrong += 1;
             NSLog("Wrong!")
         }
     }
     
+    //Handles what happens when the centre button is tapped
     @IBAction func Cat2Button(_ sender: Any) {
+        //Prevents user interaction for the specified delay
+        self.view.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now()+delay){
+            self.view.isUserInteractionEnabled = true
+        }
         if answerNumber == 1 {
             //make green/play sound etc
             if !dispNewWord(){
@@ -283,11 +298,18 @@ class WordViewController: UIViewController {
             }
         }
         else {
+            numWrong += 1;
             NSLog("Wrong!")
         }
     }
 
+    //Handles what happens when the right button is pressed
     @IBAction func Cat3Button(_ sender: Any) {
+        //Prevents user interaction for the specified delay
+        self.view.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now()+delay){
+            self.view.isUserInteractionEnabled = true
+        }
         if answerNumber == 2 {
             //make green/play sound etc
             if !dispNewWord(){
@@ -296,6 +318,7 @@ class WordViewController: UIViewController {
             }
         }
         else {
+            numWrong += 1;
             NSLog("Wrong!")
         }
     }
@@ -303,6 +326,7 @@ class WordViewController: UIViewController {
     //to be called when the game is over, displays stuff and tidies up
     func gameOver(){
         let gameDuration = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
+        print(gameDuration)
     }
     
     /*
