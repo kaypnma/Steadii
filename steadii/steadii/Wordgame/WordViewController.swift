@@ -120,12 +120,12 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Astronomy"
-        listOfWords = ["Moon", "Pluto", "Comet", "Astroid", "Mercury", "Venus", "Neptune", "Saturn", "Telescope", "Hubble"]
+        listOfWords = ["Moon", "Pluto", "Comet", "Asteroid", "Mercury", "Venus", "Neptune", "Saturn", "Telescope", "Hubble"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
         catName = "Chemistry"
-        listOfWords = ["Test Tube", "Beaker", "Beaker", "Silicon", "Boron", "Periodic Table", "Acid", "Ion", "Atom", "Molecule"]
+        listOfWords = ["Test Tube", "Beaker", "Lab Coat", "Silicon", "Boron", "Periodic Table", "Acid", "Ion", "Atom", "Molecule"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
@@ -229,10 +229,12 @@ class WordViewController: UIViewController {
     
     @IBOutlet weak var wordLabel: UILabel!
     
+    @IBOutlet weak var exitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.exitButton.isHidden = true
+        
         wordQuestions.reserveCapacity(numQuestions)
         for _ in 0..<numQuestions{
             wordQuestions.append(catMan.getWords())
@@ -274,6 +276,7 @@ class WordViewController: UIViewController {
             if !dispNewWord(){
                 //Do game over stuff
                 gameOver()
+
             }
         }
         else {
@@ -295,6 +298,7 @@ class WordViewController: UIViewController {
             if !dispNewWord(){
                 //Do game over stuff
                 gameOver()
+
             }
         }
         else {
@@ -327,6 +331,12 @@ class WordViewController: UIViewController {
     func gameOver(){
         let gameDuration = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
         print(gameDuration)
+        self.exitButton.isHidden = false
+
+        
+        //close buttons and label (hide)
+        //make exit button appear
+        //make game over screen
     }
     
     /*

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PlayerMainVC-->
+        <scene sceneID="Y4H-wH-NQT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="PlayerMainVC" id="Lhq-KI-4jv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FE-63-gg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="-242"/>
+        </scene>
         <!--Word View Controller-->
         <scene sceneID="cvl-Sq-9dO">
             <objects>
@@ -55,11 +63,20 @@
                                     <action selector="Cat2Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="pfQ-Ib-NzZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67n-Il-TbI">
+                                <rect key="frame" x="65" y="51" width="97" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="exit"/>
+                                <connections>
+                                    <segue destination="Lhq-KI-4jv" kind="show" id="gPW-3k-s93"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="S8b-oX-KAM"/>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="67n-Il-TbI" id="Qjq-iV-tjI"/>
                         <outlet property="wordLabel" destination="D1b-yf-WHv" id="mlj-27-OeQ"/>
                         <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="bHB-ei-aW2"/>
                         <outletCollection property="catButtons" destination="efG-ua-aD9" collectionClass="NSMutableArray" id="fTn-yu-8zU"/>
@@ -72,4 +89,7 @@
             <point key="canvasLocation" x="-202.01005025125627" y="27.338129496402878"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="exit" width="97" height="103"/>
+    </resources>
 </document>
