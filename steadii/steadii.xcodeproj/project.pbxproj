@@ -13,6 +13,8 @@
 		566DC44C23680989002FC0B9 /* BallGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566DC44B23680989002FC0B9 /* BallGame.storyboard */; };
 		567C720A2367B7BD0021271A /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 567C72092367B7BD0021271A /* DLRadioButton.m */; };
 		5689FF192366B81C00AE28CB /* radioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5689FF182366B81C00AE28CB /* radioButton.swift */; };
+		5EB910C4237DDDFC0095664A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB910C1237DDDF40095664A /* Charts.framework */; };
+		5EB910C5237DDDFC0095664A /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB910C1237DDDF40095664A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DC61521236CDE3800F0F69E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC6151F236CDE3800F0F69E /* GameScene.swift */; };
 		6DC61522236CDE3800F0F69E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC61520236CDE3800F0F69E /* GameViewController.swift */; };
 		6DC61524236CDE4900F0F69E /* ballimg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6DC61523236CDE4900F0F69E /* ballimg.atlas */; };
@@ -35,6 +37,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5EB910C0237DDDF40095664A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EB910BB237DDDF40095664A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		5EB910C2237DDDF40095664A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EB910BB237DDDF40095664A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		5EB910C6237DDDFC0095664A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EB910BB237DDDF40095664A /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
 		829E2B612364BB130064993B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 829E2B442364BB0C0064993B /* Project object */;
@@ -51,6 +74,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5EB910C8237DDDFC0095664A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5EB910C5237DDDFC0095664A /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0C525A4C908B7A9803746492 /* Pods_steadiiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steadiiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4084268B92E7659C368FF5CE /* Pods-steadii.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii.debug.xcconfig"; path = "Target Support Files/Pods-steadii/Pods-steadii.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +99,7 @@
 		567C72092367B7BD0021271A /* DLRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		567C720C2367B8960021271A /* DLRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		5689FF182366B81C00AE28CB /* radioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radioButton.swift; sourceTree = "<group>"; };
+		5EB910BB237DDDF40095664A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		6DC6151F236CDE3800F0F69E /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6DC61520236CDE3800F0F69E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6DC61523236CDE4900F0F69E /* ballimg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ballimg.atlas; sourceTree = "<group>"; };
@@ -99,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99BA9684101F45B2A3DB9D7D /* Pods_steadii.framework in Frameworks */,
+				5EB910C4237DDDFC0095664A /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EB910BC237DDDF40095664A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EB910C1237DDDF40095664A /* Charts.framework */,
+				5EB910C3237DDDF40095664A /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6DC6151E236CDE1200F0F69E /* Ballgame */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +195,7 @@
 		829E2B432364BB0C0064993B = {
 			isa = PBXGroup;
 			children = (
+				5EB910BB237DDDF40095664A /* Charts.xcodeproj */,
 				829E2B4E2364BB0C0064993B /* steadii */,
 				829E2B632364BB130064993B /* steadiiTests */,
 				829E2B6E2364BB130064993B /* steadiiUITests */,
@@ -250,10 +299,12 @@
 				829E2B492364BB0C0064993B /* Frameworks */,
 				829E2B4A2364BB0C0064993B /* Resources */,
 				10E2346ECD83287F37D6E4A7 /* [CP] Embed Pods Frameworks */,
+				5EB910C8237DDDFC0095664A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5EB910C7237DDDFC0095664A /* PBXTargetDependency */,
 			);
 			name = steadii;
 			productName = steadii;
@@ -334,6 +385,12 @@
 			mainGroup = 829E2B432364BB0C0064993B;
 			productRefGroup = 829E2B4D2364BB0C0064993B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5EB910BC237DDDF40095664A /* Products */;
+					ProjectRef = 5EB910BB237DDDF40095664A /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				829E2B4B2364BB0C0064993B /* steadii */,
@@ -342,6 +399,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5EB910C1237DDDF40095664A /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 5EB910C0237DDDF40095664A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5EB910C3237DDDF40095664A /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 5EB910C2237DDDF40095664A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		829E2B4A2364BB0C0064993B /* Resources */ = {
@@ -517,6 +591,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5EB910C7237DDDFC0095664A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 5EB910C6237DDDFC0095664A /* PBXContainerItemProxy */;
+		};
 		829E2B622364BB130064993B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 829E2B4B2364BB0C0064993B /* steadii */;
@@ -669,6 +748,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4084268B92E7659C368FF5CE /* Pods-steadii.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -690,6 +770,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5207B6B75451BFA76C4BC79 /* Pods-steadii.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
