@@ -6,12 +6,12 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Chris Keilbart on 11/12/2019
+//  Last Updated by Chris Keilbart on 11/14/2019
 //  Worked on by Denyse Tran and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
-    Remove debug prints
+   bond -> dividend
 */
 
 //  Known Bugs:
@@ -100,7 +100,7 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Finance"
-        listOfWords = ["Budget", "Money", "Stocks", "Bonds", "Bank", "Teller", "Debit", "Credit", "Debt", "Asset"]
+        listOfWords = ["Budget", "Money", "Stocks", "Dividend", "Bank", "Teller", "Debit", "Credit", "Debt", "Asset"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
