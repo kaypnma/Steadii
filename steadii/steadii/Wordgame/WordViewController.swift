@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
-    Added delay and timer
+    Remove debug prints
 */
 
 //  Known Bugs:
@@ -197,12 +197,12 @@ class categoryManager{
         returnableCategories[rightInt] = categoryNames[rightCatNum]
         returnableCategories[(rightInt+1)%3] = categoryNames[wrongCatNum1]
         returnableCategories[(rightInt+2)%3] = categoryNames[wrongCatNum2]
-        print(drawnWord)
+        /*print(drawnWord)
         print(rightInt)
         print(returnableCategories[0])
         print(returnableCategories[1])
         print(returnableCategories[2])
-        print("\n")
+        print("\n")*/
         return wordQuestion(word: drawnWord, categories: returnableCategories, answerInt: rightInt)
     }
     
@@ -282,7 +282,7 @@ class WordViewController: UIViewController {
         else {
             //change the button image to wrong (red) and add an x
             numWrong += 1;
-            NSLog("Wrong!")
+            //NSLog("Wrong!")
         }
     }
     
@@ -303,7 +303,7 @@ class WordViewController: UIViewController {
         }
         else {
             numWrong += 1;
-            NSLog("Wrong!")
+            //NSLog("Wrong!")
         }
     }
 
@@ -323,7 +323,7 @@ class WordViewController: UIViewController {
         }
         else {
             numWrong += 1;
-            NSLog("Wrong!")
+            //NSLog("Wrong!")
         }
     }
     
