@@ -6,12 +6,12 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Chris Keilbart on 11/14/2019
+//  Last Updated by Denyse Tran on 11/14/2019
 //  Worked on by Denyse Tran and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
-   bond -> dividend
+   add right and wrong guesses animations
 */
 
 //  Known Bugs:
@@ -220,30 +220,37 @@ class WordViewController: UIViewController {
     var wordQuestions = [wordQuestion]()
     var questionNumber = 0
     var answerNumber = Int()
-    let numQuestions = 15
+    let numQuestions = 10
     let startTime = Date()
-    var numWrong = 0;
-    let delay = 0.65
+    var numWrong = 0
+    let delay = 0.65 //originally was .65
+    let buttonChangeDelay = 0.2
     
+    //images for wrong and right, need to appear with better quality ones
+    @IBOutlet weak var checkmark: UIImageView!
+    @IBOutlet weak var wrongmark: UIImageView!
     @IBOutlet var catButtons: [UIButton]!
-    
     @IBOutlet weak var wordLabel: UILabel!
-    
     @IBOutlet weak var exitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //hiding buttons initially
         self.exitButton.isHidden = true
+        self.checkmark.isHidden = true
+        self.wrongmark.isHidden = true
         
         wordQuestions.reserveCapacity(numQuestions)
         for _ in 0..<numQuestions{
             wordQuestions.append(catMan.getWords())
+
         }
         //Game cannot be over right away, so we do not care about this result
         _ = dispNewWord()
     }
     
-    //Function to display a new word and categories, to be called after a successfull guess
+    //Function to display a new word and categories, to be called after a successful guess
     //Returns true if the game should continue, otherwise the game is over
     func dispNewWord() -> Bool{
         if questionNumber < numQuestions {
@@ -272,17 +279,30 @@ class WordViewController: UIViewController {
             self.view.isUserInteractionEnabled = true
         }
         if answerNumber == 0 {
-            //make green/play sound etc
+            //if answer is correct for the left button
+            //display green button, add check mark
+            self.catButtons[0].backgroundColor = UIColor(red:0.80, green:0.90, blue:0.42, alpha:1.0)
+            self.wrongmark.isHidden = true
+            self.checkmark.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now()+buttonChangeDelay){
+                for i in 0...2 {
+                    self.catButtons[i].backgroundColor = UIColor(red: 250/255, green: 207/255, blue: 142/255, alpha: 1)
+                }
+                self.checkmark.isHidden = true
+            }
             if !dispNewWord(){
                 //Do game over stuff
                 gameOver()
-
             }
         }
         else {
-            //change the button image to wrong (red) and add an x
+            //if the guess is wrong
             numWrong += 1;
             //NSLog("Wrong!")
+            //display red button, x mark
+            self.catButtons[0].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
+            self.wrongmark.isHidden = false
+
         }
     }
     
@@ -294,19 +314,40 @@ class WordViewController: UIViewController {
             self.view.isUserInteractionEnabled = true
         }
         if answerNumber == 1 {
-            //make green/play sound etc
+            //if answer is correct for the left button
+            //display green button, add check mark
+            self.catButtons[1].backgroundColor = UIColor(red:0.80, green:0.90, blue:0.42, alpha:1.0)
+            self.wrongmark.isHidden = true
+            self.checkmark.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now()+buttonChangeDelay){
+                for i in 0...2 {
+                    self.catButtons[i].backgroundColor = UIColor(red: 250/255, green: 207/255, blue: 142/255, alpha: 1)
+                }
+                self.checkmark.isHidden = true
+            }
             if !dispNewWord(){
                 //Do game over stuff
                 gameOver()
-
             }
         }
         else {
+            //if the guess is wrong
             numWrong += 1;
             //NSLog("Wrong!")
+            //display red button, x mark
+            self.catButtons[1].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
+            self.wrongmark.isHidden = false
+
         }
     }
 
+    @IBAction func Cat3ButtonTouch(_ sender: Any) {
+        if answerNumber == 2 {
+            self.catButtons[2].backgroundColor = UIColor(red:0.80, green:0.90, blue:0.42, alpha:1.0)
+        } else {
+            self.catButtons[2].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
+        }
+    }
     //Handles what happens when the right button is pressed
     @IBAction func Cat3Button(_ sender: Any) {
         //Prevents user interaction for the specified delay
@@ -315,28 +356,51 @@ class WordViewController: UIViewController {
             self.view.isUserInteractionEnabled = true
         }
         if answerNumber == 2 {
-            //make green/play sound etc
+            //set button to green because correct
+            self.catButtons[2].backgroundColor = UIColor(red:0.80, green:0.90, blue:0.42, alpha:1.0)
+            self.wrongmark.isHidden = true
+            self.checkmark.isHidden = false
+
+            DispatchQueue.main.asyncAfter(deadline: .now()+buttonChangeDelay){
+                for i in 0...2 {
+                self.catButtons[i].backgroundColor = UIColor(red: 250/255, green: 207/255, blue: 142/255, alpha: 1)
+                }
+                self.checkmark.isHidden = true
+
+            }
             if !dispNewWord(){
                 //Do game over stuff
                 gameOver()
             }
         }
         else {
+            //if the guess is wrong
             numWrong += 1;
+            //display red button, x mark
+            self.catButtons[2].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
+            self.wrongmark.isHidden = false
+
+            
             //NSLog("Wrong!")
         }
     }
+    
     
     //to be called when the game is over, displays stuff and tidies up
     func gameOver(){
         let gameDuration = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
         print(gameDuration)
         self.exitButton.isHidden = false
-
         
-        //close buttons and label (hide)
-        //make exit button appear
-        //make game over screen
+        //hiding buttons and label when game ends
+        for i in 0...2 {
+            self.catButtons[i].isHidden = true
+        }
+        self.wordLabel.isHidden = true
+        self.wrongmark.isHidden = true
+        self.checkmark.isHidden = true
+
+        //make game over screen - image or text
     }
     
     /*
@@ -349,4 +413,37 @@ class WordViewController: UIViewController {
     }
     */
 
+}
+
+//button function for border and rounded edges
+@IBDesignable extension UIButton {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
 }

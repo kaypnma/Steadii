@@ -206,7 +206,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             self.addChild(GameOver)
             
-            //notification for the exit button to apear when the game ends
+            //notification for the exit button to appear when the game ends
             NotificationCenter.default.post(name:NSNotification.Name("ExitButtonNotification"), object:nil)
            
            

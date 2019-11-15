@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="CorbelBold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -678,7 +678,6 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C63-Tx-DpU"/>
         <segue reference="q03-3O-Rue"/>
     </inferredMetricsTieBreakers>
 </document>

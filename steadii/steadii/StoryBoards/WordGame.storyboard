@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CORBEL.TTF">
+            <string>Corbel</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--PlayerMainVC-->
         <scene sceneID="Y4H-wH-NQT">
@@ -26,39 +31,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-yf-WHv">
-                                <rect key="frame" x="265" y="160" width="665" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-rS-ItW">
-                                <rect key="frame" x="121" y="474" width="250" height="140"/>
+                                <rect key="frame" x="86" y="498" width="290" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Cat1Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="t5S-hE-MsV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-Cu-5l9">
-                                <rect key="frame" x="824" y="474" width="250" height="140"/>
+                                <rect key="frame" x="819" y="498" width="290" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Cat3Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="Gsu-Ul-HHv"/>
+                                    <action selector="Cat3ButtonTouch:" destination="xIE-S5-p5z" eventType="touchDown" id="O9o-vn-AR9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efG-ua-aD9">
-                                <rect key="frame" x="472" y="474" width="250" height="140"/>
+                                <rect key="frame" x="455" y="498" width="290" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="27"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Cat2Button:" destination="xIE-S5-p5z" eventType="touchUpInside" id="pfQ-Ib-NzZ"/>
                                 </connections>
@@ -71,13 +94,30 @@
                                     <segue destination="Lhq-KI-4jv" kind="show" id="gPW-3k-s93"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="Zda-ep-fIC">
+                                <rect key="frame" x="472" y="312" width="250" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wrong" translatesAutoresizingMaskIntoConstraints="NO" id="wgC-rI-fXg">
+                                <rect key="frame" x="477" y="312" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-yf-WHv">
+                                <rect key="frame" x="196" y="176" width="809" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="S8b-oX-KAM"/>
                     </view>
                     <connections>
+                        <outlet property="checkmark" destination="Zda-ep-fIC" id="kDb-Tu-Ymc"/>
                         <outlet property="exitButton" destination="67n-Il-TbI" id="Qjq-iV-tjI"/>
                         <outlet property="wordLabel" destination="D1b-yf-WHv" id="mlj-27-OeQ"/>
+                        <outlet property="wrongmark" destination="wgC-rI-fXg" id="LdS-wX-f0F"/>
                         <outletCollection property="catButtons" destination="Ake-rS-ItW" collectionClass="NSMutableArray" id="bHB-ei-aW2"/>
                         <outletCollection property="catButtons" destination="efG-ua-aD9" collectionClass="NSMutableArray" id="fTn-yu-8zU"/>
                         <outletCollection property="catButtons" destination="CPX-Cu-5l9" collectionClass="NSMutableArray" id="1H3-fB-WCw"/>
@@ -90,6 +130,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check" width="31" height="23"/>
         <image name="exit" width="97" height="103"/>
+        <image name="wrong" width="23" height="23"/>
     </resources>
 </document>
