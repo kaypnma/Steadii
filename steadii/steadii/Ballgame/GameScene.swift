@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
- -  New header
+    Added sound effects for checkEdgeCollision and gameOver
 */
 
 //  Known Bugs:
@@ -20,9 +20,6 @@
 */
 
 //  To do:
-/*
-    Add optional sound
-*/
 
 //  Copyright © 2019 ii Studio. All rights reserved.
 
@@ -30,6 +27,7 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 import FirebaseDatabase
+import AVFoundation
 
 protocol gameOverDelegate : class {
     func gameIsOver()
@@ -58,6 +56,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var playerRadius:Double
     var minimumGap:Double
+    
+    //Sounds
+    var audioPlayer = AVAudioPlayer()
     
     // Initializes the starting sizes of game elements
     init (  size: CGSize,
@@ -163,17 +164,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Checks if the plane has collided with the edge of the screen, and if it has it bounces it off
     func checkEdgeCollision (plane: SKNode){
+        let soundBounce = Bundle.main.path(forResource: "bounce", ofType: "mp3")
         if (plane.position.x > (size.width/2.0 - CGFloat(planeRadius)) &&
             plane.physicsBody!.velocity.dx > 0) ||
             (plane.position.x < (-size.width/2.0 + CGFloat(planeRadius)) &&
                 plane.physicsBody!.velocity.dx < 0) {
             plane.physicsBody!.velocity.dx *= -1
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBounce!))
+            }
+            catch {
+                print(error)
+            }
+            audioPlayer.play()
         }
         
         if (plane.position.y > (size.height/2.0 - CGFloat(planeRadius)) && plane.physicsBody!.velocity.dy > 0) ||
             (plane.position.y < (-size.height/2.0 + CGFloat(planeRadius)) &&
                 plane.physicsBody!.velocity.dy < 0) {
             plane.physicsBody!.velocity.dy *= -1
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBounce!))
+            }
+            catch {
+                print(error)
+            }
+            audioPlayer.play()
         }
     }
     
@@ -184,8 +201,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Checks if any part of the user controlled ball is overlapping the plane
     func gameOver (distanceR: CGFloat) -> Bool {
+        let soundTouch = Bundle.main.path(forResource: "touch", ofType: "mp3")
         if distanceR > CGFloat(planeRadius - playerRadius) {
             //Game has ended
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundTouch!))
+            }
+            catch {
+                print(error)
+            }
+            audioPlayer.play()
             plane.physicsBody?.isDynamic = false
             player.physicsBody?.isDynamic = false
             //print ("Time: ", Double(round(1000*(-startTime.timeIntervalSinceNow))/1000))

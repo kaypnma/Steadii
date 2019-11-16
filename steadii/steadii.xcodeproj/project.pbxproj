@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7A928C2380A37800127C40 /* touch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A92872380A37700127C40 /* touch.mp3 */; };
+		2B7A928D2380A37800127C40 /* end.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A92882380A37700127C40 /* end.mp3 */; };
+		2B7A928E2380A37800127C40 /* right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A92892380A37700127C40 /* right.mp3 */; };
+		2B7A928F2380A37800127C40 /* bounce.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A928A2380A37700127C40 /* bounce.mp3 */; };
+		2B7A92902380A37800127C40 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A928B2380A37700127C40 /* wrong.mp3 */; };
+		2B84AB2F2380914A00021C94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AB2E2380914A00021C94 /* AVFoundation.framework */; };
 		4C333296BAF80F5EC32BBEB4 /* Pods_steadiiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C525A4C908B7A9803746492 /* Pods_steadiiTests.framework */; };
 		564687B92367924F00C514AC /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564687B72367924F00C514AC /* CreateViewController.swift */; };
 		564687BA2367924F00C514AC /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564687B82367924F00C514AC /* CreateViewController.xib */; };
@@ -53,6 +59,12 @@
 
 /* Begin PBXFileReference section */
 		0C525A4C908B7A9803746492 /* Pods_steadiiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steadiiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7A92872380A37700127C40 /* touch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = touch.mp3; sourceTree = "<group>"; };
+		2B7A92882380A37700127C40 /* end.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = end.mp3; sourceTree = "<group>"; };
+		2B7A92892380A37700127C40 /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = right.mp3; sourceTree = "<group>"; };
+		2B7A928A2380A37700127C40 /* bounce.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bounce.mp3; sourceTree = "<group>"; };
+		2B7A928B2380A37700127C40 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		2B84AB2E2380914A00021C94 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4084268B92E7659C368FF5CE /* Pods-steadii.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii.debug.xcconfig"; path = "Target Support Files/Pods-steadii/Pods-steadii.debug.xcconfig"; sourceTree = "<group>"; };
 		50AE1559F39BE4AFD409C430 /* Pods_steadii_steadiiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steadii_steadiiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564687B3236778E900C514AC /* steadii-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "steadii-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -98,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B84AB2F2380914A00021C94 /* AVFoundation.framework in Frameworks */,
 				99BA9684101F45B2A3DB9D7D /* Pods_steadii.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +134,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B7A927C238098FD00127C40 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2B7A928A2380A37700127C40 /* bounce.mp3 */,
+				2B7A92882380A37700127C40 /* end.mp3 */,
+				2B7A92892380A37700127C40 /* right.mp3 */,
+				2B7A92872380A37700127C40 /* touch.mp3 */,
+				2B7A928B2380A37700127C40 /* wrong.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		6DC6151E236CDE1200F0F69E /* Ballgame */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +194,7 @@
 		829E2B4E2364BB0C0064993B /* steadii */ = {
 			isa = PBXGroup;
 			children = (
+				2B7A927C238098FD00127C40 /* Sounds */,
 				BA425E3A236CEEEB003FF941 /* GoogleService-Info.plist */,
 				6DC6151E236CDE1200F0F69E /* Ballgame */,
 				822D764F236802E1002B56B2 /* StoryBoards */,
@@ -231,6 +257,7 @@
 		99A57822FB49826D53205119 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B84AB2E2380914A00021C94 /* AVFoundation.framework */,
 				A8D78AB461145AC308473AD9 /* Pods_steadii.framework */,
 				50AE1559F39BE4AFD409C430 /* Pods_steadii_steadiiUITests.framework */,
 				0C525A4C908B7A9803746492 /* Pods_steadiiTests.framework */,
@@ -305,6 +332,7 @@
 		829E2B442364BB0C0064993B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = iiStudio;
@@ -349,11 +377,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				822D765323682F4E002B56B2 /* WordGame.storyboard in Resources */,
+				2B7A928D2380A37800127C40 /* end.mp3 in Resources */,
 				829E2B5A2364BB130064993B /* LaunchScreen.storyboard in Resources */,
+				2B7A928E2380A37800127C40 /* right.mp3 in Resources */,
+				2B7A92902380A37800127C40 /* wrong.mp3 in Resources */,
+				2B7A928C2380A37800127C40 /* touch.mp3 in Resources */,
 				6DC61524236CDE4900F0F69E /* ballimg.atlas in Resources */,
 				822D765123680341002B56B2 /* Caregiver.storyboard in Resources */,
 				564687BA2367924F00C514AC /* CreateViewController.xib in Resources */,
 				566DC44C23680989002FC0B9 /* BallGame.storyboard in Resources */,
+				2B7A928F2380A37800127C40 /* bounce.mp3 in Resources */,
 				824A703823651B3400C406B0 /* corbel in Resources */,
 				822D766723684546002B56B2 /* Settings.storyboard in Resources */,
 				BA425E3B236CEEEB003FF941 /* GoogleService-Info.plist in Resources */,
@@ -672,6 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62T4CLHLVC;
 				INFOPLIST_FILE = steadii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,6 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62T4CLHLVC;
 				INFOPLIST_FILE = steadii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
