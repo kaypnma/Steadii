@@ -197,7 +197,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             GameOver = SKLabelNode(text: "GAME OVER\nDURATION: " + String(gtime) + " seconds")
             GameOver.numberOfLines = 0
             GameOver.fontSize = 80
-            GameOver.fontName = "Corbel-Bold"
+            GameOver.fontName = "AvenirNext-DemiBold"
             GameOver.fontColor = UIColor.black
             //databse component, need to construct a function for future
             let ref = Database.database().reference()

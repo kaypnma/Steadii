@@ -6,8 +6,8 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Denyse Tran on 11/14/2019
-//  Worked on by Denyse Tran and Chris Keilbart
+//  Last Updated by Kay Arellano on 11/15/2019
+//  Worked on by Kay Arellano, Chris Keilbart and Denyse Tran
 
 //  Updates from Previous Commit:
 /*
@@ -250,6 +250,10 @@ class WordViewController: UIViewController {
         _ = dispNewWord()
     }
     
+    func dispCountdown() {
+        
+    }
+    
     //Function to display a new word and categories, to be called after a successful guess
     //Returns true if the game should continue, otherwise the game is over
     func dispNewWord() -> Bool{
@@ -399,10 +403,25 @@ class WordViewController: UIViewController {
         self.wordLabel.isHidden = true
         self.wrongmark.isHidden = true
         self.checkmark.isHidden = true
-
+        
         //make game over screen - image or text
+        let w = UIScreen.main.bounds.width
+        let h = UIScreen.main.bounds.height
+        print(w)
+        print(h)
+        let gameLbl = UILabel(frame: CGRect(x: w/2, y: h/3, width: 809, height: 104))
+        gameLbl.center = CGPoint(x: w/2, y: h/3)
+        gameLbl.text = "GAME OVER"
+        gameLbl.endLabel()
+        view.addSubview(gameLbl)
+        
+        let scoreLbl = UILabel(frame: CGRect(x: w/2, y: 2*h/3, width: 809, height: 104))
+        scoreLbl.center = CGPoint(x: w/2, y: 2*h/3)
+        scoreLbl.text = String(gameDuration) + " seconds"
+        scoreLbl.endLabel()
+        view.addSubview(scoreLbl)
+        
     }
-    
     /*
     // MARK: - Navigation
 
@@ -445,5 +464,15 @@ class WordViewController: UIViewController {
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
         }
+    }
+}
+
+//Will predetermine the label characteristics
+extension UILabel {
+    func endLabel() {
+        textAlignment = .center
+        textColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
+        font = UIFont(name: "AvenirNext-DemiBold", size: 100)
+        lineBreakMode = .byCharWrapping
     }
 }
