@@ -226,6 +226,13 @@ class WordViewController: UIViewController {
     let delay = 0.65 //originally was .65
     let buttonChangeDelay = 0.2
     
+    let w = UIScreen.main.bounds.width
+    let h = UIScreen.main.bounds.height
+//    var seconds = 3
+//    var timer = Timer()
+//    var isRunning = false
+//    var CountLbl: UILabel!
+    
     //images for wrong and right, need to appear with better quality ones
     @IBOutlet weak var checkmark: UIImageView!
     @IBOutlet weak var wrongmark: UIImageView!
@@ -247,12 +254,23 @@ class WordViewController: UIViewController {
 
         }
         //Game cannot be over right away, so we do not care about this result
+//        dispCountdown()
         _ = dispNewWord()
     }
     
-    func dispCountdown() {
-        
-    }
+//    func dispCountdown() {
+//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+//    }
+//
+//    func updateTimer() {
+//        seconds -= 1
+//        CountLbl.text = timeString(time: TimeInterval(seconds))
+//    }
+//
+//    func timeString(time:TimeInterval) -> String {
+//        let seconds = Int(time) % 60
+//        return String(sec)
+//    }
     
     //Function to display a new word and categories, to be called after a successful guess
     //Returns true if the game should continue, otherwise the game is over
@@ -404,23 +422,20 @@ class WordViewController: UIViewController {
         self.wrongmark.isHidden = true
         self.checkmark.isHidden = true
         
-        //make game over screen - image or text
-        let w = UIScreen.main.bounds.width
-        let h = UIScreen.main.bounds.height
-        print(w)
-        print(h)
+        //Game over screen initialization
+        //Initialize game over label
         let gameLbl = UILabel(frame: CGRect(x: w/2, y: h/3, width: 809, height: 104))
         gameLbl.center = CGPoint(x: w/2, y: h/3)
         gameLbl.text = "GAME OVER"
         gameLbl.endLabel()
         view.addSubview(gameLbl)
         
-        let scoreLbl = UILabel(frame: CGRect(x: w/2, y: 2*h/3, width: 809, height: 104))
+        //Initialize score label
+        let scoreLbl = UILabel(frame: CGRect(x: w/2, y: 2*h/3, width: w, height: 104))
         scoreLbl.center = CGPoint(x: w/2, y: 2*h/3)
-        scoreLbl.text = String(gameDuration) + " seconds"
+        scoreLbl.text = "Duration: " + String(gameDuration) + " seconds"
         scoreLbl.endLabel()
         view.addSubview(scoreLbl)
-        
     }
     /*
     // MARK: - Navigation
@@ -472,7 +487,7 @@ extension UILabel {
     func endLabel() {
         textAlignment = .center
         textColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
-        font = UIFont(name: "AvenirNext-DemiBold", size: 100)
+        font = UIFont(name: "AvenirNext-DemiBold", size: 80)
         lineBreakMode = .byCharWrapping
     }
 }
