@@ -6,8 +6,8 @@
 //  Description/Purpose: Implementation of Ball Tilt Game
 
 //  Created by Chris Keilbart on 10/23/19
-//  Last Updated by Chris Keilbart on 11/03/2019
-//  Worked on by Chris Keilbart, John Qu, Dustin Seah, Denyse Tran
+//  Last Updated by Kay Arellano on 11/15/2019
+//  Worked on by Kay Arellano, Chris Keilbart, John Qu, Dustin Seah, Denyse Tran
 
 //  Updates from Previous Commit:
 /*
@@ -40,6 +40,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let manager = CMMotionManager()
     var player = SKSpriteNode()
     var GameOver:SKLabelNode!
+    var ScoreLbl:SKLabelNode!
     
     var prevTime:TimeInterval = 0
     let startTime = Date()
@@ -217,26 +218,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.isPaused = true
             
             //Outputs a game over sign when the game ends
-            var gtime = 0.0
-            gtime = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
-            GameOver = SKLabelNode(text: "GAME OVER\nDURATION: " + String(gtime) + " seconds")
+            let h = UIScreen.main.bounds.height
+            
+            GameOver = SKLabelNode(text: "GAME OVER")
+            GameOver.position = CGPoint(x: 0, y: h/5)
             GameOver.numberOfLines = 0
             GameOver.fontSize = 80
-            GameOver.fontName = "Corbel-Bold"
-            GameOver.fontColor = UIColor.black
+            GameOver.fontName = "AvenirNext-DemiBold"
+            GameOver.fontColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
+            
+            var gtime = 0.0
+            gtime = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
+            ScoreLbl = SKLabelNode(text: "Duration: " + String(gtime) + " seconds")
+            ScoreLbl.numberOfLines = 0
+            ScoreLbl.fontSize = 80
+            ScoreLbl.fontName = "AvenirNext-DemiBold"
+            ScoreLbl.position = CGPoint(x: 0, y: -h/5)
+            ScoreLbl.fontColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
+            
+            
             //databse component, need to construct a function for future
             let ref = Database.database().reference()
             ref.child("score").child("player/bscore").setValue(gtime)
             ////
             
             self.addChild(GameOver)
+            self.addChild(ScoreLbl)
             
-            //notification for the exit button to apear when the game ends
+            //notification for the exit button to appear when the game ends
             NotificationCenter.default.post(name:NSNotification.Name("ExitButtonNotification"), object:nil)
-           
-           
-            
-            
+  
             return true
         }
         else {

@@ -6,12 +6,12 @@
 //  Description/Purpose: Used to automate UI testing of Steadii
 
 //  Created by Kay Arellano on 10/26/19
-//  Last Updated by Chris Keilbart on 11/04/2019
+//  Last Updated by Chris Keilbart on 11/14/2019
 //  Worked on by Kay Arellano, Dustin Seah, and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
- -  Added all of the tests
+ -  Added a word game test
 */
 
 //  Known Bugs:
@@ -401,6 +401,38 @@ class steadiiUITests: XCTestCase {
         back.tap()
         let title2 = app.staticTexts["Choose a game"]
         XCTAssert(title2.exists && title2.isHittable, "Cannot return from user settings to main menu")
+    }
+    
+    //Tests to see if we can enter and exit from the word game
+    func testBeginWordGame(){
+        simulateCreatePlayer()
+        app.buttons["Play Button"].tap()
+        XCTAssert(app.buttons.element(boundBy: 0).exists && app.buttons.element(boundBy: 0).isHittable, "Left button not present")
+        XCTAssert(app.buttons.element(boundBy: 1).exists && app.buttons.element(boundBy: 1).isHittable, "Centre button not present")
+        XCTAssert(app.buttons.element(boundBy: 2).exists && app.buttons.element(boundBy: 2).isHittable, "Right button not present")
+        XCTAssert(app.staticTexts.element(boundBy: 0).exists && app.staticTexts.element(boundBy: 0).isHittable, "No title is visible")
+        
+        for _ in 0 ... 14{
+            if app.buttons["exit"].exists {
+                break
+            }
+            app.buttons.element(boundBy: 0).tap()
+            sleep(1)
+            if app.buttons["exit"].exists {
+                break
+            }
+            app.buttons.element(boundBy: 1).tap()
+            sleep(1)
+            if app.buttons["exit"].exists {
+                break
+            }
+            app.buttons.element(boundBy: 2).tap()
+            sleep(1)
+        }
+        XCTAssert(app.buttons["exit"].exists && app.buttons["exit"].isHittable, "No exit button")
+        app.buttons["exit"].tap()
+        let title = app.staticTexts["Choose a game"]
+        XCTAssert(title.exists && title.isHittable, "Cannot return from word game to main menu")
     }
     
     //Helper function to simulate creating a player account
