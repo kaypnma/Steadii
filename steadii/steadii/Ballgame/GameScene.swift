@@ -60,6 +60,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Sounds
     var audioPlayer = AVAudioPlayer()
+    let soundTouch = Bundle.main.path(forResource: "touch", ofType: "mp3")
+    let soundBounce = Bundle.main.path(forResource: "bounce", ofType: "mp3")
     
     // Initializes the starting sizes of game elements
     init (  size: CGSize,
@@ -165,7 +167,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Checks if the plane has collided with the edge of the screen, and if it has it bounces it off
     func checkEdgeCollision (plane: SKNode){
-        let soundBounce = Bundle.main.path(forResource: "bounce", ofType: "mp3")
         if (plane.position.x > (size.width/2.0 - CGFloat(planeRadius)) &&
             plane.physicsBody!.velocity.dx > 0) ||
             (plane.position.x < (-size.width/2.0 + CGFloat(planeRadius)) &&
@@ -202,7 +203,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Checks if any part of the user controlled ball is overlapping the plane
     func gameOver (distanceR: CGFloat) -> Bool {
-        let soundTouch = Bundle.main.path(forResource: "touch", ofType: "mp3")
         if distanceR > CGFloat(planeRadius - playerRadius) {
             //Game has ended
             do {

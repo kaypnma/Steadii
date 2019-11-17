@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
-   add right and wrong guesses animations
+   add ending, right, wrong sound effects
 */
 
 //  Known Bugs:
@@ -30,6 +30,7 @@
 
 
 import UIKit
+import AVFoundation
 
 //Class for a specific category, contains the name and a list of words, randomly ordered
 class individualCategory{
@@ -240,6 +241,14 @@ class WordViewController: UIViewController {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     
+    //Sounds
+    var audioPlayerEnd = AVAudioPlayer()
+    var audioPlayerRight = AVAudioPlayer()
+    var audioPlayerWrong = AVAudioPlayer()
+    let soundEnd = Bundle.main.path(forResource: "end", ofType: "mp3")
+    let soundRight = Bundle.main.path(forResource: "right", ofType: "mp3")
+    let soundWrong = Bundle.main.path(forResource: "wrong", ofType: "mp3")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -256,6 +265,28 @@ class WordViewController: UIViewController {
         //Game cannot be over right away, so we do not care about this result
 //        dispCountdown()
         _ = dispNewWord()
+        
+        
+        do {
+            audioPlayerEnd = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundEnd!))
+        }
+        catch {
+            print(error)
+        }
+        
+        do {
+            audioPlayerRight = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundRight!))
+        }
+        catch {
+            print(error)
+        }
+        
+        do {
+            audioPlayerWrong = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundWrong!))
+        }
+        catch {
+            print(error)
+        }
     }
     
 //    func dispCountdown() {
@@ -316,6 +347,9 @@ class WordViewController: UIViewController {
                 //Do game over stuff
                 gameOver()
             }
+            else {
+                audioPlayerRight.play()
+            }
         }
         else {
             //if the guess is wrong
@@ -324,7 +358,7 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[0].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
-
+            audioPlayerWrong.play()
         }
     }
     
@@ -351,6 +385,9 @@ class WordViewController: UIViewController {
                 //Do game over stuff
                 gameOver()
             }
+            else {
+                audioPlayerRight.play()
+            }
         }
         else {
             //if the guess is wrong
@@ -359,7 +396,7 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[1].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
-
+            audioPlayerWrong.play()
         }
     }
 
@@ -394,6 +431,9 @@ class WordViewController: UIViewController {
                 //Do game over stuff
                 gameOver()
             }
+            else {
+                audioPlayerRight.play()
+            }
         }
         else {
             //if the guess is wrong
@@ -401,7 +441,7 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[2].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
-
+            audioPlayerWrong.play()
             
             //NSLog("Wrong!")
         }
@@ -413,6 +453,7 @@ class WordViewController: UIViewController {
         let gameDuration = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
         print(gameDuration)
         self.exitButton.isHidden = false
+        audioPlayerEnd.play()
         
         //hiding buttons and label when game ends
         for i in 0...2 {
