@@ -58,6 +58,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var playerRadius:Double
     var minimumGap:Double
     
+    var isOver = false
+    
     //Sounds
     var audioPlayer = AVAudioPlayer()
     let soundTouch = Bundle.main.path(forResource: "touch", ofType: "mp3")
@@ -127,9 +129,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Used to bounce the plane off of screen edges
     override func didSimulatePhysics() {
-        let plane = childNode(withName: "plane")!
-        
-        checkEdgeCollision(plane: plane);
+        if !isOver {
+            let plane = childNode(withName: "plane")!
+            
+            checkEdgeCollision(plane: plane);
+        }
     }
     
     //Used to monitor gravity
@@ -151,7 +155,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let distanceR = sqrt(pow(distanceX,2) + pow(distanceY,2))
             
             //Detect game over condition
-            if  gameOver(distanceR: distanceR) {
+            isOver = gameOver(distanceR: distanceR)
+            if  isOver {
                 return
             }
             
@@ -241,6 +246,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let ref = Database.database().reference()
             ref.child("score").child("player/bscore").setValue(gtime)
             ////
+            
+            //Remove plane and player from window
+            player.removeFromParent()
+            plane.removeFromParent()
             
             self.addChild(GameOver)
             self.addChild(ScoreLbl)

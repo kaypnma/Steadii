@@ -6,12 +6,13 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Kay Arellano on 11/15/2019
+//  Last Updated by Kay Arellano on 11/16/2019
 //  Worked on by Kay Arellano, Chris Keilbart and Denyse Tran
 
 //  Updates from Previous Commit:
 /*
-   add ending, right, wrong sound effects
+    Added a countdown before game
+    Fixed end scene
 */
 
 //  Known Bugs:
@@ -22,7 +23,6 @@
 //  To do:
 /*
     Add more words and categories as desired
-    Add game ending
     Add animations
 */
 
@@ -222,17 +222,17 @@ class WordViewController: UIViewController {
     var questionNumber = 0
     var answerNumber = Int()
     let numQuestions = 10
-    let startTime = Date()
+    var startTime = Date()
     var numWrong = 0
     let delay = 0.65 //originally was .65
     let buttonChangeDelay = 0.2
     
+    //Variables used for countdown and game over screen
     let w = UIScreen.main.bounds.width
     let h = UIScreen.main.bounds.height
-//    var seconds = 3
-//    var timer = Timer()
-//    var isRunning = false
-//    var CountLbl: UILabel!
+    var seconds = 3
+    var timer = Timer()
+    var CountLbl: UILabel!
     
     //images for wrong and right, need to appear with better quality ones
     @IBOutlet weak var checkmark: UIImageView!
@@ -257,16 +257,15 @@ class WordViewController: UIViewController {
         self.checkmark.isHidden = true
         self.wrongmark.isHidden = true
         
+        //Hide all buttons for countdown screen
+        hideScreen()
+        
         wordQuestions.reserveCapacity(numQuestions)
         for _ in 0..<numQuestions{
             wordQuestions.append(catMan.getWords())
 
         }
         //Game cannot be over right away, so we do not care about this result
-//        dispCountdown()
-        _ = dispNewWord()
-        
-        
         do {
             audioPlayerEnd = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundEnd!))
         }
@@ -287,21 +286,41 @@ class WordViewController: UIViewController {
         catch {
             print(error)
         }
+        //First start countdown and call dispNewWord
+        dispCountdown()
     }
     
-//    func dispCountdown() {
-//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
-//    }
-//
-//    func updateTimer() {
-//        seconds -= 1
-//        CountLbl.text = timeString(time: TimeInterval(seconds))
-//    }
-//
-//    func timeString(time:TimeInterval) -> String {
-//        let seconds = Int(time) % 60
-//        return String(sec)
-//    }
+    //Start timer and initialize countdown label
+    func dispCountdown() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        CountLbl = UILabel(frame: CGRect(x: w/2, y: h/2, width: w, height: h))
+        CountLbl.center = CGPoint(x: w/2, y: h/2)
+        CountLbl.countdownLabel()
+        view.addSubview(CountLbl)
+    }
+    
+    //Update timer and display text
+    @objc func updateTimer() {
+        if seconds > 0 {
+            CountLbl.text = timerFormat(seconds)
+        }
+        else {
+            CountLbl.text = "START"
+        }
+        if seconds >= 0 {
+            seconds -= 1
+        } else {
+            CountLbl.removeFromSuperview()
+            timer.invalidate()
+            startTime = Date()
+            _ = dispNewWord()
+        }
+    }
+    
+    func timerFormat(_ time: Int) -> String {
+        let seconds = Int(time) % 60
+        return String(seconds)
+    }
     
     //Function to display a new word and categories, to be called after a successful guess
     //Returns true if the game should continue, otherwise the game is over
@@ -311,8 +330,10 @@ class WordViewController: UIViewController {
             answerNumber = wordQuestions[questionNumber].answerInt
             
             for i in 0...2 {
-            catButtons[i].setTitle(wordQuestions[questionNumber].categories[i], for: .normal)
+                catButtons[i].setTitle(wordQuestions[questionNumber].categories[i], for: .normal)
+                self.catButtons[i].isHidden = false
             }
+            self.wordLabel.isHidden = false
             
             //Why oh why does swift not have ++...
             questionNumber += 1
@@ -456,12 +477,7 @@ class WordViewController: UIViewController {
         audioPlayerEnd.play()
         
         //hiding buttons and label when game ends
-        for i in 0...2 {
-            self.catButtons[i].isHidden = true
-        }
-        self.wordLabel.isHidden = true
-        self.wrongmark.isHidden = true
-        self.checkmark.isHidden = true
+        hideScreen()
         
         //Game over screen initialization
         //Initialize game over label
@@ -477,6 +493,15 @@ class WordViewController: UIViewController {
         scoreLbl.text = "Duration: " + String(gameDuration) + " seconds"
         scoreLbl.endLabel()
         view.addSubview(scoreLbl)
+    }
+    
+    func hideScreen() {
+        for i in 0...2 {
+            self.catButtons[i].isHidden = true
+        }
+        self.wordLabel.isHidden = true
+        self.wrongmark.isHidden = true
+        self.checkmark.isHidden = true
     }
     /*
     // MARK: - Navigation
@@ -525,6 +550,12 @@ class WordViewController: UIViewController {
 
 //Will predetermine the label characteristics
 extension UILabel {
+    func countdownLabel() {
+        textAlignment = .center
+        textColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
+        font = UIFont(name: "AvenirNext-DemiBold", size: 150)
+        lineBreakMode = .byCharWrapping
+    }
     func endLabel() {
         textAlignment = .center
         textColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
