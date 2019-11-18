@@ -369,6 +369,10 @@ class WordViewController: UIViewController {
                 gameOver()
             }
             else {
+                if (audioPlayerRight.isPlaying){
+                    audioPlayerRight.stop()
+                    audioPlayerRight.currentTime = 0
+                }
                 audioPlayerRight.play()
             }
         }
@@ -379,6 +383,10 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[0].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
+            if (audioPlayerWrong.isPlaying){
+                audioPlayerWrong.stop()
+                audioPlayerWrong.currentTime = 0
+            }
             audioPlayerWrong.play()
         }
     }
@@ -407,6 +415,10 @@ class WordViewController: UIViewController {
                 gameOver()
             }
             else {
+                if (audioPlayerRight.isPlaying){
+                    audioPlayerRight.stop()
+                    audioPlayerRight.currentTime = 0
+                }
                 audioPlayerRight.play()
             }
         }
@@ -417,6 +429,10 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[1].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
+            if (audioPlayerWrong.isPlaying){
+                audioPlayerWrong.stop()
+                audioPlayerWrong.currentTime = 0
+            }
             audioPlayerWrong.play()
         }
     }
@@ -453,6 +469,10 @@ class WordViewController: UIViewController {
                 gameOver()
             }
             else {
+                if (audioPlayerRight.isPlaying){
+                    audioPlayerRight.stop()
+                    audioPlayerRight.currentTime = 0
+                }
                 audioPlayerRight.play()
             }
         }
@@ -462,6 +482,10 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[2].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
+            if (audioPlayerWrong.isPlaying){
+                audioPlayerWrong.stop()
+                audioPlayerWrong.currentTime = 0
+            }
             audioPlayerWrong.play()
             
             //NSLog("Wrong!")
