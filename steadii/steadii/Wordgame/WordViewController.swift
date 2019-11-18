@@ -6,13 +6,12 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Kay Arellano on 11/16/2019
+//  Last Updated by Chris Keilbart on 11/17/2019
 //  Worked on by Kay Arellano, Chris Keilbart and Denyse Tran
 
 //  Updates from Previous Commit:
 /*
-    Added a countdown before game
-    Fixed end scene
+    Classical Musicians -> Famous Composers
 */
 
 //  Known Bugs:
@@ -135,7 +134,7 @@ class categoryManager{
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
-        catName = "Classical Musicians"
+        catName = "Famous Composers"
         listOfWords = ["Bach", "Brahms", "Beethoven", "Mozart", "Chopin", "Tchaikovsky", "Handel", "Vivaldi", "Debussy", "Wagner"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
