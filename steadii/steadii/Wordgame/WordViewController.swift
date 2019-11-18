@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
-    Dance changes
+    Math changes
 */
 
 //  Known Bugs:
@@ -70,7 +70,7 @@ class categoryManager{
         containedCategories.reserveCapacity(numCats)
         
         var catName = "Mathematics"
-        var listOfWords = ["Number", "Fraction", "Subtraction", "Addition", "Division", "Integer", "Square root", "Exponent", "Multiplication", "Decimal"]
+        var listOfWords = ["Algebra", "Fraction", "Subtraction", "Addition", "Division", "Integer", "Square root", "Exponent", "Multiplication", "Arithmetic"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
