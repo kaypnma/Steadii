@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
-    Mercury -> Galaxy
+    Dance changes
 */
 
 //  Known Bugs:
@@ -160,7 +160,7 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Dance"
-        listOfWords = ["Swing", "Foxtrot", "Ballroom", "Ballet", "The Charleston", "Folk", "Square", "Line", "Tap", "The Twist"]
+        listOfWords = ["Swing", "Foxtrot", "Ballroom", "Ballet", "The Charleston", "Folk", "Can-can", "Line", "Conga", "The Twist"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
