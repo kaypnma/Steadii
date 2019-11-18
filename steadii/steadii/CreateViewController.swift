@@ -28,15 +28,82 @@
 
 import UIKit
 import FirebaseDatabase
-class CreateViewController: UIViewController {
+import FirebaseFirestore
+import FirebaseAuth
 
+class CreateViewController: UIViewController {
+    
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var createButton: LButton!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPassworTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    func validateFields() ->String?{
+        //chceck that all fields are filled in
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||emailTextField .text?.trimmingCharacters(in:.whitespacesAndNewlines)==""||passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""{
+            return "Please fill in all the fileds"
+        }
+        //check if the password is secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if CreateViewController.isPasswordValid(cleanedPassword)==false{
+            return"Please make sure your password is valid"
+        }
+        return nil
+    }
+    static func isPasswordValid(_ password : String)->Bool{
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@","^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}" )
+        return passwordTest.evaluate(with: password)
+    }
 
 
+    @IBAction func createButtonTapped(_ sender: Any) {
+        let error  = validateFields()
+        if error != nil{
+            //theres something wrong with the fields, show error message
+            showError(error!)
+        }
+        else{
+            //create cleaned version of the data
+            let firstname = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            // let confirmpassword = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            
+            
+            //create a user
+            Auth.auth().createUser(withEmail: email, password:password) { (result,err) in
+                if  err != nil {
+                    //there was an error
+                    self.showError("Error creating user")
+                }
+                else{
+                    //user was created successfully, now store the firstname, lastname, email to database
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid]){(error)in
+                        if error != nil{
+                            //show error
+                            self.showError("Error saving user data")
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+        //validate the fields
+    }
+    func showError(_ message:String){
+        print("ERROR!!:"+message)
+    }
     /*
     // MARK: - Navigation
 

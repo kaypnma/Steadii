@@ -38,6 +38,7 @@
 		829EBC2523668484007F71D8 /* LButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829EBC2423668484007F71D8 /* LButton.swift */; };
 		99BA9684101F45B2A3DB9D7D /* Pods_steadii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D78AB461145AC308473AD9 /* Pods_steadii.framework */; };
 		BA425E3B236CEEEB003FF941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA425E3A236CEEEB003FF941 /* GoogleService-Info.plist */; };
+		BAD98DC623833C8100B691C4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD98DC523833C8100B691C4 /* SignInViewController.swift */; };
 		D821343D5AC8A66F7573269A /* Pods_steadii_steadiiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AE1559F39BE4AFD409C430 /* Pods_steadii_steadiiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		902BABBD6BD7CCBB735A9511 /* Pods-steadiiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadiiTests.release.xcconfig"; path = "Target Support Files/Pods-steadiiTests/Pods-steadiiTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8D78AB461145AC308473AD9 /* Pods_steadii.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steadii.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA425E3A236CEEEB003FF941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAD98DC523833C8100B691C4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C5FF0DC53E942C6E4A3D835C /* Pods-steadiiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadiiTests.debug.xcconfig"; path = "Target Support Files/Pods-steadiiTests/Pods-steadiiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5207B6B75451BFA76C4BC79 /* Pods-steadii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii.release.xcconfig"; path = "Target Support Files/Pods-steadii/Pods-steadii.release.xcconfig"; sourceTree = "<group>"; };
 		FCE0703C2231E81DB980F36A /* Pods-steadii-steadiiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii-steadiiUITests.debug.xcconfig"; path = "Target Support Files/Pods-steadii-steadiiUITests/Pods-steadii-steadiiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				824A703723651B3400C406B0 /* corbel */,
 				829E2B4F2364BB0C0064993B /* AppDelegate.swift */,
 				829E2B512364BB0C0064993B /* ViewController.swift */,
+				BAD98DC523833C8100B691C4 /* SignInViewController.swift */,
 				564687B72367924F00C514AC /* CreateViewController.swift */,
 				564687B82367924F00C514AC /* CreateViewController.xib */,
 				5689FF182366B81C00AE28CB /* radioButton.swift */,
@@ -530,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD98DC623833C8100B691C4 /* SignInViewController.swift in Sources */,
 				829EBC2323666252007F71D8 /* TextField.swift in Sources */,
 				564687B92367924F00C514AC /* CreateViewController.swift in Sources */,
 				565F6D4E23762DB4007BF59A /* WordViewController.swift in Sources */,

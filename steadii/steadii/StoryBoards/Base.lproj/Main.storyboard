@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="LoginVC" customClass="ViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="LoginVC" customClass="SignInViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-EG-dbe">
-                                <rect key="frame" x="360" y="582.5" width="189" height="34"/>
+                                <rect key="frame" x="360" y="582.5" width="203" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-7N-nQq" customClass="DLRadioButton">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
@@ -49,7 +49,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
-                                        <rect key="frame" x="45" y="0.0" width="144" height="34"/>
+                                        <rect key="frame" x="45" y="0.0" width="158" height="34"/>
                                         <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -93,6 +93,7 @@
                                     <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Dw-jV-q3f"/>
                                     <segue destination="wsL-8c-uVk" kind="show" id="Itt-Vr-E0F"/>
                                 </connections>
                             </button>
@@ -120,6 +121,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="OWs-QH-KWK" id="YIR-by-oyX"/>
+                        <outlet property="loginButton" destination="Uuf-oi-OSX" id="Xpa-cf-20A"/>
+                        <outlet property="passwordTextField" destination="AM5-4N-taJ" id="kkt-sO-upe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esV-jg-BYD">
-                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <rect key="frame" x="40" y="54" width="16" height="22"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="9fv-d2-uVi" kind="show" id="ZfO-qu-PKS"/>
@@ -155,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="trj-cK-LBM">
-                                <rect key="frame" x="502" y="230.5" width="206" height="6"/>
+                                <rect key="frame" x="502" y="230.5" width="206" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep the ball within the confinement by tilting your device to move the ball to stay within the blue bounds." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK9-0V-JOg">
                                 <rect key="frame" x="234" y="124" width="726.5" height="71.5"/>
@@ -235,14 +241,14 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-o4-dfO">
-                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <rect key="frame" x="40" y="54" width="16" height="22"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="9fv-d2-uVi" kind="show" id="q03-3O-Rue"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 40 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="0du-9h-1h6">
-                                <rect key="frame" x="103" y="388.5" width="461" height="346"/>
+                                <rect key="frame" x="103" y="398.5" width="461" height="346"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="346" id="VXu-FQ-Zzm"/>
                                     <constraint firstAttribute="width" constant="461" id="yUX-8g-YZ2"/>
@@ -255,7 +261,7 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-RZ-TzC">
-                                <rect key="frame" x="477" y="230.5" width="240" height="6"/>
+                                <rect key="frame" x="477" y="230.5" width="240" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-bb-6GO">
                                 <rect key="frame" x="199.5" y="124" width="795.5" height="71.5"/>
@@ -265,7 +271,7 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsL-on-6ow">
-                                <rect key="frame" x="636" y="271.5" width="473" height="491"/>
+                                <rect key="frame" x="636" y="281.5" width="473" height="491"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="491" id="CQf-sK-Oiw"/>
                                     <constraint firstAttribute="width" constant="473" id="f5y-3U-jpQ"/>
@@ -284,7 +290,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASKETBALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KE-8T-1gx">
-                                <rect key="frame" x="119" y="271.5" width="429" height="91"/>
+                                <rect key="frame" x="119" y="281.5" width="429" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="Rgc-ae-A4J"/>
                                 </constraints>
@@ -593,6 +599,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                     <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="createButtonTapped:" destination="luA-Bb-7YR" eventType="touchUpInside" id="PPi-0I-NZ4"/>
                                     <segue destination="9fv-d2-uVi" kind="show" id="BTa-KW-sXG"/>
                                 </connections>
                             </button>
@@ -632,6 +639,14 @@ If it is wrong, it will be indicated in red with a cross.</string>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="confirmPassworTextField" destination="ftB-22-hIe" id="oHF-T2-gvb"/>
+                        <outlet property="createButton" destination="otv-hd-yY1" id="aHp-DK-Jms"/>
+                        <outlet property="emailTextField" destination="tVD-24-Y2F" id="LKc-Ud-Cqb"/>
+                        <outlet property="firstNameTextField" destination="13E-5C-Rmp" id="tRu-FG-1zd"/>
+                        <outlet property="lastNameTextField" destination="CFF-x4-4Pl" id="lLU-6W-nrh"/>
+                        <outlet property="passwordTextField" destination="AtU-AG-wbD" id="baQ-6n-Sm8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kl3-St-fgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -668,7 +683,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="Play Button-1" width="240" height="240"/>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
-        <image name="back_arrow" width="52" height="34"/>
+        <image name="back_arrow" width="52" height="34.5"/>
         <image name="moving_ball_tut1" width="217" height="217"/>
         <image name="moving_ball_tut2" width="241" height="217"/>
         <image name="opt" width="24" height="24"/>
@@ -678,6 +693,6 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q03-3O-Rue"/>
+        <segue reference="BTa-KW-sXG"/>
     </inferredMetricsTieBreakers>
 </document>
