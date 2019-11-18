@@ -6,12 +6,12 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Chris Keilbart on 11/17/2019
+//  Last Updated by Chris Keilbart on 11/18/2019
 //  Worked on by Kay Arellano, Chris Keilbart and Denyse Tran
 
 //  Updates from Previous Commit:
 /*
-    Classical Musicians -> Famous Composers
+    Mercury -> Galaxy
 */
 
 //  Known Bugs:
@@ -120,7 +120,7 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Astronomy"
-        listOfWords = ["Moon", "Pluto", "Comet", "Asteroid", "Mercury", "Venus", "Neptune", "Saturn", "Telescope", "Hubble"]
+        listOfWords = ["Moon", "Pluto", "Comet", "Asteroid", "Galaxy", "Venus", "Neptune", "Saturn", "Telescope", "Hubble"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
