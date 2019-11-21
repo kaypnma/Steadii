@@ -21,7 +21,8 @@
 
 //  To do:
 /*
-    None
+   - Intake data from firebase and individualize the graph view.
+        -> as of now, any name we tap goes into "Denyse's statistics"
 */
 
 //  Copyright © 2019 ii Studio. All rights reserved.
