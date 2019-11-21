@@ -6,12 +6,12 @@
 //  Description/Purpose: defines view controller
 
 //  Created by Kay Arellano on 10/26/19
-//  Last Updated by Chris Keilbart on 11/03/2019
+//  Last Updated by Chris Keilbart on 11/21/2019
 //  Worked on by Kay Arellano, Dustin Seah, Jack Guo, Denyse Tran, and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
- -  Added Header
+ -  Used fake data to plot fake graphs onto caretaker view
 */
 
 //  Known Bugs:
