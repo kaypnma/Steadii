@@ -28,6 +28,8 @@
 
 import UIKit
 import Firebase
+import Charts
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
