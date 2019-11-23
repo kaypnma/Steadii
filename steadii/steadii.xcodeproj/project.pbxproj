@@ -28,7 +28,7 @@
 		822D766723684546002B56B2 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822D766623684546002B56B2 /* Settings.storyboard */; };
 		824A703823651B3400C406B0 /* corbel in Resources */ = {isa = PBXBuildFile; fileRef = 824A703723651B3400C406B0 /* corbel */; };
 		829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B4F2364BB0C0064993B /* AppDelegate.swift */; };
-		829E2B522364BB0C0064993B /* workDammitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B512364BB0C0064993B /* workDammitViewController.swift */; };
+		829E2B522364BB0C0064993B /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E2B512364BB0C0064993B /* GraphViewController.swift */; };
 		829E2B552364BB0C0064993B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829E2B532364BB0C0064993B /* Main.storyboard */; };
 		829E2B572364BB130064993B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829E2B562364BB130064993B /* Assets.xcassets */; };
 		829E2B5A2364BB130064993B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829E2B582364BB130064993B /* LaunchScreen.storyboard */; };
@@ -86,7 +86,7 @@
 		824A703723651B3400C406B0 /* corbel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corbel; sourceTree = "<group>"; };
 		829E2B4C2364BB0C0064993B /* steadii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steadii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829E2B4F2364BB0C0064993B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		829E2B512364BB0C0064993B /* workDammitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workDammitViewController.swift; sourceTree = "<group>"; };
+		829E2B512364BB0C0064993B /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		829E2B542364BB0C0064993B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		829E2B562364BB130064993B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		829E2B592364BB130064993B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				829EBC21236660DF007F71D8 /* CustomView */,
 				824A703723651B3400C406B0 /* corbel */,
 				829E2B4F2364BB0C0064993B /* AppDelegate.swift */,
-				829E2B512364BB0C0064993B /* workDammitViewController.swift */,
+				829E2B512364BB0C0064993B /* GraphViewController.swift */,
 				BAD98DC523833C8100B691C4 /* SignInViewController.swift */,
 				564687B72367924F00C514AC /* CreateViewController.swift */,
 				564687B82367924F00C514AC /* CreateViewController.xib */,
@@ -540,7 +540,7 @@
 				6DC61521236CDE3800F0F69E /* GameScene.swift in Sources */,
 				567C720A2367B7BD0021271A /* DLRadioButton.m in Sources */,
 				6DC61522236CDE3800F0F69E /* GameViewController.swift in Sources */,
-				829E2B522364BB0C0064993B /* workDammitViewController.swift in Sources */,
+				829E2B522364BB0C0064993B /* GraphViewController.swift in Sources */,
 				5689FF192366B81C00AE28CB /* radioButton.swift in Sources */,
 				829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */,
 				829EBC2523668484007F71D8 /* LButton.swift in Sources */,

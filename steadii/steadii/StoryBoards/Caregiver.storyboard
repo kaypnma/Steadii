@@ -186,7 +186,7 @@
         <!--PlayerStatsVC-->
         <scene sceneID="Y73-hH-B2Y">
             <objects>
-                <viewController storyboardIdentifier="PlayerStatsVC" id="XLc-Ji-cjO" userLabel="PlayerStatsVC" customClass="workDammit" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerStatsVC" id="XLc-Ji-cjO" userLabel="PlayerStatsVC" customClass="GraphViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jf6-Tk-nAp">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,12 +234,12 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPZ-63-J3D" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="124" y="262" width="429" height="384"/>
+                                <rect key="frame" x="124" y="264" width="429" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-af-gg7" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="673" y="287" width="429" height="384"/>
+                                <rect key="frame" x="625" y="264" width="429" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -262,8 +262,8 @@
                         <viewLayoutGuide key="safeArea" id="8hg-QW-TTg"/>
                     </view>
                     <connections>
-                        <outlet property="spag" destination="hPZ-63-J3D" id="X6A-4b-Rqe"/>
-                        <outlet property="spagger" destination="t4E-af-gg7" id="uaK-lh-iFt"/>
+                        <outlet property="monthlyGraph" destination="hPZ-63-J3D" id="wHO-s8-fkY"/>
+                        <outlet property="weeklyGraph" destination="t4E-af-gg7" id="Pqr-hC-4pU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNq-bD-ge3" userLabel="First Responder" sceneMemberID="firstResponder"/>
