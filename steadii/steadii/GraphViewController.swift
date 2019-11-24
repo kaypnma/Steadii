@@ -15,6 +15,8 @@
  -  Normalized the function names
  -  Lines have different colours
  -  Made more modular for intaking data
+ -  Took out right axis labels
+ -  Took out in graph labels
 */
 
 //  Known Bugs:
@@ -37,6 +39,16 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var weeklyGraph: LineChartView!
     
     func graphDisplay(){
+        // Not sure of the form the data will be when taking from firebase , I assumed as a dictionary
+        
+        // To do:
+        // retieve data.
+        
+        // split data into past week and month.
+        
+        // set entries like how we did below.
+        
+        
         // fake entries
         let monthlyBallEntry1 = ChartDataEntry(x: 1.0, y: 2.0)
         let monthlyBallEntry2 = ChartDataEntry(x: 2.0, y: 4.0)
@@ -69,11 +81,18 @@ class GraphViewController: UIViewController {
         weeklyWordDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         let weeklyData = LineChartData(dataSets: [weeklyBallDataSet,weeklyWordDataSet])
         
-        monthlyGraph.data = monthlyData
+        monthlyData.setDrawValues(false) // don't label points
+        weeklyData.setDrawValues(false)
+        
+        monthlyGraph.data = monthlyData // feed data into object
         weeklyGraph.data = weeklyData
         
-        monthlyGraph.chartDescription?.text = "Monthly Trend"
+        monthlyGraph.chartDescription?.text = "Monthly Trend" //Description of Graphs
         weeklyGraph.chartDescription?.text = "Weekly Trend"
+        
+        
+        weeklyGraph.rightAxis.enabled = false // disable the right axis
+        monthlyGraph.rightAxis.enabled = false
         
         monthlyGraph.notifyDataSetChanged()
         weeklyGraph.notifyDataSetChanged()
