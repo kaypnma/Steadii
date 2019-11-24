@@ -21,5 +21,6 @@ target 'steadii' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Charts'
+  pod 'DLRadioButton'
 
 end

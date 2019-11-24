@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseFirestore
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
@@ -34,11 +36,32 @@ class SignInViewController: UIViewController {
 //                self.errorLabel.alpha = 1
             }
             else {
+                // go to firestore to check for the account type
+                let db = Firestore.firestore()
+           //direct to the games page if account is for players
+            db.collection("users").document(email).getDocument(completion: { (document, error) in
+                    if error == nil {
+                        if document != nil && document!.exists{
+                            print("found the account as a player")
+                            //self.performSegue(withIdentifier: "PlayerMainVC", sender: self)
+                        }
+                    }
+                    
+                    
+                })
+            db.collection("carers").document(email).getDocument(completion: { (document, error) in
+                    if error == nil {
+                        if document != nil && document!.exists{
+                            print("found the account as a carer")
+                            //self.performSegue(withIdentifier: "PlayerMainVC", sender: self)
+                        }
+                    }
+                    
+                    
+                })
+
                 
-//                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-//                
-//                self.view.window?.rootViewController = homeViewController
-//                self.view.window?.makeKeyAndVisible()
+            
             }
         }
     }

@@ -30,13 +30,15 @@ import UIKit
 import FirebaseDatabase
 import FirebaseFirestore
 import FirebaseAuth
-
+import DLRadioButton
 class CreateViewController: UIViewController {
     
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var createButton: LButton!
     @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var playerButton: DLRadioButton!
     
+    @IBOutlet weak var careGiverButton: DLRadioButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPassworTextField: UITextField!
@@ -87,13 +89,27 @@ class CreateViewController: UIViewController {
                 }
                 else{
                     //user was created successfully, now store the firstname, lastname, email to database
+                    let data: [String: Any] = ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid]
+                   
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid]){(error)in
+                    if self.careGiverButton.isSelected {
+                        db.collection("carers").document(email).setData(data){(error)in
+                            if error != nil{
+                                //show error
+                                self.showError("Error saving user data")
+                            }
+                            
+                        }
+                    }
+                    if self.playerButton.isSelected{
+                    db.collection("users").document(email)
+                        .setData(data){(error)in
                         if error != nil{
                             //show error
                             self.showError("Error saving user data")
                         }
                         
+                    }
                     }
                 }
             }

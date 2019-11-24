@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-EG-dbe">
-                                <rect key="frame" x="360" y="582.5" width="203" height="34"/>
+                                <rect key="frame" x="360" y="582.5" width="189" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-7N-nQq" customClass="DLRadioButton">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
@@ -49,7 +49,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
-                                        <rect key="frame" x="45" y="0.0" width="158" height="34"/>
+                                        <rect key="frame" x="45" y="0.0" width="144" height="34"/>
                                         <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -94,7 +94,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Dw-jV-q3f"/>
-                                    <segue destination="wsL-8c-uVk" kind="show" id="Itt-Vr-E0F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,7 +332,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <!--PlayerMainVC-->
         <scene sceneID="mjj-1s-gM1">
             <objects>
-                <viewController storyboardIdentifier="PlayerMainVC" id="9fv-d2-uVi" userLabel="PlayerMainVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerMainVC" id="9fv-d2-uVi" userLabel="PlayerMainVC" customClass="PlayerMainViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tzm-eO-WG5">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -640,12 +639,14 @@ If it is wrong, it will be indicated in red with a cross.</string>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="careGiverButton" destination="bst-ZU-bW1" id="5rB-QS-SQL"/>
                         <outlet property="confirmPassworTextField" destination="ftB-22-hIe" id="oHF-T2-gvb"/>
                         <outlet property="createButton" destination="otv-hd-yY1" id="aHp-DK-Jms"/>
                         <outlet property="emailTextField" destination="tVD-24-Y2F" id="LKc-Ud-Cqb"/>
                         <outlet property="firstNameTextField" destination="13E-5C-Rmp" id="tRu-FG-1zd"/>
                         <outlet property="lastNameTextField" destination="CFF-x4-4Pl" id="lLU-6W-nrh"/>
                         <outlet property="passwordTextField" destination="AtU-AG-wbD" id="baQ-6n-Sm8"/>
+                        <outlet property="playerButton" destination="z9o-F3-a0B" id="Mhd-MK-yoP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kl3-St-fgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -693,6 +694,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BTa-KW-sXG"/>
+        <segue reference="NPk-v8-zeD"/>
+        <segue reference="ZfO-qu-PKS"/>
     </inferredMetricsTieBreakers>
 </document>
