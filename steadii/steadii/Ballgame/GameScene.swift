@@ -61,7 +61,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isOver = false
     
     //Sounds
-    var audioPlayer = AVAudioPlayer()
+    let defaults = UserDefaults.standard
+    var audioPlayerTouch = AVAudioPlayer()
+    var audioPlayerBounce = AVAudioPlayer()
     let soundTouch = Bundle.main.path(forResource: "touch", ofType: "mp3")
     let soundBounce = Bundle.main.path(forResource: "bounce", ofType: "mp3")
     
@@ -94,6 +96,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.playerRadius = playerRadius
         minimumGap = PminimumGap
+        
+        
+        do {
+            audioPlayerTouch = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundTouch!))
+        }
+        catch {
+            print(error)
+        }
+        do {
+            audioPlayerBounce = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBounce!))
+        }
+        catch {
+            print(error)
+        }
         
         super.init(size: size)
     }
@@ -177,27 +193,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             (plane.position.x < (-size.width/2.0 + CGFloat(planeRadius)) &&
                 plane.physicsBody!.velocity.dx < 0) {
             plane.physicsBody!.velocity.dx *= -1
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBounce!))
-            }
-            catch {
-                print(error)
-            }
-            audioPlayer.play()
+            playAudio(sound: "bounce")
         }
         
         if (plane.position.y > (size.height/2.0 - CGFloat(planeRadius)) && plane.physicsBody!.velocity.dy > 0) ||
             (plane.position.y < (-size.height/2.0 + CGFloat(planeRadius)) &&
                 plane.physicsBody!.velocity.dy < 0) {
             plane.physicsBody!.velocity.dy *= -1
-            
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBounce!))
-            }
-            catch {
-                print(error)
-            }
-            audioPlayer.play()
+            playAudio(sound: "bounce")
         }
     }
     
@@ -210,13 +213,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func gameOver (distanceR: CGFloat) -> Bool {
         if distanceR > CGFloat(planeRadius - playerRadius) {
             //Game has ended
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundTouch!))
-            }
-            catch {
-                print(error)
-            }
-            audioPlayer.play()
+            playAudio(sound: "touch")
             plane.physicsBody?.isDynamic = false
             player.physicsBody?.isDynamic = false
             //print ("Time: ", Double(round(1000*(-startTime.timeIntervalSinceNow))/1000))
@@ -309,5 +306,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         plane.physicsBody!.mass = 0.0
         plane.physicsBody!.velocity = planePhysicsVelocity
         plane.physicsBody?.collisionBitMask = 0
+    }
+    
+    func playAudio(sound: String) {
+        //print("sound: ", defaults.integer(forKey: "sound"))
+        if defaults.integer(forKey: "sound") == 1 {
+            if (sound == "touch") {
+                audioPlayerTouch.play()
+            }
+            else if (sound == "bounce") {
+                if (audioPlayerBounce.isPlaying){
+                    audioPlayerBounce.stop()
+                    audioPlayerBounce.currentTime = 0
+                }
+                audioPlayerBounce.play()
+            }
+        }
     }
 }
