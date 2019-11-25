@@ -40,17 +40,44 @@ class GraphViewController: UIViewController {
     
     func graphDisplay(){
         // Not sure of the form the data will be when taking from firebase , I assumed as a dictionary
+        // so, data will come to us as the following structure?
+        
+        // [Ball Game Performances]
+        // [Date]   [Score/Time]
+        // Nov 12   25.345
+        // Nov 24   22.556
+        // Nov 25   15.842
+        // ..
+        
+        // [Word Game Performances]
+        // Nov 17   13.257
+        // Nov 20   23.233
+        // Nov 23   26.554
+        // ..
         
         // To do:
         // retieve data.
         
         // split data into past week and month.
+        // is there a date type we can use?
         
-        // set entries like how we did below.
+        // assuming the data have been processed into the following arrays
         
+        // FAKE DATA
+        //let processedMonthlyBallxData = [0.0,12.0,13.0]
+        //let processedMonthlyBallyData = [25.345,22.556,15.842]
+        
+        //let processedMonthlyWordxData = [0,3,6]
+        //let processedMonthlyWordyData = [13.257,23.233,26.554]
+        
+        //let processedWeeklyBallxData = [0,1]
+        //let processedWeeklyBallyData = [22.556,15.842]
+        
+        //let processedWeeklyWordxData = [0,3]
+        //let processedWeeklyWordyData = [23.233,26.554]
         
         // fake entries
-        let monthlyBallEntry1 = ChartDataEntry(x: 1.0, y: 2.0)
+        let monthlyBallEntry1 = ChartDataEntry(x: 1.0/*processedMonthlyBallxData*/, y: 2.0/*processedMonthlyBallyData*/)
         let monthlyBallEntry2 = ChartDataEntry(x: 2.0, y: 4.0)
         let monthlyBallEntry3 = ChartDataEntry(x: 3.0, y: 8.0)
         let weeklyBallEntry1 = ChartDataEntry(x: 1.0, y: 3.0)
