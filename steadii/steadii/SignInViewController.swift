@@ -32,28 +32,28 @@ class SignInViewController: UIViewController {
             
             if error != nil {
                 // Couldn't sign in
-//                self.errorLabel.text = error!.localizedDescription
-//                self.errorLabel.alpha = 1
+
             }
             else {
                 // go to firestore to check for the account type
                 let db = Firestore.firestore()
            //direct to the games page if account is for players
-            db.collection("users").document(email).getDocument(completion: { (document, error) in
+                db.collection("users").document(email).getDocument(completion: { (document, error) in
                     if error == nil {
                         if document != nil && document!.exists{
                             print("found the account as a player")
-                            //self.performSegue(withIdentifier: "PlayerMainVC", sender: self)
+                            self.performSegue(withIdentifier: "PlayerView", sender: self)
                         }
                     }
                     
                     
                 })
-            db.collection("carers").document(email).getDocument(completion: { (document, error) in
+                //direct to the carers' view for carers accounts
+                db.collection("carers").document(email).getDocument(completion: { (document, error) in
                     if error == nil {
                         if document != nil && document!.exists{
                             print("found the account as a carer")
-                            //self.performSegue(withIdentifier: "PlayerMainVC", sender: self)
+                            self.performSegue(withIdentifier: "CarerView", sender: self)
                         }
                     }
                     
@@ -70,7 +70,7 @@ class SignInViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
