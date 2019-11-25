@@ -241,6 +241,7 @@ class WordViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     
     //Sounds
+    let defaults = UserDefaults.standard
     var audioPlayerEnd = AVAudioPlayer()
     var audioPlayerRight = AVAudioPlayer()
     var audioPlayerWrong = AVAudioPlayer()
@@ -368,11 +369,7 @@ class WordViewController: UIViewController {
                 gameOver()
             }
             else {
-                if (audioPlayerRight.isPlaying){
-                    audioPlayerRight.stop()
-                    audioPlayerRight.currentTime = 0
-                }
-                audioPlayerRight.play()
+                playAudio(sound: "right")
             }
         }
         else {
@@ -382,11 +379,7 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[0].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
-            if (audioPlayerWrong.isPlaying){
-                audioPlayerWrong.stop()
-                audioPlayerWrong.currentTime = 0
-            }
-            audioPlayerWrong.play()
+            playAudio(sound: "wrong")
         }
     }
     
@@ -414,11 +407,7 @@ class WordViewController: UIViewController {
                 gameOver()
             }
             else {
-                if (audioPlayerRight.isPlaying){
-                    audioPlayerRight.stop()
-                    audioPlayerRight.currentTime = 0
-                }
-                audioPlayerRight.play()
+                playAudio(sound: "right")
             }
         }
         else {
@@ -428,11 +417,7 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[1].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
-            if (audioPlayerWrong.isPlaying){
-                audioPlayerWrong.stop()
-                audioPlayerWrong.currentTime = 0
-            }
-            audioPlayerWrong.play()
+            playAudio(sound: "wrong")
         }
     }
 
@@ -468,11 +453,7 @@ class WordViewController: UIViewController {
                 gameOver()
             }
             else {
-                if (audioPlayerRight.isPlaying){
-                    audioPlayerRight.stop()
-                    audioPlayerRight.currentTime = 0
-                }
-                audioPlayerRight.play()
+                playAudio(sound: "right")
             }
         }
         else {
@@ -481,11 +462,7 @@ class WordViewController: UIViewController {
             //display red button, x mark
             self.catButtons[2].backgroundColor = UIColor(red:0.98, green:0.61, blue:0.56, alpha:1.0)
             self.wrongmark.isHidden = false
-            if (audioPlayerWrong.isPlaying){
-                audioPlayerWrong.stop()
-                audioPlayerWrong.currentTime = 0
-            }
-            audioPlayerWrong.play()
+            playAudio(sound: "wrong")
             
             //NSLog("Wrong!")
         }
@@ -497,7 +474,7 @@ class WordViewController: UIViewController {
         let gameDuration = Double(round(1000*(-startTime.timeIntervalSinceNow))/1000)
         print(gameDuration)
         self.exitButton.isHidden = false
-        audioPlayerEnd.play()
+        playAudio(sound: "end")
         
         //hiding buttons and label when game ends
         hideScreen()
@@ -535,7 +512,29 @@ class WordViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func playAudio(sound: String) {
+        //print("sound: ", defaults.integer(forKey: "sound"))
+        if defaults.integer(forKey: "sound") == 1 {
+            if (sound == "end") {
+                    audioPlayerEnd.play()
+            }
+            else if (sound == "wrong") {
+                if (audioPlayerWrong.isPlaying){
+                    audioPlayerWrong.stop()
+                    audioPlayerWrong.currentTime = 0
+                }
+                audioPlayerWrong.play()
+            }
+            else if (sound == "right") {
+                if (audioPlayerRight.isPlaying){
+                    audioPlayerRight.stop()
+                    audioPlayerRight.currentTime = 0
+                }
+                audioPlayerRight.play()
+            }
+        }
+    }
 }
 
 //button function for border and rounded edges
