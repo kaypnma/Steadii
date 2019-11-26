@@ -78,9 +78,6 @@ class CreateViewController: UIViewController {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             // let confirmpassword = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            
-            
             //create a user
             Auth.auth().createUser(withEmail: email, password:password) { (result,err) in
                 if  err != nil {
@@ -98,10 +95,6 @@ class CreateViewController: UIViewController {
                                 //show error
                                 self.showError("Error saving user data")
                             }
-                            
-                            
-                            
-                            
                         }
                         self.performSegue(withIdentifier: "CarerView1", sender: self)
                     }
@@ -114,6 +107,9 @@ class CreateViewController: UIViewController {
                         }
                         
                     }
+                        let dateString = self.getDate()
+                    db.collection("users").document(email).collection("performances").document("game1").setData([dateString: "0"])
+                db.collection("users").document(email).collection("performances").document("game2").setData([dateString: "0"])
                         self.performSegue(withIdentifier: "PlayerView1", sender: self)
                     }
                 }
@@ -124,6 +120,13 @@ class CreateViewController: UIViewController {
     }
     func showError(_ message:String){
         print("ERROR!!:"+message)
+    }
+    func getDate()->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateString = dateFormatter.string(from:Date())
+        return dateString
+        
     }
     /*
     // MARK: - Navigation
