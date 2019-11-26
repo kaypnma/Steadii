@@ -549,10 +549,10 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="DpA-eb-Nds">
-                                <rect key="frame" x="296" y="131" width="178" height="44.5"/>
+                                <rect key="frame" x="299" y="131" width="172" height="44.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9o-F3-a0B" userLabel="PlayerButton" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="44.5"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -562,7 +562,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUk-cn-eQT">
-                                        <rect key="frame" x="55" y="0.0" width="123" height="44.5"/>
+                                        <rect key="frame" x="49" y="0.0" width="123" height="44.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44.5" id="Tps-fB-HVd"/>
                                         </constraints>
@@ -573,10 +573,10 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TVo-u8-jAf">
-                                <rect key="frame" x="681" y="131" width="218.5" height="44.5"/>
+                                <rect key="frame" x="684" y="131" width="212.5" height="44.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-ZU-bW1" userLabel="CaregiverButton" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="44.5"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -590,7 +590,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caregiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSk-Ig-jr1">
-                                        <rect key="frame" x="55" y="0.0" width="163.5" height="44.5"/>
+                                        <rect key="frame" x="49" y="0.0" width="163.5" height="44.5"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -609,7 +609,6 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 </state>
                                 <connections>
                                     <action selector="createButtonTapped:" destination="luA-Bb-7YR" eventType="touchUpInside" id="PPi-0I-NZ4"/>
-                                    <segue destination="9fv-d2-uVi" kind="show" id="BTa-KW-sXG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -657,6 +656,8 @@ If it is wrong, it will be indicated in red with a cross.</string>
                         <outlet property="lastNameTextField" destination="CFF-x4-4Pl" id="lLU-6W-nrh"/>
                         <outlet property="passwordTextField" destination="AtU-AG-wbD" id="baQ-6n-Sm8"/>
                         <outlet property="playerButton" destination="z9o-F3-a0B" id="Mhd-MK-yoP"/>
+                        <segue destination="9fv-d2-uVi" kind="show" identifier="PlayerView1" id="GvN-e8-JEn"/>
+                        <segue destination="U0Z-i1-xO9" kind="show" identifier="CarerView1" id="qV7-Fp-Dnj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kl3-St-fgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -704,6 +705,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NcQ-xS-m8m"/>
+        <segue reference="GvN-e8-JEn"/>
+        <segue reference="qV7-Fp-Dnj"/>
     </inferredMetricsTieBreakers>
 </document>

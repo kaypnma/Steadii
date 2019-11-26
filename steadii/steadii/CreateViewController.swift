@@ -99,7 +99,11 @@ class CreateViewController: UIViewController {
                                 self.showError("Error saving user data")
                             }
                             
+                            
+                            
+                            
                         }
+                        self.performSegue(withIdentifier: "CarerView1", sender: self)
                     }
                     if self.playerButton.isSelected{
                     db.collection("users").document(email)
@@ -110,6 +114,7 @@ class CreateViewController: UIViewController {
                         }
                         
                     }
+                        self.performSegue(withIdentifier: "PlayerView1", sender: self)
                     }
                 }
             }
