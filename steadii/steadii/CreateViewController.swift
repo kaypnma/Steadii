@@ -41,7 +41,8 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var careGiverButton: DLRadioButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPassworTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,8 +50,12 @@ class CreateViewController: UIViewController {
     }
     func validateFields() ->String?{
         //chceck that all fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||emailTextField .text?.trimmingCharacters(in:.whitespacesAndNewlines)==""||passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""{
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||emailTextField .text?.trimmingCharacters(in:.whitespacesAndNewlines)==""||passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""{
             return "Please fill in all the fileds"
+        }
+        if passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines){
+            return "the confirm password and password should be the same!"
+            
         }
         //check if the password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -77,7 +82,7 @@ class CreateViewController: UIViewController {
             let lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            // let confirmpassword = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+             let confirmpassword = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             //create a user
             Auth.auth().createUser(withEmail: email, password:password) { (result,err) in
                 if  err != nil {
@@ -89,6 +94,7 @@ class CreateViewController: UIViewController {
                     let data: [String: Any] = ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid]
                    
                     let db = Firestore.firestore()
+                    //if carer button is selectd
                     if self.careGiverButton.isSelected {
                         db.collection("carers").document(email).setData(data){(error)in
                             if error != nil{
@@ -98,6 +104,7 @@ class CreateViewController: UIViewController {
                         }
                         self.performSegue(withIdentifier: "CarerView1", sender: self)
                     }
+                    //if player button is selected
                     if self.playerButton.isSelected{
                     db.collection("users").document(email)
                         .setData(data){(error)in
@@ -111,6 +118,10 @@ class CreateViewController: UIViewController {
                     db.collection("users").document(email).collection("performances").document("game1").setData([dateString: "0"])
                 db.collection("users").document(email).collection("performances").document("game2").setData([dateString: "0"])
                         self.performSegue(withIdentifier: "PlayerView1", sender: self)
+                    }
+                    //check if user selected an account type
+                    if ((!self.playerButton.isSelected)&&(!self.careGiverButton.isSelected)){
+                        self.showError("please select an account type!")
                     }
                 }
             }
