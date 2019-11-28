@@ -30,6 +30,8 @@
 
 import UIKit
 import AVFoundation
+import FirebaseFirestore
+import FirebaseAuth
 
 //Class for a specific category, contains the name and a list of words, randomly ordered
 class individualCategory{
@@ -475,7 +477,7 @@ class WordViewController: UIViewController {
         print(gameDuration)
         self.exitButton.isHidden = false
         playAudio(sound: "end")
-        
+        updateDatabase(score:gameDuration)
         //hiding buttons and label when game ends
         hideScreen()
         
@@ -584,4 +586,39 @@ extension UILabel {
         font = UIFont(name: "AvenirNext-DemiBold", size: 80)
         lineBreakMode = .byCharWrapping
     }
+}
+func getDate()->String{
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd/MM/yyyy"
+    let dateString = dateFormatter.string(from:Date())
+    return dateString
+    
+}
+func updateDatabase(score: Double){
+    
+    let db = Firestore.firestore()
+    
+    if Auth.auth().currentUser != nil {
+        // User is signed in.
+        // ...
+        let user = Auth.auth().currentUser
+        if let user = user {
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with your backend server,
+            // if you have one. Use getTokenWithCompletion:completion: instead.
+            let uid = user.uid
+            let email = user.email
+            let dateString = getDate()
+            print("email:"+email!+"  uid:"+uid)
+            db.collection("users").document(email!).collection("performances").document("game2").setData([dateString:score])
+            // ...
+            
+        } else {
+            // No user is signed in.
+            // ...
+        }
+    }
+    
+    
+    
 }

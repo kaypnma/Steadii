@@ -28,6 +28,8 @@ import GameplayKit
 import CoreMotion
 import FirebaseDatabase
 import AVFoundation
+import FirebaseAuth
+import FirebaseFirestore
 
 protocol gameOverDelegate : class {
     func gameIsOver()
@@ -208,6 +210,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func updateTileData (tiltdata: CMAccelerometerData) {
         physicsWorld.gravity = CGVector(dx: -tiltdata.acceleration.y * tiltSensitivity, dy: tiltdata.acceleration.x * tiltSensitivity)//Swapped and negated because of landscape
     }
+    func getDate()->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateString = dateFormatter.string(from:Date())
+        return dateString
+        
+    }
+    func updateDatabase(score: Double){
+        
+        let db = Firestore.firestore()
+       
+        if Auth.auth().currentUser != nil {
+            // User is signed in.
+            // ...
+            let user = Auth.auth().currentUser
+            if let user = user {
+                // The user's ID, unique to the Firebase project.
+                // Do NOT use this value to authenticate with your backend server,
+                // if you have one. Use getTokenWithCompletion:completion: instead.
+                let uid = user.uid
+                let email = user.email
+                let dateString = self.getDate()
+                print("email:"+email!+"  uid:"+uid)
+                db.collection("users").document(email!).collection("performances").document("game1").setData([dateString:score])
+                // ...
+                
+        } else {
+            // No user is signed in.
+            // ...
+        }
+        }
+        
+        
+        
+    }
     
     // Checks if any part of the user controlled ball is overlapping the plane
     func gameOver (distanceR: CGFloat) -> Bool {
@@ -239,9 +276,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ScoreLbl.fontColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1.0)
             
             
-            //databse component, need to construct a function for future
-            let ref = Database.database().reference()
-            ref.child("score").child("player/bscore").setValue(gtime)
+            //databse component, upload the score to firebase firestore
+           
+            updateDatabase(score: gtime)
             ////
             
             //Remove plane and player from window
