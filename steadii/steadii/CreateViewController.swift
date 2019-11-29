@@ -115,8 +115,8 @@ class CreateViewController: UIViewController {
                         
                     }
                         let dateString = self.getDate()
-                    db.collection("users").document(email).collection("performances").document("game1").setData([dateString: "0"])
-                    db.collection("users").document(email).collection("performances").document("game2").setData([dateString: "0"])
+                    db.collection("users").document(email).collection("performances").document("ballgame").setData([dateString: 0.0])
+                    db.collection("users").document(email).collection("performances").document("wordgame").setData([dateString: 0.0])
                         self.performSegue(withIdentifier: "PlayerView1", sender: self)
                     }
                     //check if user selected an account type

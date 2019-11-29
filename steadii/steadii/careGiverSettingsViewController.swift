@@ -17,9 +17,10 @@ class careGiverSettingsViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBAction func removeButtonTapped(_ sender: Any) {
-        self.getCareeList()
-        print("caree out side")
-        print(careeList)
+        self.getBallGameScore()
+        self.getWordGameScore()
+       // print("caree out side")
+       // print(careeList)
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
@@ -49,7 +50,7 @@ class careGiverSettingsViewController: UIViewController {
 //        let dateString = dateFormatter.string(from:Date().addingTimeInterval(-1*24*60*60))
 //        return dateString
 //    }
-    func getCareeList(){
+    func getBallGameScore(){
         let db = Firestore.firestore()
         //direct to the games page if account is for players
         if Auth.auth().currentUser != nil {
@@ -76,12 +77,16 @@ class careGiverSettingsViewController: UIViewController {
                     print("careelist2:")
                     print(self.careeList)
                     //read the ball game scores
-                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("game1").getDocument(completion: { (document, error) in
+                    print("ball game :")
+                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("ballgame").getDocument(completion: { (document, error) in
                             if error == nil{
+                                
                                 let ballgameScore = document!.data()//![dateNow] as! Double
+                                
                                 print(caree)
                                 //print(dateNow)
-                                print(ballgameScore)
+                                print(ballgameScore as Any)
+                               
                             }
                             else{
                     
@@ -89,20 +94,8 @@ class careGiverSettingsViewController: UIViewController {
                             
                         })
                     }
-                    //reading the word game performances
-                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("game2").getDocument(completion: { (document, error) in
-                        if error == nil{
-                            let ballgameScore = document!.data()//![dateNow] as! Double
-                            print(caree)
-                           // print(dateNow)
-                            print(ballgameScore)
-                        }
-                        else{
-                            
-                        }
-                        
-                    })
-                    }
+                     print()
+                    
             
                 }
                 
@@ -125,4 +118,72 @@ class careGiverSettingsViewController: UIViewController {
 
 
 }
+    func getWordGameScore(){
+        let db = Firestore.firestore()
+        //direct to the games page if account is for players
+        if Auth.auth().currentUser != nil {
+            // User is signed in.
+            // ...
+            
+            let user = Auth.auth().currentUser
+            if let user = user {
+                //if carer signed in, get the list of all the carees
+                
+                let email = user.email
+                //let dateNow = getDate()
+                //let dateWeek = getDateWeek()
+                //let dbcRef=db.collection("carers").document(email!)
+                db.collection("carers").document(email!).getDocument { (document, error) in
+                    if error == nil{
+                        if document != nil && document!.exists{
+                            self.careeList = document!.data()!["caree"] as! [String]
+                            //print(careeList)
+                            print("careelist1:")
+                            print(self.careeList)
+                        }
+                    }
+                    print("careelist2:")
+                    print(self.careeList)
+                    //read the ball game scores
+                    print("word game :")
+                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("wordgame").getDocument(completion: { (document, error) in
+                        if error == nil{
+                            
+                            let ballgameScore = document!.data()//![dateNow] as! Double
+                            
+                            print(caree)
+                            //print(dateNow)
+                            print(ballgameScore as Any)
+                            
+                        }
+                        else{
+                            
+                        }
+                        
+                    })
+                    }
+                    print()
+                    
+                    
+                }
+                
+            }
+            //wait(until limit: 6000) -> true
+            //return "6 seconds"
+            
+            
+            /*
+             // MARK: - Navigation
+             
+             // In a storyboard-based application, you will often want to do a little preparation before navigation
+             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+             // Get the new view controller using segue.destination.
+             // Pass the selected object to the new view controller.
+             }
+             */
+            
+        }
+        
+        
+    }
 }

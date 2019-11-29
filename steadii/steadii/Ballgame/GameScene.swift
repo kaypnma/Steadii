@@ -233,7 +233,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let email = user.email
                 let dateString = self.getDate()
                 //print("email:"+email!+"  uid:"+uid)
-            db.collection("users").document(email!).collection("performances").document("game1").setData([dateString:score],merge:true)
+            db.collection("users").document(email!).collection("performances").document("ballgame").setData([dateString:score],merge:true)
                 // ...
                 
         } else {

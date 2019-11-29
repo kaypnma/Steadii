@@ -610,7 +610,7 @@ func updateDatabase(score: Double){
             let email = user.email
             let dateString = getDate()
             print("email:"+email!+"  uid:"+uid)
-            db.collection("users").document(email!).collection("performances").document("game2").setData([dateString:score],merge:true)
+            db.collection("users").document(email!).collection("performances").document("wordgame").setData([dateString:score],merge:true)
 
             
         } else {
