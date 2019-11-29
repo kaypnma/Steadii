@@ -27,6 +27,7 @@
 //  Copyright © 2019 ii Studio. All rights reserved.
 
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     
@@ -36,6 +37,16 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        
+    }
     @IBAction func buttonTapped(button: UIButton)
     {
         let defaults = UserDefaults.standard
@@ -43,4 +54,5 @@ class SettingsViewController: UIViewController {
         defaults.set(-1*currentSound, forKey: "sound")
         //print ("sound set to : ", defaults.integer(forKey: "sound"))
     }
+    
 }

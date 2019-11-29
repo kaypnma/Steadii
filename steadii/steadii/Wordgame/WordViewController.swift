@@ -589,7 +589,7 @@ extension UILabel {
 }
 func getDate()->String{
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd/MM/yyyy"
+    dateFormatter.dateFormat = "yyyy-MM-dd"
     let dateString = dateFormatter.string(from:Date())
     return dateString
     
@@ -610,8 +610,8 @@ func updateDatabase(score: Double){
             let email = user.email
             let dateString = getDate()
             print("email:"+email!+"  uid:"+uid)
-            db.collection("users").document(email!).collection("performances").document("game2").setData([dateString:score])
-            // ...
+            db.collection("users").document(email!).collection("performances").document("game2").setData([dateString:score],merge:true)
+
             
         } else {
             // No user is signed in.

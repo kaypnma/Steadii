@@ -212,7 +212,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     func getDate()->String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from:Date())
         return dateString
         
@@ -233,7 +233,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let email = user.email
                 let dateString = self.getDate()
                 print("email:"+email!+"  uid:"+uid)
-                db.collection("users").document(email!).collection("performances").document("game1").setData([dateString:score])
+//                let ballGameRef = db.collection("users").document(email!).collection("performances").document("game1")
+//                ballGameRef.updateData([
+//                    dateString: FieldValue.arrayUnion([score])
+//                    ])
+//                ballGameRef.getDocument { (document, error) in
+//                    if let document = document, document.exists {
+//                        let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                        print("Document data: \(dataDescription)")
+//                    } else {
+//                        print("Document does not exist")
+//                    }
+//                }//
+                db.collection("users").document(email!).collection("performances").document("game1").setData([dateString:score],merge:true)
                 // ...
                 
         } else {
