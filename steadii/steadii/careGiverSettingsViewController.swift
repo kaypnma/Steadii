@@ -2,20 +2,24 @@
 //  careGiverSettingsViewController.swift
 //  steadii
 //
-//  Created by 郭佳佳 on 2019-11-28.
+//  Created by Jack Guo on 2019-11-28.
 //  Copyright © 2019 iiStudio. All rights reserved.
 //
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class careGiverSettingsViewController: UIViewController {
+     var careeList: [String] = []
 
 
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBAction func removeButtonTapped(_ sender: Any) {
+        self.getCareeList()
     }
+    
     @IBAction func logoutButtonTapped(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
@@ -30,8 +34,79 @@ class careGiverSettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func getDate()->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from:Date())
+        return dateString
+        
+    }
+    func getDateWeek()->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from:Date().addingTimeInterval(-1*24*60*60))
+        return dateString
+    }
+    func getCareeList(){
+        let db = Firestore.firestore()
+        //direct to the games page if account is for players
+        if Auth.auth().currentUser != nil {
+            // User is signed in.
+            // ...
+           
+            let user = Auth.auth().currentUser
+            if let user = user {
+                //if carer signed in, get the list of all the carees
+                
+                let email = user.email
+                let dateNow = getDate()
+                let dateWeek = getDateWeek()
+                let dbcRef=db.collection("carers").document(email!)
+                db.collection("carers").document(email!).getDocument { (document, error) in
+                    if error == nil{
+                        if document != nil && document!.exists{
+                            self.careeList = document!.data()!["caree"] as! [String]
+                            //print(careeList)
+                            print("careelist1:")
+                            print(self.careeList)
+                        }
+                    }
+                    print("careelist2:")
+                    print(self.careeList)
+                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("game1").getDocument(completion: { (document, error) in
+                            if error == nil{
+                                let ballgameScore = document!.data()//![dateNow] as! Double
+                                print(caree)
+                                print(dateNow)
+                                print(ballgameScore)
+                            }
+                            else{
+                    
+                            }
+                            
+                        })
+                    }
+                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("game2").getDocument(completion: { (document, error) in
+                        if error == nil{
+                            let ballgameScore = document!.data()//![dateNow] as! Double
+                            print(caree)
+                            print(dateNow)
+                            print(ballgameScore)
+                        }
+                        else{
+                            
+                        }
+                        
+                    })
+                    }
+            
+                }
+                
+            }
+            //wait(until limit: 6000) -> true
+            //return "6 seconds"
     
-
+        
     /*
     // MARK: - Navigation
 
@@ -42,4 +117,8 @@ class careGiverSettingsViewController: UIViewController {
     }
     */
 
+}
+
+
+}
 }
