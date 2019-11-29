@@ -41,6 +41,7 @@
 		BA157E58238A2D8B0079E25E /* PlayerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA157E57238A2D8B0079E25E /* PlayerMainViewController.swift */; };
 		BA425E3B236CEEEB003FF941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA425E3A236CEEEB003FF941 /* GoogleService-Info.plist */; };
 		BA4732D82390BE30009DA42F /* careGiverSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4732D72390BE30009DA42F /* careGiverSettingsViewController.swift */; };
+		BA501AF12391B71B0042D144 /* addCareeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501AF02391B71A0042D144 /* addCareeViewController.swift */; };
 		BAD98DC623833C8100B691C4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD98DC523833C8100B691C4 /* SignInViewController.swift */; };
 		D821343D5AC8A66F7573269A /* Pods_steadii_steadiiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AE1559F39BE4AFD409C430 /* Pods_steadii_steadiiUITests.framework */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		BA157E57238A2D8B0079E25E /* PlayerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMainViewController.swift; sourceTree = "<group>"; };
 		BA425E3A236CEEEB003FF941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA4732D72390BE30009DA42F /* careGiverSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = careGiverSettingsViewController.swift; sourceTree = "<group>"; };
+		BA501AF02391B71A0042D144 /* addCareeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCareeViewController.swift; sourceTree = "<group>"; };
 		BAD98DC523833C8100B691C4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C5FF0DC53E942C6E4A3D835C /* Pods-steadiiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadiiTests.debug.xcconfig"; path = "Target Support Files/Pods-steadiiTests/Pods-steadiiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5207B6B75451BFA76C4BC79 /* Pods-steadii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steadii.release.xcconfig"; path = "Target Support Files/Pods-steadii/Pods-steadii.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BA157E57238A2D8B0079E25E /* PlayerMainViewController.swift */,
 				BA4732D72390BE30009DA42F /* careGiverSettingsViewController.swift */,
 				829E2B512364BB0C0064993B /* ViewController.swift */,
+				BA501AF02391B71A0042D144 /* addCareeViewController.swift */,
 				BAD98DC523833C8100B691C4 /* SignInViewController.swift */,
 				2BCD7B27238C6A1300FCA8B8 /* SettingsViewController.swift */,
 				564687B72367924F00C514AC /* CreateViewController.swift */,
@@ -554,6 +557,7 @@
 				829E2B522364BB0C0064993B /* ViewController.swift in Sources */,
 				5689FF192366B81C00AE28CB /* radioButton.swift in Sources */,
 				829E2B502364BB0C0064993B /* AppDelegate.swift in Sources */,
+				BA501AF12391B71B0042D144 /* addCareeViewController.swift in Sources */,
 				BA157E58238A2D8B0079E25E /* PlayerMainViewController.swift in Sources */,
 				829EBC2523668484007F71D8 /* LButton.swift in Sources */,
 			);

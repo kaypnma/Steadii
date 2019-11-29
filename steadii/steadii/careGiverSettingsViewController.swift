@@ -18,6 +18,8 @@ class careGiverSettingsViewController: UIViewController {
     
     @IBAction func removeButtonTapped(_ sender: Any) {
         self.getCareeList()
+        print("caree out side")
+        print(careeList)
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
@@ -34,19 +36,19 @@ class careGiverSettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    func getDate()->String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.string(from:Date())
-        return dateString
-        
-    }
-    func getDateWeek()->String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.string(from:Date().addingTimeInterval(-1*24*60*60))
-        return dateString
-    }
+//    func getDate()->String{
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        let dateString = dateFormatter.string(from:Date())
+//        return dateString
+//
+//    }
+//    func getDateWeek()->String{
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        let dateString = dateFormatter.string(from:Date().addingTimeInterval(-1*24*60*60))
+//        return dateString
+//    }
     func getCareeList(){
         let db = Firestore.firestore()
         //direct to the games page if account is for players
@@ -59,9 +61,9 @@ class careGiverSettingsViewController: UIViewController {
                 //if carer signed in, get the list of all the carees
                 
                 let email = user.email
-                let dateNow = getDate()
-                let dateWeek = getDateWeek()
-                let dbcRef=db.collection("carers").document(email!)
+                //let dateNow = getDate()
+                //let dateWeek = getDateWeek()
+                //let dbcRef=db.collection("carers").document(email!)
                 db.collection("carers").document(email!).getDocument { (document, error) in
                     if error == nil{
                         if document != nil && document!.exists{
@@ -73,11 +75,12 @@ class careGiverSettingsViewController: UIViewController {
                     }
                     print("careelist2:")
                     print(self.careeList)
+                    //read the ball game scores
                     for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("game1").getDocument(completion: { (document, error) in
                             if error == nil{
                                 let ballgameScore = document!.data()//![dateNow] as! Double
                                 print(caree)
-                                print(dateNow)
+                                //print(dateNow)
                                 print(ballgameScore)
                             }
                             else{
@@ -86,11 +89,12 @@ class careGiverSettingsViewController: UIViewController {
                             
                         })
                     }
+                    //reading the word game performances
                     for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("game2").getDocument(completion: { (document, error) in
                         if error == nil{
                             let ballgameScore = document!.data()//![dateNow] as! Double
                             print(caree)
-                            print(dateNow)
+                           // print(dateNow)
                             print(ballgameScore)
                         }
                         else{

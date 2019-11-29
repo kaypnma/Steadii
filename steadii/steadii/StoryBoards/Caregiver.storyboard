@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="CorbelBold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -279,7 +279,7 @@
         <!--AddPlayerVC-->
         <scene sceneID="eyV-dC-zhN">
             <objects>
-                <viewController storyboardIdentifier="AddPlayerVC" id="kmB-pj-Ay8" userLabel="AddPlayerVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPlayerVC" id="kmB-pj-Ay8" userLabel="AddPlayerVC" customClass="addCareeViewController" customModule="steadii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vd0-1x-ecq">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,6 +318,9 @@
                                 <state key="normal" title="ADD">
                                     <color key="titleColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="kmB-pj-Ay8" eventType="touchUpInside" id="fXK-pH-2cT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-EI-9rp">
                                 <rect key="frame" x="377" y="74" width="440" height="60"/>
@@ -345,6 +348,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qg5-iM-j4j"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="I8Q-Ud-9SJ" id="s4b-of-gyb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQT-zm-84A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,6 +463,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="U2I-Xb-8Km"/>
-        <segue reference="A7z-YL-llJ"/>
+        <segue reference="itv-D2-n2A"/>
     </inferredMetricsTieBreakers>
 </document>

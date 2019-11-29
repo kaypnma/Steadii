@@ -116,7 +116,7 @@ class CreateViewController: UIViewController {
                     }
                         let dateString = self.getDate()
                     db.collection("users").document(email).collection("performances").document("game1").setData([dateString: "0"])
-                db.collection("users").document(email).collection("performances").document("game2").setData([dateString: "0"])
+                    db.collection("users").document(email).collection("performances").document("game2").setData([dateString: "0"])
                         self.performSegue(withIdentifier: "PlayerView1", sender: self)
                     }
                     //check if user selected an account type
@@ -134,7 +134,7 @@ class CreateViewController: UIViewController {
     }
     func getDate()->String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "yyyyMMdd"
         let dateString = dateFormatter.string(from:Date())
         return dateString
         
