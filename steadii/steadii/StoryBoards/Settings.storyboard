@@ -33,67 +33,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ya-so-59u">
-                                <rect key="frame" x="40" y="54" width="16" height="22"/>
+                                <rect key="frame" x="40" y="54" width="52" height="34.5"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="euq-HG-gbY" kind="show" id="HGD-Yv-Ub9"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="nhC-Ut-jws">
-                                <rect key="frame" x="690" y="194" width="86" height="280"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfP-jv-TLr">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="22"/>
-                                        <state key="normal" image="connect_acc"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-PM-2Ij">
-                                        <rect key="frame" x="0.0" y="86" width="86" height="22"/>
-                                        <state key="normal" image="Icon feather-volume-x"/>
-                                        <connections>
-                                            <action selector="buttonTappedWithButton:" destination="UWd-Ig-Fb2" eventType="touchUpInside" id="tYK-ND-Bf5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrf-kY-pxi">
-                                        <rect key="frame" x="0.0" y="172" width="86" height="22"/>
-                                        <state key="normal" image="stats"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvD-Ix-Xff">
-                                        <rect key="frame" x="0.0" y="258" width="86" height="22"/>
-                                        <state key="normal" image="notification_bell"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-dF-dlh">
-                                <rect key="frame" x="207" y="190" width="298.5" height="417"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Account" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXE-sA-0db">
-                                        <rect key="frame" x="0.0" y="0.0" width="298.5" height="54"/>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nf8-e4-7K3">
-                                        <rect key="frame" x="0.0" y="121" width="298.5" height="54"/>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Stats" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhO-g8-R6B">
-                                        <rect key="frame" x="0.0" y="242" width="298.5" height="54"/>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-Ac-M3P">
-                                        <rect key="frame" x="0.0" y="363" width="298.5" height="54"/>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrY-6f-umi" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="450" y="690" width="294" height="70"/>
+                                <rect key="frame" x="450" y="370" width="294" height="70"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="syd-BC-tzg"/>
@@ -106,22 +53,49 @@
                                     <action selector="logoutButtonTapped:" destination="UWd-Ig-Fb2" eventType="touchUpInside" id="TM5-Hr-hQm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 3.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-TA-avP">
+                                <rect key="frame" x="371" y="713" width="136" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nf8-e4-7K3">
+                                <rect key="frame" x="385" y="216" width="109.5" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-PM-2Ij">
+                                <rect key="frame" x="708" y="214" width="86" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Icon feather-volume-x"/>
+                                <connections>
+                                    <action selector="buttonTappedWithButton:" destination="UWd-Ig-Fb2" eventType="touchUpInside" id="tYK-ND-Bf5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iiStudio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2E-Oh-KBC">
+                                <rect key="frame" x="705.5" y="713" width="91" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Ya-so-59u" firstAttribute="top" secondItem="0h2-g5-DHa" secondAttribute="top" constant="30" id="03w-AU-Sxn"/>
+                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="l4D-TA-avP" secondAttribute="bottom" constant="66" id="1QO-6o-zcp"/>
                             <constraint firstItem="0Ya-so-59u" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="40" id="98F-1A-Bvh"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" secondItem="nhC-Ut-jws" secondAttribute="trailing" constant="418" id="AHj-zU-vCf"/>
                             <constraint firstItem="xrY-6f-umi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="450" id="HFx-tQ-f8B"/>
-                            <constraint firstItem="ox9-dF-dlh" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="207" id="JaN-6i-igY"/>
-                            <constraint firstItem="nhC-Ut-jws" firstAttribute="leading" secondItem="ox9-dF-dlh" secondAttribute="trailing" constant="184.5" id="Mcd-nd-D0C"/>
-                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="xrY-6f-umi" secondAttribute="bottom" constant="54" id="Mlq-Tf-s14"/>
+                            <constraint firstItem="0h2-g5-DHa" firstAttribute="bottom" secondItem="N2E-Oh-KBC" secondAttribute="bottom" constant="66" id="LEu-Kw-19g"/>
+                            <constraint firstItem="xrY-6f-umi" firstAttribute="top" secondItem="uYA-xV-3kG" secondAttribute="bottom" constant="240" id="OIE-Pc-imT"/>
                             <constraint firstItem="uYA-xV-3kG" firstAttribute="centerX" secondItem="ssH-3B-Unl" secondAttribute="centerX" id="QMv-3H-K7X"/>
                             <constraint firstItem="xrY-6f-umi" firstAttribute="centerX" secondItem="ssH-3B-Unl" secondAttribute="centerX" id="Qy2-mB-js2"/>
-                            <constraint firstItem="rfP-jv-TLr" firstAttribute="top" secondItem="uYA-xV-3kG" secondAttribute="bottom" constant="64" id="cge-Pb-AGI"/>
+                            <constraint firstItem="l4D-TA-avP" firstAttribute="centerX" secondItem="ssH-3B-Unl" secondAttribute="centerX" constant="-158" id="RRU-LZ-OQu"/>
+                            <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" secondItem="N2E-Oh-KBC" secondAttribute="trailing" constant="397.5" id="daB-ef-QBU"/>
+                            <constraint firstItem="N2E-Oh-KBC" firstAttribute="centerX" secondItem="ssH-3B-Unl" secondAttribute="centerX" constant="154" id="fxy-Tb-1I6"/>
                             <constraint firstItem="0h2-g5-DHa" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xrY-6f-umi" secondAttribute="trailing" constant="450" id="ggF-Vs-992"/>
-                            <constraint firstItem="ox9-dF-dlh" firstAttribute="top" secondItem="uYA-xV-3kG" secondAttribute="bottom" constant="60" id="sxu-lR-TlQ"/>
-                            <constraint firstItem="rfP-jv-TLr" firstAttribute="leading" secondItem="zXE-sA-0db" secondAttribute="trailing" constant="184.5" id="zBa-tI-5XD"/>
+                            <constraint firstItem="l4D-TA-avP" firstAttribute="leading" secondItem="0h2-g5-DHa" secondAttribute="leading" constant="371" id="iN5-Yz-IV1"/>
                             <constraint firstItem="uYA-xV-3kG" firstAttribute="top" secondItem="0h2-g5-DHa" secondAttribute="top" constant="60" id="zDl-Gh-fGd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0h2-g5-DHa"/>
@@ -146,8 +120,5 @@
     <resources>
         <image name="Icon feather-volume-x" width="86" height="58"/>
         <image name="back_arrow" width="52" height="34.5"/>
-        <image name="connect_acc" width="76.5" height="53.5"/>
-        <image name="notification_bell" width="47" height="57"/>
-        <image name="stats" width="49" height="53"/>
     </resources>
 </document>
