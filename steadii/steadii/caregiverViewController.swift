@@ -6,12 +6,12 @@
 //  Description/Purpose: defines view controller
 
 //  Created by Dustin Seah on 11/28/19
-//  Last Updated by Dustin Seah on 11/28/2019
+//  Last Updated by Chris Keilbart on 11/28/2019
 //  Worked on by Dustin Seah and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
- -  First commit
+ -  Attempted to implement linear regression functionality
  */
 
 //  Known Bugs:
@@ -138,6 +138,34 @@ class caregiverViewController : UIViewController{
         GlobalAccountInfo.weeklyBallYTrend = []
         GlobalAccountInfo.monthlyWordYTrend = []
         GlobalAccountInfo.weeklyWordYTrend = []
+    }
+    
+    //Function to generate the linear regression data given an input array
+    //Returns the value of the line at lowEnd and Highend
+    func linReg(x: [Double], y: [Double], lowEnd: Double, highEnd: Double) -> [Double]{
+        //y=mx+b
+        //m=sum((x-xmean)(y-ymean)/sum((x-xmean)^2)
+        var numerator = 0.0
+        var denominator = 0.0
+        let xmean = mean(input: x)
+        let ymean = mean(input: y)
+        for i in 0..<x.count{
+            numerator += (x[i]-xmean)*(y[i]-ymean)
+            denominator += (x[i]-xmean)*(x[i]-xmean)
+        }
+        let m = numerator/denominator
+        let b = ymean - m*xmean
+        
+        return [lowEnd*m+b, highEnd*m+b]
+    }
+    //Todo: Handle 0 data points case
+    //Does what it says on the tin
+    func mean(input: [Double]) -> Double {
+        var avg = 0.0
+        for i in input{
+            avg += i
+        }
+        return avg
     }
     
     //Fills the global class with data
