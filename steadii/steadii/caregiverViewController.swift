@@ -236,7 +236,7 @@ class caregiverViewController : UIViewController{
         for i in input{
             avg += i
         }
-        return avg/input.count
+        return avg/Double(input.count) //@chris I was getting an error with this it was simply "avg/input.count" before. I just casted it, not sure if that makes a difference
     }
     
     //Fills the global class with data

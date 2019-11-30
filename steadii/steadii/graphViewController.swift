@@ -28,7 +28,10 @@
 
 import UIKit
 import Charts
+
 class GraphViewController: UIViewController {
+    @IBOutlet weak var monthlyYAxisLabel: UILabel!
+    @IBOutlet weak var weeklyYAxisLabel: UILabel!
     @IBOutlet weak var monthlyGraph: LineChartView!
     @IBOutlet weak var weeklyGraph: LineChartView!
     @IBOutlet weak var nameTitle: UILabel!
@@ -71,7 +74,9 @@ class GraphViewController: UIViewController {
         //let processedWeeklyWordxData = [0,3]
         //let processedWeeklyWordyData = [23.233,26.554]
         
-        
+        // rotate the YAxis Labels
+        monthlyYAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        weeklyYAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         
         var monthlyBallEntries : [ChartDataEntry] = []
         var monthlyWordEntries : [ChartDataEntry] = []
@@ -96,6 +101,7 @@ class GraphViewController: UIViewController {
         GlobalAccountInfo.weeklyBallScore = [16.52,16.47,17.88,19.55]
         GlobalAccountInfo.weeklyWordX = [0.0,1.0,4.0,6.0]
         GlobalAccountInfo.weeklyWordScore = [19.55,14.21,16.57,19.66]
+        
         
         // fake trendline data
         GlobalAccountInfo.monthlyBallYTrend = [15.23,19.55]
@@ -171,21 +177,26 @@ class GraphViewController: UIViewController {
         
         // set trendlines
         let monthlyBallTrendDataSet = LineChartDataSet(entries: monthlyBallTrendEntries/*[monthlyBallEntry1, monthlyBallEntry2, monthlyBallEntry3]*/, label: "Ball Tilting Game Trend")
-        monthlyBallTrendDataSet.setCircleColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
-        monthlyBallTrendDataSet.setColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
+        monthlyBallTrendDataSet.setCircleColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
+        monthlyBallTrendDataSet.setColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         
         let monthlyWordTrendDataSet = LineChartDataSet(entries: monthlyWordTrendEntries/*[monthlyWordEntry1, monthlyWordEntry2, monthlyWordEntry3]*/, label: "Word Association Game Trend")
-        monthlyWordTrendDataSet.setCircleColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
-        monthlyWordTrendDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
+        monthlyWordTrendDataSet.setCircleColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
+        monthlyWordTrendDataSet.setColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         
         
         let weeklyBallTrendDataSet = LineChartDataSet(entries: weeklyBallTrendEntries/*[weeklyBallEntry1, weeklyBallEntry2, weeklyBallEntry3]*/, label: "Ball Tilting Game Trend")
-        weeklyBallTrendDataSet.setCircleColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
-        weeklyBallTrendDataSet.setColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
+        weeklyBallTrendDataSet.setCircleColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
+        weeklyBallTrendDataSet.setColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         
         let weeklyWordTrendDataSet = LineChartDataSet(entries: weeklyWordTrendEntries/*[weeklyWordEntry1, weeklyWordEntry2, weeklyWordEntry3]*/, label: "Word Association Game Trend")
-        weeklyWordTrendDataSet.setCircleColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
-        weeklyWordTrendDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
+        weeklyWordTrendDataSet.setCircleColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
+        weeklyWordTrendDataSet.setColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
+        
+        
+        //weeklyWordTrendDataSet.valueFont = (name: "Verdana", size: 14.0)
+        // doesn't work because "no such module UIFont"
+        
         
         
         let monthlyData = LineChartData(dataSets: [monthlyBallDataSet,monthlyWordDataSet,monthlyBallTrendDataSet,monthlyWordTrendDataSet])
@@ -200,15 +211,18 @@ class GraphViewController: UIViewController {
         weeklyWordTrendDataSet.circleRadius = 0.0
         weeklyBallTrendDataSet.circleRadius = 0.0
         
-        monthlyGraph.data = monthlyData// feed data into object
+        monthlyGraph.data = monthlyData // feed data into object
         weeklyGraph.data = weeklyData
         
-        monthlyGraph.chartDescription?.text = "Monthly Trend" //Description of Graphs
-        weeklyGraph.chartDescription?.text = "Weekly Trend"
+        monthlyGraph.chartDescription?.text = "Past Month's Performance Over Time" //Description of Graphs
+        weeklyGraph.chartDescription?.text = "Past Week's Performance Over Time"
         
         
         weeklyGraph.rightAxis.enabled = false // disable the right axis
         monthlyGraph.rightAxis.enabled = false
+        
+        weeklyGraph.xAxis.enabled = false // disable the x axis
+        monthlyGraph.xAxis.enabled = false
         
         monthlyGraph.notifyDataSetChanged()
         weeklyGraph.notifyDataSetChanged()

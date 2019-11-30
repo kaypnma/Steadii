@@ -248,13 +248,31 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-rM-H8I" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="597" y="247" width="485" height="472"/>
+                                <rect key="frame" x="603" y="247" width="472" height="472"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8q-Sk-5ZK">
+                                        <rect key="frame" x="-49" y="226" width="67" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHU-rR-2wr" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="96" y="247" width="485" height="472"/>
+                                <rect key="frame" x="102" y="247" width="472" height="472"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jX-9H-i8J">
+                                        <rect key="frame" x="-56" y="226" width="82" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -277,8 +295,10 @@
                     </view>
                     <connections>
                         <outlet property="monthlyGraph" destination="RHU-rR-2wr" id="1Ka-0D-IbD"/>
+                        <outlet property="monthlyYAxisLabel" destination="5jX-9H-i8J" id="E70-Xo-Xzc"/>
                         <outlet property="nameTitle" destination="KRa-HJ-o6B" id="HjI-gf-c7c"/>
                         <outlet property="weeklyGraph" destination="Ug0-rM-H8I" id="Rft-9f-l5O"/>
+                        <outlet property="weeklyYAxisLabel" destination="L8q-Sk-5ZK" id="DqZ-qX-mmd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNq-bD-ge3" userLabel="First Responder" sceneMemberID="firstResponder"/>
