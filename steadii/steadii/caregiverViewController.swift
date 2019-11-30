@@ -236,7 +236,7 @@ class caregiverViewController : UIViewController{
         for i in input{
             avg += i
         }
-        return avg
+        return avg/input.count
     }
     
     //Fills the global class with data
