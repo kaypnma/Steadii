@@ -100,10 +100,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0h2-g5-DHa"/>
                     </view>
+                    <connections>
+                        <segue destination="gE0-fN-0Je" kind="show" identifier="signinMainSegue" id="LXz-CW-nUH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27J-su-F1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-54.2713567839196" y="-10.071942446043167"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="vu7-bH-C4j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="LoginVC" id="gE0-fN-0Je" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxz-UV-2Vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="422"/>
         </scene>
     </scenes>
     <resources>

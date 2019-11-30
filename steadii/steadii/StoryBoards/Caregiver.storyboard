@@ -300,15 +300,9 @@
                                 </constraints>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
-                                    <segue destination="lp7-4X-f7B" kind="show" id="itv-D2-n2A"/>
+                                    <segue destination="lp7-4X-f7B" kind="show" identifier="careGiverMainSegue" id="itv-D2-n2A"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-Ud-9SJ">
-                                <rect key="frame" x="640.5" y="182" width="124" height="68"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="50"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add player" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5p-fd-dpB">
                                 <rect key="frame" x="313" y="182" width="228.5" height="67.5"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="50"/>
@@ -340,15 +334,22 @@
                                 <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-Ud-9SJ">
+                                <rect key="frame" x="641" y="182" width="408" height="54"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="I8Q-Ud-9SJ" secondAttribute="trailing" constant="429.5" id="484-iR-QkC"/>
                             <constraint firstItem="LJQ-BS-wXf" firstAttribute="centerX" secondItem="vd0-1x-ecq" secondAttribute="centerX" id="7tI-OQ-9GM"/>
                             <constraint firstItem="a5p-fd-dpB" firstAttribute="top" secondItem="A3y-EI-9rp" secondAttribute="bottom" constant="48" id="Jkm-og-xyB"/>
                             <constraint firstItem="BY5-GF-bxE" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="40" id="U2f-4V-Lla"/>
                             <constraint firstItem="Qg5-iM-j4j" firstAttribute="bottom" secondItem="LJQ-BS-wXf" secondAttribute="bottom" constant="164" id="XKY-cS-0Wb"/>
                             <constraint firstItem="a5p-fd-dpB" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="313" id="Y6G-Ir-xjC"/>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="I8Q-Ud-9SJ" secondAttribute="trailing" constant="145" id="bW8-CS-A3b"/>
+                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="leading" secondItem="a5p-fd-dpB" secondAttribute="trailing" constant="99.5" id="iwL-0l-hPL"/>
                             <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="top" secondItem="A3y-EI-9rp" secondAttribute="bottom" constant="48" id="kiH-Ik-O2X"/>
                             <constraint firstItem="A3y-EI-9rp" firstAttribute="top" secondItem="Qg5-iM-j4j" secondAttribute="top" constant="50" id="px3-aM-axT"/>
                             <constraint firstItem="A3y-EI-9rp" firstAttribute="centerX" secondItem="vd0-1x-ecq" secondAttribute="centerX" id="rpE-Gv-qB7"/>
@@ -455,11 +456,20 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="6bM-Pj-OUs" id="tag-MB-ph8"/>
+                        <segue destination="UtE-xq-3NZ" kind="show" identifier="signinMainSegue" id="Hce-7r-os8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX2-jZ-k1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20.100502512562816" y="1541.7266187050361"/>
+            <point key="canvasLocation" x="-20" y="1551"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="5Aa-yZ-2FO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="LoginVC" id="UtE-xq-3NZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixs-LW-k8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="1938"/>
         </scene>
     </scenes>
     <resources>
