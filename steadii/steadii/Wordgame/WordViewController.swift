@@ -72,7 +72,7 @@ class categoryManager{
         containedCategories.reserveCapacity(numCats)
         
         var catName = "Mathematics"
-        var listOfWords = ["Algebra", "Fraction", "Subtraction", "Addition", "Division", "Integer", "Square root", "Exponent", "Multiplication", "Arithmetic"]
+        var listOfWords = ["Algebra", "Fraction", "Subtraction", "Addition", "Pi", "Integer", "Square root", "Exponent", "Multiplication", "Arithmetic"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
