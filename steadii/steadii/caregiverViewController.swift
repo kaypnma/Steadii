@@ -11,7 +11,8 @@
 
 //  Updates from Previous Commit:
 /*
- -  Attempted to implement linear regression functionality
+ -  I wrote this through gitlab online so it probably will not compile first time. 
+    I added the name printing and hiding
  */
 
 //  Known Bugs:
@@ -30,6 +31,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
+//The global graph information class, we must construct it with garbage data
 var GlobalAccountInfo = accountInfo (name:"kmn", email:"pls@gmail.com", monthlyBallScore: [1.0], weeklyBallScore : [1.0], monthlyWordScore : [1.0], weeklyWordScore : [1.0], monthlyBallX : [1.0], weeklyBallX : [1.0], monthlyWordX : [1.0], weeklyWordX : [1.0], monthlyBallYTrend : [1.0], weeklyBallYTrend : [1.0], monthlyWordYTrend : [1.0], weeklyWordYTrend : [1.0] )
 
 class accountInfo{
@@ -73,6 +75,7 @@ class accountInfo{
 }
 
 class caregiverViewController : UIViewController{
+    //Counted the way one would read a book
     @IBOutlet weak var Player1: LButton!
     @IBOutlet weak var Player2: LButton!
     @IBOutlet weak var Player3: LButton!
@@ -80,13 +83,14 @@ class caregiverViewController : UIViewController{
     @IBOutlet weak var Player5: LButton!
     @IBOutlet weak var Player6: LButton!
     
-    let maxPlayers = 6
-    
     //You can use this as the list of players
-    var careeList : [String] = []
+    var playerList : [String] = []
+    var emailList : [String] = []
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        //Must be called before display for obvious reasons
+        getPlayersAndEmails()
         dispNamesOnButtons()
         //updateData(email: "cc@gmail.com", name: "test")
     }
@@ -94,6 +98,7 @@ class caregiverViewController : UIViewController{
     //Jack: don't worry about these
     @IBAction func but1Clicked(_ sender: Any) {
         //Pass the username and the email of my button to the updatedata function
+        //The username and email for each button should be known inside of the class
         print(1)
     }
     
@@ -117,9 +122,75 @@ class caregiverViewController : UIViewController{
         print(6)
     }
     
-    //Function to display names on buttons, Jack you should do this once you read the list of names, then hide them as needed
+    //Function to display names on buttons
     func dispNamesOnButtons(){
-        Player1.setTitle("Test1", for: .normal)
+        switch playerList.count {
+            case 0:
+                Player1.isHidden = true
+                Player2.isHidden = true
+                Player3.isHidden = true
+                Player4.isHidden = true
+                Player5.isHidden = true
+                Player6.isHidden = true
+            case 1:
+                Player1.setTitle(playerList[0], for: .normal)
+                Player2.isHidden = true
+                Player3.isHidden = true
+                Player4.isHidden = true
+                Player5.isHidden = true
+                Player6.isHidden = true
+            case 2:
+                Player1.setTitle(playerList[0], for: .normal)
+                Player2.setTitle(playerList[1], for: .normal)
+                Player3.isHidden = true
+                Player4.isHidden = true
+                Player5.isHidden = true
+                Player6.isHidden = true
+            case 3:
+                Player1.setTitle(playerList[0], for: .normal)
+                Player2.setTitle(playerList[1], for: .normal)
+                Player3.setTitle(playerList[2], for: .normal)
+                Player4.isHidden = true
+                Player5.isHidden = true
+                Player6.isHidden = true
+            case 4: 
+                Player1.setTitle(playerList[0], for: .normal)
+                Player2.setTitle(playerList[1], for: .normal)
+                Player3.setTitle(playerList[2], for: .normal)
+                Player4.setTitle(playerList[3], for: .normal)
+                Player5.isHidden = true
+                Player6.isHidden = true
+            case 5:
+                Player1.setTitle(playerList[0], for: .normal)
+                Player2.setTitle(playerList[1], for: .normal)
+                Player3.setTitle(playerList[2], for: .normal)
+                Player4.setTitle(playerList[3], for: .normal)
+                Player5.setTitle(playerList[4], for: .normal)
+                Player6.isHidden = true
+            case 6:
+                Player1.setTitle(playerList[0], for: .normal)
+                Player2.setTitle(playerList[1], for: .normal)
+                Player3.setTitle(playerList[2], for: .normal)
+                Player4.setTitle(playerList[3], for: .normal)
+                Player5.setTitle(playerList[4], for: .normal)
+                Player5.setTitle(playerList[5], for: .normal)
+            default:
+                //Bad stuff happened, better display nothing just in case
+                Player1.isHidden = true
+                Player2.isHidden = true
+                Player3.isHidden = true
+                Player4.isHidden = true
+                Player5.isHidden = true
+                Player6.isHidden = true
+        }
+    }
+    
+    //Func get list of names and emails for all of the managed players
+    func getPlayersAndEmails(){
+        //update playerlist and emaillist
+        //self.playerList = ?
+        //self.emailList = ?
+        
     }
     
     //Resets the global class to prep it for reuse, don't worry about it
@@ -174,5 +245,9 @@ class caregiverViewController : UIViewController{
         resetGlobal()
         //This function will parse the data and send it to the global class
         //JACK: Please return me some array of data from the last 30 days right here, I will parse it.
+        var ballScores:[Double] = []
+        var wordScores:[Double] = []
+        var ballDates:[String] = []
+        var wordDates:[String] = []
     }
 }
