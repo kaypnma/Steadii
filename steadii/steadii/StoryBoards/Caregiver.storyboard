@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CorbelBold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -271,6 +271,7 @@
                     </view>
                     <connections>
                         <outlet property="monthlyGraph" destination="RHU-rR-2wr" id="1Ka-0D-IbD"/>
+                        <outlet property="nameTitle" destination="KRa-HJ-o6B" id="HjI-gf-c7c"/>
                         <outlet property="weeklyGraph" destination="Ug0-rM-H8I" id="Rft-9f-l5O"/>
                     </connections>
                 </viewController>
