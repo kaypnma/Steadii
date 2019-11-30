@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CorbelBold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -52,6 +52,7 @@
                                     <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="but2Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="di4-BQ-QdM"/>
                                     <segue destination="XLc-Ji-cjO" kind="show" id="ggR-hR-Az7"/>
                                 </connections>
                             </button>
@@ -67,21 +68,6 @@
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APU-Yk-jUi" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="90" y="179" width="445" height="125"/>
-                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="JtD-D5-C36"/>
-                                    <constraint firstAttribute="width" constant="445" id="MIm-DL-knl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Kay Arellano">
-                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="XLc-Ji-cjO" kind="show" id="VrN-Tx-ESC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-cn-co3" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="659" y="374" width="445" height="125"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +80,7 @@
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="but4Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="gB5-ty-kyC"/>
                                     <segue destination="XLc-Ji-cjO" kind="show" id="D1C-Mp-EGI"/>
                                 </connections>
                             </button>
@@ -109,6 +96,7 @@
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="but6Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="crS-aD-Lqi"/>
                                     <segue destination="XLc-Ji-cjO" kind="show" id="Wkv-V7-KZs"/>
                                 </connections>
                             </button>
@@ -124,6 +112,7 @@
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="but3Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="pIy-Ws-qd5"/>
                                     <segue destination="XLc-Ji-cjO" kind="show" id="U2I-Xb-8Km"/>
                                 </connections>
                             </button>
@@ -139,6 +128,7 @@
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="but5Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="Y8d-gm-gm5"/>
                                     <segue destination="XLc-Ji-cjO" kind="show" id="AcZ-b3-cFu"/>
                                 </connections>
                             </button>
@@ -152,6 +142,22 @@
                                 <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APU-Yk-jUi" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="90" y="178" width="445" height="125"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="JtD-D5-C36"/>
+                                    <constraint firstAttribute="width" constant="445" id="MIm-DL-knl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
+                                <state key="normal" title="Kay Arellano">
+                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="but1Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="s5V-6n-eL0"/>
+                                    <segue destination="XLc-Ji-cjO" kind="show" id="VrN-Tx-ESC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
