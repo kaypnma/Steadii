@@ -6,17 +6,12 @@
 //  Description/Purpose: defines view controller
 
 //  Created by Dustin Seah on 11/3/19
-//  Last Updated by Dustin Seah on 11/23/2019
-//  Worked on by Kay Arellano, Dustin Seah, Jack Guo, Denyse Tran, and Chris Keilbart
+//  Last Updated by Dustin Seah on 11/28/2019
+//  Worked on by  Dustin Seah, Jack Guo, and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
- -  Still faking data
- -  Normalized the function names
- -  Lines have different colours
- -  Made more modular for intaking data
- -  Took out right axis labels
- -  Took out in graph labels
+ - faked data in arrays instead
  */
 
 //  Known Bugs:
@@ -26,8 +21,7 @@
 
 //  To do:
 /*
- - Intake data from firebase and individualize the graph view.
- -> as of now, any name we tap goes into "Denyse's statistics"
+ - Intake data from firebase.
  */
 
 //  Copyright © 2019 ii Studio. All rights reserved.
