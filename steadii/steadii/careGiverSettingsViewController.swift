@@ -27,6 +27,7 @@ class careGiverSettingsViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            self.performSegue(withIdentifier: "signinMainSegue", sender: self)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

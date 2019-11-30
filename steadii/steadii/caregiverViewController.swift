@@ -80,39 +80,71 @@ class caregiverViewController : UIViewController{
     @IBOutlet weak var Player5: LButton!
     @IBOutlet weak var Player6: LButton!
     
+    let maxPlayers = 6
+    
+    //You can use this as the list of players
     var careeList : [String] = []
+    
     override func viewDidLoad(){
         super.viewDidLoad()
-        getName()
+        dispNamesOnButtons()
+        //updateData(email: "cc@gmail.com", name: "test")
     }
     
-    func getName(){
-        
-        let db = Firestore.firestore()
-        //direct to the games page if account is for players
-        if Auth.auth().currentUser != nil {
-            // User is signed in.
-            // ...
-            
-            let user = Auth.auth().currentUser
-            if let user = user {
-                //if carer signed in, get the list of all the carees
-                
-                let email = user.email
-                //let dateNow = getDate()
-                //let dateWeek = getDateWeek()
-                //let dbcRef=db.collection("carers").document(email!)
-                db.collection("carers").document(email!).getDocument { (document, error) in
-                    if error == nil{
-                        if document != nil && document!.exists{
-                            self.careeList = document!.data()!["caree"] as! [String]
-                            print("careelist1:")
-                            print(self.careeList) // Jack - map email name to real name and display on buttons
-    }
-                    }
-                }
-            }
-        }
+    //Jack: don't worry about these
+    @IBAction func but1Clicked(_ sender: Any) {
+        //Pass the username and the email of my button to the updatedata function
+        print(1)
     }
     
+    @IBAction func but2Clicked(_ sender: Any) {
+        print(2)
+    }
+    
+    @IBAction func but3Clicked(_ sender: Any) {
+        print(3)
+    }
+    
+    @IBAction func but4Clicked(_ sender: Any) {
+        print(4)
+    }
+    
+    @IBAction func but5Clicked(_ sender: Any) {
+        print(5)
+    }
+    
+    @IBAction func but6Clicked(_ sender: Any) {
+        print(6)
+    }
+    
+    //Function to display names on buttons, Jack you should do this once you read the list of names, then hide them as needed
+    func dispNamesOnButtons(){
+        Player1.setTitle("Test1", for: .normal)
+    }
+    
+    //Resets the global class to prep it for reuse, don't worry about it
+    func resetGlobal(){
+        GlobalAccountInfo.name = "Reset"
+        GlobalAccountInfo.email = "Reset"
+        GlobalAccountInfo.monthlyBallScore = []
+        GlobalAccountInfo.weeklyBallScore = []
+        GlobalAccountInfo.monthlyWordScore = []
+        GlobalAccountInfo.weeklyWordScore = []
+        GlobalAccountInfo.monthlyBallX = []
+        GlobalAccountInfo.weeklyBallX = []
+        GlobalAccountInfo.monthlyWordX = []
+        GlobalAccountInfo.weeklyWordX = []
+        GlobalAccountInfo.monthlyBallYTrend = []
+        GlobalAccountInfo.weeklyBallYTrend = []
+        GlobalAccountInfo.monthlyWordYTrend = []
+        GlobalAccountInfo.weeklyWordYTrend = []
+    }
+    
+    //Fills the global class with data
+    func updateData(email: String, name: String){
+        //var ballscores
+        resetGlobal()
+        //This function will parse the data and send it to the global class
+        //JACK: Please return me some array of data from the last 30 days right here, I will parse it.
+    }
 }
