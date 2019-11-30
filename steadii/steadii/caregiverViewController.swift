@@ -90,8 +90,8 @@ class caregiverViewController : UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         //Must be called before display for obvious reasons
-        getPlayersAndEmails()
-        dispNamesOnButtons()
+        ///getPlayersAndEmails()
+        //dispNamesOnButtons()
         //updateData(email: "cc@gmail.com", name: "test")
     }
     
