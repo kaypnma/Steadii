@@ -34,6 +34,7 @@ class addCareeViewController: UIViewController {
                 //print(emailp)
                 db.collection("carers").document(emailc!).updateData([                    "caree": FieldValue.arrayUnion([emailp])])
             }}
+        self.performSegue(withIdentifier: "careGiverMainSegue", sender: self)
         
     }
     
