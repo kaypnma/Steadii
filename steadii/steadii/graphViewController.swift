@@ -6,12 +6,12 @@
 //  Description/Purpose: defines view controller
 
 //  Created by Dustin Seah on 11/3/19
-//  Last Updated by Dustin Seah on 11/28/2019
+//  Last Updated by Dustin Seah on 11/29/2019
 //  Worked on by  Dustin Seah, Jack Guo, and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
- - faked data in arrays instead
+ - no data case done
  */
 
 //  Known Bugs:
@@ -87,7 +87,7 @@ class GraphViewController: UIViewController {
         var weeklyBallTrendEntries : [ChartDataEntry] = []
         var weeklyWordTrendEntries : [ChartDataEntry] = []
         
-        
+        /*
         // fake monthly data
         
         GlobalAccountInfo.monthlyBallX = [0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0]
@@ -108,6 +108,31 @@ class GraphViewController: UIViewController {
         GlobalAccountInfo.monthlyWordYTrend = [19.55,16.47]
         GlobalAccountInfo.weeklyBallYTrend = [16.52,19.55]
         GlobalAccountInfo.weeklyWordYTrend = [19.55,19.66]
+        */
+        
+        // if the data has not been altered, i.e. no data, set everything to nil
+        if(GlobalAccountInfo.monthlyBallScore == [1.0] && GlobalAccountInfo.weeklyBallScore == [1.0] && GlobalAccountInfo.monthlyWordScore == [1.0] && GlobalAccountInfo.weeklyWordScore == [1.0] && GlobalAccountInfo.monthlyBallX == [1.0] && GlobalAccountInfo.weeklyBallX == [1.0] && GlobalAccountInfo.monthlyWordX == [1.0] && GlobalAccountInfo.weeklyWordX == [1.0] && GlobalAccountInfo.monthlyBallYTrend == [1.0] && GlobalAccountInfo.weeklyBallYTrend == [1.0] && GlobalAccountInfo.monthlyWordYTrend == [1.0] && GlobalAccountInfo.weeklyWordYTrend == [1.0]){
+            
+            GlobalAccountInfo.monthlyBallX = [/*0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0*/]
+            GlobalAccountInfo.monthlyBallScore = [/*15.23,15.22,17.514,19.66,16.52,16.47,19.55,20.55,14.21,16.57,19.55*/]
+            GlobalAccountInfo.monthlyWordX = [/*0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0*/]
+            GlobalAccountInfo.monthlyWordScore = [/*19.55,20.55,14.21,16.57,19.55,15.23,15.22,17.514,19.66,16.52,16.47*/]
+            
+            
+            //fake weekly data
+            GlobalAccountInfo.weeklyBallX = [/*0.0,1.0,4.0,6.0*/]
+            GlobalAccountInfo.weeklyBallScore = [/*16.52,16.47,17.88,19.55*/]
+            GlobalAccountInfo.weeklyWordX = [/*0.0,1.0,4.0,6.0*/]
+            GlobalAccountInfo.weeklyWordScore = [/*19.55,14.21,16.57,19.66*/]
+            
+            
+            // fake trendline data
+            GlobalAccountInfo.monthlyBallYTrend = [/*15.23,19.55*/]
+            GlobalAccountInfo.monthlyWordYTrend = [/*19.55,16.47*/]
+            GlobalAccountInfo.weeklyBallYTrend = [/*16.52,19.55*/]
+            GlobalAccountInfo.weeklyWordYTrend = [/*19.55,19.66*/]
+        }
+        
         
         GlobalAccountInfo.name = "Test Name"
         nameTitle.text = GlobalAccountInfo.name
@@ -154,6 +179,7 @@ class GraphViewController: UIViewController {
         let weeklyWordEntry2 = ChartDataEntry(x: 2.0, y: 4.0)
         let weeklyWordEntry3 = ChartDataEntry(x: 3.0, y: 8.0)
         */
+        
         
         // set monthly data
         let monthlyBallDataSet = LineChartDataSet(entries: monthlyBallEntries/*[monthlyBallEntry1, monthlyBallEntry2, monthlyBallEntry3]*/, label: "Ball Tilting Game")
