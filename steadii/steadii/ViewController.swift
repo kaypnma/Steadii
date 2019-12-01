@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         let defaults = UserDefaults.standard
         if defaults.integer(forKey: "sound") == 0 {
             defaults.set(1, forKey: "sound")
+            print("Initialized sound setting to 1.")
         }
     }
 }

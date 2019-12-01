@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ya-so-59u">
-                                <rect key="frame" x="40" y="54" width="52" height="34.5"/>
+                                <rect key="frame" x="40" y="54" width="52" height="34"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="euq-HG-gbY" kind="show" id="HGD-Yv-Ub9"/>
@@ -71,7 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon feather-volume-x"/>
                                 <connections>
-                                    <action selector="buttonTappedWithButton:" destination="UWd-Ig-Fb2" eventType="touchUpInside" id="tYK-ND-Bf5"/>
+                                    <action selector="soundButtonTappedWithButton:" destination="UWd-Ig-Fb2" eventType="touchUpInside" id="McD-j1-H75"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iiStudio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2E-Oh-KBC">
@@ -80,6 +80,14 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQe-Ys-P9O">
+                                <rect key="frame" x="711" y="213" width="80" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Icon feather-volume-2"/>
+                                <connections>
+                                    <action selector="soundButtonTappedWithButton:" destination="UWd-Ig-Fb2" eventType="touchUpInside" id="BiE-6b-eo5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -101,6 +109,8 @@
                         <viewLayoutGuide key="safeArea" id="0h2-g5-DHa"/>
                     </view>
                     <connections>
+                        <outlet property="soundOff" destination="LQe-Ys-P9O" id="EMR-tP-QAW"/>
+                        <outlet property="soundOn" destination="HZb-PM-2Ij" id="fGZ-pg-ZqO"/>
                         <segue destination="gE0-fN-0Je" kind="show" identifier="signinMainSegue" id="LXz-CW-nUH"/>
                     </connections>
                 </viewController>
@@ -118,7 +128,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon feather-volume-2" width="80" height="60"/>
         <image name="Icon feather-volume-x" width="86" height="58"/>
-        <image name="back_arrow" width="52" height="34.5"/>
+        <image name="back_arrow" width="52" height="34"/>
     </resources>
 </document>

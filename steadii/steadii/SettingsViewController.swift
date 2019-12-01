@@ -31,9 +31,14 @@ import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var soundOn: UIButton!
+    @IBOutlet weak var soundOff: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
         
+        updateSoundButton(defaults: defaults)
         // Do any additional setup after loading the view.
     }
     
@@ -48,12 +53,27 @@ class SettingsViewController: UIViewController {
         
         
     }
-    @IBAction func buttonTapped(button: UIButton)
+    @IBAction func soundButtonTapped(button: UIButton)
     {
         let defaults = UserDefaults.standard
         let currentSound = defaults.integer(forKey: "sound")
         defaults.set(-1*currentSound, forKey: "sound")
+        updateSoundButton(defaults: defaults)
         //print ("sound set to : ", defaults.integer(forKey: "sound"))
+    }
+    
+    func updateSoundButton(defaults: UserDefaults) {
+        if defaults.integer(forKey: "sound") == 1 {
+            soundOn.isHidden = true
+            soundOff.isHidden = false
+        }
+        else if defaults.integer(forKey: "sound") == -1 {
+            soundOn.isHidden = false
+            soundOff.isHidden = true
+        }
+        else {
+            print("ERROR: invalid sound setting!")
+        }
     }
     
 }
