@@ -20,6 +20,12 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let defaults = UserDefaults.standard
+        print("here")
+        if defaults.integer(forKey: "sound") == 0 {
+            defaults.set(1, forKey: "sound")
+            print("Initialized sound setting to 1.")
+        }
     }
     
     

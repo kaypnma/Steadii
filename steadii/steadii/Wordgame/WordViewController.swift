@@ -244,9 +244,9 @@ class WordViewController: UIViewController {
     
     //Sounds
     let defaults = UserDefaults.standard
-    var audioPlayerEnd = AVAudioPlayer()
-    var audioPlayerRight = AVAudioPlayer()
-    var audioPlayerWrong = AVAudioPlayer()
+    var audioPlayerEnd: AVAudioPlayer!
+    var audioPlayerRight: AVAudioPlayer!
+    var audioPlayerWrong: AVAudioPlayer!
     let soundEnd = Bundle.main.path(forResource: "end", ofType: "mp3")
     let soundRight = Bundle.main.path(forResource: "right", ofType: "mp3")
     let soundWrong = Bundle.main.path(forResource: "wrong", ofType: "mp3")

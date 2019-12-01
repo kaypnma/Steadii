@@ -64,8 +64,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Sounds
     let defaults = UserDefaults.standard
-    var audioPlayerTouch = AVAudioPlayer()
-    var audioPlayerBounce = AVAudioPlayer()
+    var audioPlayerTouch: AVAudioPlayer!
+    var audioPlayerBounce: AVAudioPlayer!
     let soundTouch = Bundle.main.path(forResource: "touch", ofType: "mp3")
     let soundBounce = Bundle.main.path(forResource: "bounce", ofType: "mp3")
     
