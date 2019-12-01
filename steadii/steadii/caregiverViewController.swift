@@ -92,8 +92,6 @@ class caregiverViewController : UIViewController{
         super.viewDidLoad()
         //Must be called before display for obvious reasons
         getPlayersAndEmails()
-        //dispNamesOnButtons()
-        //updateData(email: "cc@gmail.com", name: "test")
     }
     
     //Jack: don't worry about these
@@ -103,7 +101,7 @@ class caregiverViewController : UIViewController{
         //updateData(email: "p3@gmail.com")
         print(1)
         resetGlobal()
-        updateData(email: self.emailList[0], playerName: "ayy"/*self.playerList[0]*/)
+        updateData(email: self.emailList[0], playerName: self.playerList[0])
     }
     
     @IBAction func but2Clicked(_ sender: Any) {
@@ -138,6 +136,7 @@ class caregiverViewController : UIViewController{
     
     //Function to display names on buttons
     func dispNamesOnButtons(){
+        print(self.playerList)
         switch playerList.count {
             case 0:
                 Player1.isHidden = true
@@ -231,9 +230,14 @@ class caregiverViewController : UIViewController{
                                 else{
                                     
                                 }
-                                
+                                    if (caree == self.emailList[0]){
+                                        print(self.playerList)
+                                        self.dispNamesOnButtons()
+                                    }
                             })
+                                
                             }
+                            
                         }
                     }}
 
