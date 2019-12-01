@@ -37,8 +37,7 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var nameTitle: UILabel!
     
     func graphDisplay(){
-        // Not sure of the form the data will be when taking from firebase , I assumed as a dictionary
-        // so, data will come to us as the following structure?
+        //data will come to us as the following structure?
         
         // [Ball Game Performances]
         // [Date]   [Score/Time]
@@ -61,19 +60,6 @@ class GraphViewController: UIViewController {
         
         // assuming the data have been processed into the following arrays
         
-        // FAKE DATA
-        //let processedMonthlyBallxData = [0.0,12.0,13.0]
-        //let processedMonthlyBallyData = [25.345,22.556,15.842]
-        
-        //let processedMonthlyWordxData = [0,3,6]
-        //let processedMonthlyWordyData = [13.257,23.233,26.554]
-        
-        //let processedWeeklyBallxData = [0,1]
-        //let processedWeeklyBallyData = [22.556,15.842]
-        
-        //let processedWeeklyWordxData = [0,3]
-        //let processedWeeklyWordyData = [23.233,26.554]
-        
         // rotate the YAxis Labels
         monthlyYAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         weeklyYAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
@@ -89,7 +75,6 @@ class GraphViewController: UIViewController {
         
         /*
         // fake monthly data
-        
         GlobalAccountInfo.monthlyBallX = [0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0]
         GlobalAccountInfo.monthlyBallScore = [15.23,15.22,17.514,19.66,16.52,16.47,19.55,20.55,14.21,16.57,19.55]
         GlobalAccountInfo.monthlyWordX = [0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0]
@@ -108,29 +93,35 @@ class GraphViewController: UIViewController {
         GlobalAccountInfo.monthlyWordYTrend = [19.55,16.47]
         GlobalAccountInfo.weeklyBallYTrend = [16.52,19.55]
         GlobalAccountInfo.weeklyWordYTrend = [19.55,19.66]
-        */
+         */
+        
+        var trendlineStop = 2 // dummy variable for controlling trendline loop
+        // for special case where there is no data since monthlyXTrend and weeklyXTrend is constant.
         
         // if the data has not been altered, i.e. no data, set everything to nil
         if(GlobalAccountInfo.monthlyBallScore == [1.0] && GlobalAccountInfo.weeklyBallScore == [1.0] && GlobalAccountInfo.monthlyWordScore == [1.0] && GlobalAccountInfo.weeklyWordScore == [1.0] && GlobalAccountInfo.monthlyBallX == [1.0] && GlobalAccountInfo.weeklyBallX == [1.0] && GlobalAccountInfo.monthlyWordX == [1.0] && GlobalAccountInfo.weeklyWordX == [1.0] && GlobalAccountInfo.monthlyBallYTrend == [1.0] && GlobalAccountInfo.weeklyBallYTrend == [1.0] && GlobalAccountInfo.monthlyWordYTrend == [1.0] && GlobalAccountInfo.weeklyWordYTrend == [1.0]){
             
-            GlobalAccountInfo.monthlyBallX = [/*0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0*/]
-            GlobalAccountInfo.monthlyBallScore = [/*15.23,15.22,17.514,19.66,16.52,16.47,19.55,20.55,14.21,16.57,19.55*/]
-            GlobalAccountInfo.monthlyWordX = [/*0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0*/]
-            GlobalAccountInfo.monthlyWordScore = [/*19.55,20.55,14.21,16.57,19.55,15.23,15.22,17.514,19.66,16.52,16.47*/]
+            // set monthly data to empty
+            GlobalAccountInfo.monthlyBallX = []
+            GlobalAccountInfo.monthlyBallScore = []
+            GlobalAccountInfo.monthlyWordX = []
+            GlobalAccountInfo.monthlyWordScore = []
             
             
-            //fake weekly data
-            GlobalAccountInfo.weeklyBallX = [/*0.0,1.0,4.0,6.0*/]
-            GlobalAccountInfo.weeklyBallScore = [/*16.52,16.47,17.88,19.55*/]
-            GlobalAccountInfo.weeklyWordX = [/*0.0,1.0,4.0,6.0*/]
-            GlobalAccountInfo.weeklyWordScore = [/*19.55,14.21,16.57,19.66*/]
+            // set weekly data to empty
+            GlobalAccountInfo.weeklyBallX = []
+            GlobalAccountInfo.weeklyBallScore = []
+            GlobalAccountInfo.weeklyWordX = []
+            GlobalAccountInfo.weeklyWordScore = []
             
             
-            // fake trendline data
-            GlobalAccountInfo.monthlyBallYTrend = [/*15.23,19.55*/]
-            GlobalAccountInfo.monthlyWordYTrend = [/*19.55,16.47*/]
-            GlobalAccountInfo.weeklyBallYTrend = [/*16.52,19.55*/]
-            GlobalAccountInfo.weeklyWordYTrend = [/*19.55,19.66*/]
+            // set trendline data to empty
+            GlobalAccountInfo.monthlyBallYTrend = []
+            GlobalAccountInfo.monthlyWordYTrend = []
+            GlobalAccountInfo.weeklyBallYTrend = []
+            GlobalAccountInfo.weeklyWordYTrend = []
+            
+            trendlineStop = 0
         }
         
         
@@ -156,7 +147,9 @@ class GraphViewController: UIViewController {
         
         // for trendlines
         for n in 0...1{
-            
+            if trendlineStop <= n{
+                break
+            }
             monthlyBallTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyXTrend[n], y:GlobalAccountInfo.monthlyBallYTrend[n]))
             monthlyWordTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyXTrend[n], y:GlobalAccountInfo.monthlyWordYTrend[n]))
             weeklyBallTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.weeklyXTrend[n], y:GlobalAccountInfo.weeklyBallYTrend[n]))
@@ -164,58 +157,41 @@ class GraphViewController: UIViewController {
         }
         
         
-        // fake entries
-        /*
-        let monthlyBallEntry1 = ChartDataEntry(x: 1.0/*processedMonthlyBallxData*/, y: 2.0/*processedMonthlyBallyData*/)
-        let monthlyBallEntry2 = ChartDataEntry(x: 2.0, y: 4.0)
-        let monthlyBallEntry3 = ChartDataEntry(x: 3.0, y: 8.0)
-        let weeklyBallEntry1 = ChartDataEntry(x: 1.0, y: 3.0)
-        let weeklyBallEntry2 = ChartDataEntry(x: 2.0, y: 9.0)
-        let weeklyBallEntry3 = ChartDataEntry(x: 3.0, y: 18.0)
-        let monthlyWordEntry1 = ChartDataEntry(x: 1.0, y: 3.0)
-        let monthlyWordEntry2 = ChartDataEntry(x: 2.0, y: 9.0)
-        let monthlyWordEntry3 = ChartDataEntry(x: 3.0, y: 18.0)
-        let weeklyWordEntry1 = ChartDataEntry(x: 1.0, y: 2.0)
-        let weeklyWordEntry2 = ChartDataEntry(x: 2.0, y: 4.0)
-        let weeklyWordEntry3 = ChartDataEntry(x: 3.0, y: 8.0)
-        */
-        
-        
         // set monthly data
-        let monthlyBallDataSet = LineChartDataSet(entries: monthlyBallEntries/*[monthlyBallEntry1, monthlyBallEntry2, monthlyBallEntry3]*/, label: "Ball Tilting Game")
+        let monthlyBallDataSet = LineChartDataSet(entries: monthlyBallEntries, label: "Ball Tilting Game")
         monthlyBallDataSet.setCircleColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
         monthlyBallDataSet.setColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
         
-        let monthlyWordDataSet = LineChartDataSet(entries: monthlyWordEntries/*[monthlyWordEntry1, monthlyWordEntry2, monthlyWordEntry3]*/, label: "Word Association Game")
+        let monthlyWordDataSet = LineChartDataSet(entries: monthlyWordEntries, label: "Word Association Game")
         monthlyWordDataSet.setCircleColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         monthlyWordDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         
         
         // set weekly data
-        let weeklyBallDataSet = LineChartDataSet(entries: weeklyBallEntries/*[weeklyBallEntry1, weeklyBallEntry2, weeklyBallEntry3]*/, label: "Ball Tilting Game")
+        let weeklyBallDataSet = LineChartDataSet(entries: weeklyBallEntries, label: "Ball Tilting Game")
         weeklyBallDataSet.setCircleColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
         weeklyBallDataSet.setColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
         
-        let weeklyWordDataSet = LineChartDataSet(entries: weeklyWordEntries/*[weeklyWordEntry1, weeklyWordEntry2, weeklyWordEntry3]*/, label: "Word Association Game")
+        let weeklyWordDataSet = LineChartDataSet(entries: weeklyWordEntries, label: "Word Association Game")
         weeklyWordDataSet.setCircleColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         weeklyWordDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         
         
         // set trendlines
-        let monthlyBallTrendDataSet = LineChartDataSet(entries: monthlyBallTrendEntries/*[monthlyBallEntry1, monthlyBallEntry2, monthlyBallEntry3]*/, label: "Ball Tilting Game Trend")
+        let monthlyBallTrendDataSet = LineChartDataSet(entries: monthlyBallTrendEntries, label: "Ball Tilting Game Trend")
         monthlyBallTrendDataSet.setCircleColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         monthlyBallTrendDataSet.setColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         
-        let monthlyWordTrendDataSet = LineChartDataSet(entries: monthlyWordTrendEntries/*[monthlyWordEntry1, monthlyWordEntry2, monthlyWordEntry3]*/, label: "Word Association Game Trend")
+        let monthlyWordTrendDataSet = LineChartDataSet(entries: monthlyWordTrendEntries, label: "Word Association Game Trend")
         monthlyWordTrendDataSet.setCircleColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         monthlyWordTrendDataSet.setColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         
         
-        let weeklyBallTrendDataSet = LineChartDataSet(entries: weeklyBallTrendEntries/*[weeklyBallEntry1, weeklyBallEntry2, weeklyBallEntry3]*/, label: "Ball Tilting Game Trend")
+        let weeklyBallTrendDataSet = LineChartDataSet(entries: weeklyBallTrendEntries, label: "Ball Tilting Game Trend")
         weeklyBallTrendDataSet.setCircleColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         weeklyBallTrendDataSet.setColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         
-        let weeklyWordTrendDataSet = LineChartDataSet(entries: weeklyWordTrendEntries/*[weeklyWordEntry1, weeklyWordEntry2, weeklyWordEntry3]*/, label: "Word Association Game Trend")
+        let weeklyWordTrendDataSet = LineChartDataSet(entries: weeklyWordTrendEntries, label: "Word Association Game Trend")
         weeklyWordTrendDataSet.setCircleColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         weeklyWordTrendDataSet.setColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         
