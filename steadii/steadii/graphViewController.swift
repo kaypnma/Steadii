@@ -98,7 +98,7 @@ class GraphViewController: UIViewController {
         var trendlineStop = 2 // dummy variable for controlling trendline loop
         // for special case where there is no data since monthlyXTrend and weeklyXTrend is constant.
         
-        // if the data has not been altered, i.e. no data, set everything to nil
+        /*// if the data has not been altered, i.e. no data, set everything to nil
         if(GlobalAccountInfo.monthlyBallScore == [1.0] && GlobalAccountInfo.weeklyBallScore == [1.0] && GlobalAccountInfo.monthlyWordScore == [1.0] && GlobalAccountInfo.weeklyWordScore == [1.0] && GlobalAccountInfo.monthlyBallX == [1.0] && GlobalAccountInfo.weeklyBallX == [1.0] && GlobalAccountInfo.monthlyWordX == [1.0] && GlobalAccountInfo.weeklyWordX == [1.0] && GlobalAccountInfo.monthlyBallYTrend == [1.0] && GlobalAccountInfo.weeklyBallYTrend == [1.0] && GlobalAccountInfo.monthlyWordYTrend == [1.0] && GlobalAccountInfo.weeklyWordYTrend == [1.0]){
             
             // set monthly data to empty
@@ -121,6 +121,12 @@ class GraphViewController: UIViewController {
             GlobalAccountInfo.weeklyBallYTrend = []
             GlobalAccountInfo.weeklyWordYTrend = []
             
+            trendlineStop = 0
+        }*/
+    
+    //If no data is present in the monthly graph for both games, the chart must therefore be totally empty
+        if(GlobalAccountInfo.monthlyBallScore.count == 0 && GlobalAccountInfo.monthlyWordScore.count == 0){
+            //No data
             trendlineStop = 0
         }
         

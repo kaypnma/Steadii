@@ -100,28 +100,40 @@ class caregiverViewController : UIViewController{
     @IBAction func but1Clicked(_ sender: Any) {
         //Pass the username and the email of my button to the updatedata function
         //The username and email for each button should be known inside of the class
-        updateData(email: "p3@gmail.com")
+        //updateData(email: "p3@gmail.com")
         print(1)
+        resetGlobal()
+        updateData(email: self.emailList[0], playerName: "ayy"/*self.playerList[0]*/)
     }
     
     @IBAction func but2Clicked(_ sender: Any) {
         print(2)
+        resetGlobal()
+        updateData(email: self.emailList[1], playerName: self.playerList[1])
     }
     
     @IBAction func but3Clicked(_ sender: Any) {
         print(3)
+        resetGlobal()
+        updateData(email: self.emailList[2], playerName: self.playerList[2])
     }
     
     @IBAction func but4Clicked(_ sender: Any) {
         print(4)
+        resetGlobal()
+        updateData(email: self.emailList[3], playerName: self.playerList[3])
     }
     
     @IBAction func but5Clicked(_ sender: Any) {
         print(5)
+        resetGlobal()
+        updateData(email: self.emailList[4], playerName: self.playerList[4])
     }
     
     @IBAction func but6Clicked(_ sender: Any) {
         print(6)
+        resetGlobal()
+        updateData(email: self.emailList[5], playerName: self.playerList[5])
     }
     
     //Function to display names on buttons
@@ -175,7 +187,7 @@ class caregiverViewController : UIViewController{
                 Player3.setTitle(playerList[2], for: .normal)
                 Player4.setTitle(playerList[3], for: .normal)
                 Player5.setTitle(playerList[4], for: .normal)
-                Player5.setTitle(playerList[5], for: .normal)
+                Player6.setTitle(playerList[5], for: .normal)
             default:
                 //Bad stuff happened, better display nothing just in case
                 Player1.isHidden = true
@@ -206,9 +218,9 @@ class caregiverViewController : UIViewController{
                 db.collection("carers").document(email!).getDocument { (document, error) in
                     if error == nil{
                         if document != nil && document!.exists{
-                           self.playerList = document!.data()!["caree"] as! [String]
+                           self.emailList = document!.data()!["caree"] as! [String]
                             print("playerlist1:")
-                            print(self.playerList)
+                            print(self.emailList)
                         }
                     }}}}
         
@@ -277,7 +289,7 @@ class caregiverViewController : UIViewController{
         let dateString = dateFormatter.string(for: temp)
         return dateString!
     }
-    func updateData(email: String){
+    func updateData(email: String, playerName: String){
         //var ballscores
         resetGlobal()
         //This function will parse the data and send it to the global class
