@@ -60,7 +60,10 @@ class CreateViewController: UIViewController {
         //check if the password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if CreateViewController.isPasswordValid(cleanedPassword)==false{
-            return"Please make sure your password is valid"
+            return"Please make sure your password is valid, with capital letter, number and sign"
+        }
+        if !self.careGiverButton.isSelected && !self.playerButton.isSelected{
+            return("Please select an account type")
         }
         return nil
     }
@@ -82,7 +85,6 @@ class CreateViewController: UIViewController {
             let lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-             let confirmpassword = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             //create a user
             Auth.auth().createUser(withEmail: email, password:password) { (result,err) in
                 if  err != nil {
@@ -95,6 +97,7 @@ class CreateViewController: UIViewController {
                    
                     let db = Firestore.firestore()
                     //if carer button is selectd
+                    
                     if self.careGiverButton.isSelected {
                         db.collection("carers").document(email).setData(data){(error)in
                             if error != nil{
@@ -130,7 +133,12 @@ class CreateViewController: UIViewController {
         //validate the fields
     }
     func showError(_ message:String){
-        print("ERROR!!:"+message)
+        let alert = UIAlertController(title: "Warning", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+       //alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     func getDate()->String{
         let dateFormatter = DateFormatter()

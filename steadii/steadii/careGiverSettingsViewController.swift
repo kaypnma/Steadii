@@ -19,9 +19,30 @@ class careGiverSettingsViewController: UIViewController {
     
     @IBAction func removeButtonTapped(_ sender: Any) {
 
-        print("caree out side")
-        print(careeList)
-
+        let emailp = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if emailp == ""{
+            let alert = UIAlertController(title: "Warning", message: "please fill in the email address before remove", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+            
+            
+            self.present(alert, animated: true)
+        }
+        //remove the player from careelist in database
+        if Auth.auth().currentUser != nil {
+            // User is signed in.
+            // ...
+            let user = Auth.auth().currentUser
+            if let user = user {
+                // The user's ID, unique to the Firebase project.
+                // Do NOT use this value to authenticate with your backend server,
+                // if you have one. Use getTokenWithCompletion:completion: instead.
+                //let uid = user.uid
+                let db = Firestore.firestore()
+                let emailc = user.email
+                //print(emailp)
+                db.collection("carers").document(emailc!).updateData([                    "caree": FieldValue.arrayRemove([emailp])])
+            }}
        
     }
     
@@ -37,136 +58,6 @@ class careGiverSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getBallGameScore()
-
-        // Do any additional setup after loading the view.
     }
-    func getBallGameScore(){
-        let db = Firestore.firestore()
-        //direct to the games page if account is for players
-        if Auth.auth().currentUser != nil {
-            // User is signed in.
-            // ...
-           
-            let user = Auth.auth().currentUser
-            if let user = user {
-                //if carer signed in, get the list of all the carees
-                
-                let email = user.email
-
-                db.collection("carers").document(email!).getDocument(completion: { (document, error) in
-                    if error == nil{
-                        if document != nil && document!.exists{
-                            self.careeList = document!.data()!["caree"] as! [String]
-                            //print(careeList)
-                            print("careelist1:")
-                            print(self.careeList)
-                        }
-                    }
-                    print("careelist2:")
-                    print(self.careeList)
-                    //read the ball game scores
-                    print("ball game :")
-                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("ballgame").getDocument(completion: { (document, error) in
-                            if error == nil{
-                                
-                                let ballgameScore = document!.data()
-                                
-                                print(caree)
-                                print(ballgameScore as Any)
-                               
-                            }
-                            else{
-                    
-                            }
-                            
-                        })
-                    }
-                     print()
-                    
-            
-                }
-                
-            )}
-            
-        
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-
-}
-    func getWordGameScore(){
-        let db = Firestore.firestore()
-        //direct to the games page if account is for players
-        if Auth.auth().currentUser != nil {
-            // User is signed in.
-            // ...
-            
-            let user = Auth.auth().currentUser
-            if let user = user {
-                //if carer signed in, get the list of all the carees
-                
-                let email = user.email
-                db.collection("carers").document(email!).getDocument { (document, error) in
-                    if error == nil{
-                        if document != nil && document!.exists{
-                            self.careeList = document!.data()!["caree"] as! [String]
-                            print("careelist1:")
-                            print(self.careeList)
-                        }
-                    }
-                    print("careelist2:")
-                    print(self.careeList)
-                    //read the ball game scores
-                    print("word game :")
-                    for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("wordgame").getDocument(completion: { (document, error) in
-                        if error == nil{
-                            
-                            let ballgameScore = document!.data()//![dateNow] as! Double
-                            
-                            print(caree)
-                            //print(dateNow)
-                            print(ballgameScore as Any)
-                            
-                            
-                        }
-                        else{
-                            
-                        }
-                        
-                    })
-                    }
-                    print()
-                    
-                    
-                }
-                
-            }
-            //wait(until limit: 6000) -> true
-            //return "6 seconds"
-            
-            
-            /*
-             // MARK: - Navigation
-             
-             // In a storyboard-based application, you will often want to do a little preparation before navigation
-             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-             // Get the new view controller using segue.destination.
-             // Pass the selected object to the new view controller.
-             }
-             */
-            
-        }
-        
-        
-    }
+    
 }

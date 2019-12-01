@@ -21,7 +21,12 @@ class addCareeViewController: UIViewController {
     @IBAction func addButtonTapped(_ sender: Any) {
         let emailp = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if emailp == ""{
-            print("please fill in the email before add")
+            let alert = UIAlertController(title: "Warning", message: "please fill in the email address before add", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+           
+            
+            self.present(alert, animated: true)
         }
         if Auth.auth().currentUser != nil {
             // User is signed in.

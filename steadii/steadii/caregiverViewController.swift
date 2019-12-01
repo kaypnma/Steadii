@@ -217,8 +217,9 @@ class caregiverViewController : UIViewController{
                     if error == nil{
                         if document != nil && document!.exists{
                             self.emailList = document!.data()!["caree"] as! [String]
+                            //print(emailList)
                             for caree in self.emailList{
-                                print(caree)
+                                //print(caree)
                                 db.collection("users").document(caree).getDocument(completion: { (document, error) in
                                 if error == nil{
                                     let data = document!.data()
@@ -231,9 +232,11 @@ class caregiverViewController : UIViewController{
                                 else{
                                     
                                 }
-                                
+                                    
                             })
+                                
                             }
+                            
                         }
                     }}
 
