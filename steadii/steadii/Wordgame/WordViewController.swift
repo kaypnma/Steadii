@@ -606,13 +606,11 @@ func updateDatabase(score: Double){
             // The user's ID, unique to the Firebase project.
             // Do NOT use this value to authenticate with your backend server,
             // if you have one. Use getTokenWithCompletion:completion: instead.
-            let uid = user.uid
+            //let uid = user.uid
             let email = user.email
             let dateString = getDate()
-            print("email:"+email!+"  uid:"+uid)
+           // let dateInt = (dateString as NSString).integerValue
             db.collection("users").document(email!).collection("performances").document("wordgame").setData([dateString:score],merge:true)
-
-            
         } else {
             // No user is signed in.
             // ...

@@ -12,15 +12,17 @@ import FirebaseFirestore
 
 class careGiverSettingsViewController: UIViewController {
      var careeList: [String] = []
+    //let catDownloader = CatDownloader()
 
 
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBAction func removeButtonTapped(_ sender: Any) {
-        self.getBallGameScore()
-        self.getWordGameScore()
-       // print("caree out side")
-       // print(careeList)
+
+        print("caree out side")
+        print(careeList)
+
+       
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
@@ -35,22 +37,10 @@ class careGiverSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getBallGameScore()
 
         // Do any additional setup after loading the view.
     }
-//    func getDate()->String{
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        let dateString = dateFormatter.string(from:Date())
-//        return dateString
-//
-//    }
-//    func getDateWeek()->String{
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        let dateString = dateFormatter.string(from:Date().addingTimeInterval(-1*24*60*60))
-//        return dateString
-//    }
     func getBallGameScore(){
         let db = Firestore.firestore()
         //direct to the games page if account is for players
@@ -63,10 +53,8 @@ class careGiverSettingsViewController: UIViewController {
                 //if carer signed in, get the list of all the carees
                 
                 let email = user.email
-                //let dateNow = getDate()
-                //let dateWeek = getDateWeek()
-                //let dbcRef=db.collection("carers").document(email!)
-                db.collection("carers").document(email!).getDocument { (document, error) in
+
+                db.collection("carers").document(email!).getDocument(completion: { (document, error) in
                     if error == nil{
                         if document != nil && document!.exists{
                             self.careeList = document!.data()!["caree"] as! [String]
@@ -82,10 +70,9 @@ class careGiverSettingsViewController: UIViewController {
                     for caree in self.careeList{ db.collection("users").document(caree).collection("performances").document("ballgame").getDocument(completion: { (document, error) in
                             if error == nil{
                                 
-                                let ballgameScore = document!.data()//![dateNow] as! Double
+                                let ballgameScore = document!.data()
                                 
                                 print(caree)
-                                //print(dateNow)
                                 print(ballgameScore as Any)
                                
                             }
@@ -100,10 +87,8 @@ class careGiverSettingsViewController: UIViewController {
             
                 }
                 
-            }
-            //wait(until limit: 6000) -> true
-            //return "6 seconds"
-    
+            )}
+            
         
     /*
     // MARK: - Navigation
@@ -131,14 +116,10 @@ class careGiverSettingsViewController: UIViewController {
                 //if carer signed in, get the list of all the carees
                 
                 let email = user.email
-                //let dateNow = getDate()
-                //let dateWeek = getDateWeek()
-                //let dbcRef=db.collection("carers").document(email!)
                 db.collection("carers").document(email!).getDocument { (document, error) in
                     if error == nil{
                         if document != nil && document!.exists{
                             self.careeList = document!.data()!["caree"] as! [String]
-                            //print(careeList)
                             print("careelist1:")
                             print(self.careeList)
                         }
@@ -155,6 +136,7 @@ class careGiverSettingsViewController: UIViewController {
                             print(caree)
                             //print(dateNow)
                             print(ballgameScore as Any)
+                            
                             
                         }
                         else{

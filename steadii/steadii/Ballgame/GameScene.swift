@@ -232,10 +232,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let uid = user.uid
                 let email = user.email
                 let dateString = self.getDate()
-                //print("email:"+email!+"  uid:"+uid)
             db.collection("users").document(email!).collection("performances").document("ballgame").setData([dateString:score],merge:true)
-                // ...
-                
         } else {
             // No user is signed in.
             // ...

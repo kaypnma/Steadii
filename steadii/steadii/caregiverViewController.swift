@@ -30,6 +30,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import Foundation
 
 //The global graph information class, we must construct it with garbage data
 var GlobalAccountInfo = accountInfo (name:"kmn", email:"pls@gmail.com", monthlyBallScore: [1.0], weeklyBallScore : [1.0], monthlyWordScore : [1.0], weeklyWordScore : [1.0], monthlyBallX : [1.0], weeklyBallX : [1.0], monthlyWordX : [1.0], weeklyWordX : [1.0], monthlyBallYTrend : [1.0], weeklyBallYTrend : [1.0], monthlyWordYTrend : [1.0], weeklyWordYTrend : [1.0] )
@@ -90,7 +91,7 @@ class caregiverViewController : UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         //Must be called before display for obvious reasons
-        ///getPlayersAndEmails()
+        getPlayersAndEmails()
         //dispNamesOnButtons()
         //updateData(email: "cc@gmail.com", name: "test")
     }
@@ -99,6 +100,7 @@ class caregiverViewController : UIViewController{
     @IBAction func but1Clicked(_ sender: Any) {
         //Pass the username and the email of my button to the updatedata function
         //The username and email for each button should be known inside of the class
+        updateData(email: "p3@gmail.com")
         print(1)
     }
     
@@ -190,6 +192,25 @@ class caregiverViewController : UIViewController{
         //update playerlist and emaillist
         //self.playerList = ?
         //self.emailList = ?
+        let db = Firestore.firestore()
+        //direct to the games page if account is for players
+        if Auth.auth().currentUser != nil {
+            // User is signed in.
+            // ...
+            
+            let user = Auth.auth().currentUser
+            if let user = user {
+                //if carer signed in, get the list of all the carees
+                
+                let email = user.email
+                db.collection("carers").document(email!).getDocument { (document, error) in
+                    if error == nil{
+                        if document != nil && document!.exists{
+                           self.playerList = document!.data()!["caree"] as! [String]
+                            print("playerlist1:")
+                            print(self.playerList)
+                        }
+                    }}}}
         
     }
     
@@ -240,14 +261,70 @@ class caregiverViewController : UIViewController{
     }
     
     //Fills the global class with data
-    func updateData(email: String, name: String){
+
+    func getDate()->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let dateString = dateFormatter.string(from:Date())
+        return dateString
+    }
+    func getDateMinus1(dateOld : String,i : Double)->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd" //Your date format
+        let dateNew = dateFormatter.date(from: dateOld)
+        var temp = dateNew
+        temp!.addTimeInterval(-1*24*60*60*i)
+        let dateString = dateFormatter.string(for: temp)
+        return dateString!
+    }
+    func updateData(email: String){
         //var ballscores
         resetGlobal()
         //This function will parse the data and send it to the global class
         //JACK: Please return me some array of data from the last 30 days right here, I will parse it.
+        //print("in update")
+        let db = Firestore.firestore()
         var ballScores:[Double] = []
         var wordScores:[Double] = []
         var ballDates:[String] = []
         var wordDates:[String] = []
+    db.collection("users").document(email).collection("performances").document("ballgame").getDocument(completion: { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                let date = self.getDate()
+                for i in 0..<30{
+                    var d = Double(i)
+                    var  dateNew = self.getDateMinus1(dateOld:date,i:d)
+                    var performance1 = data![dateNew] as? Double ?? 0.0
+                    //print(performance1)
+                    ballScores.append(performance1)
+                    ballDates.append(dateNew)
+                }
+                print(ballDates)
+                print(ballScores)
+            } else {
+                print("Document does not exist")
+            }
+        })
+    db.collection("users").document(email).collection("performances").document("wordgame").getDocument(completion: { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                let date = self.getDate()
+                for i in 0..<30{
+                    var d = Double(i)
+                    var  dateNew = self.getDateMinus1(dateOld:date,i:d)
+                    var performance1 = data![dateNew] as? Double ?? 0.0
+                    wordScores.append(performance1)
+                    wordDates.append(dateNew)
+                }
+                print(wordScores)
+                print(wordDates)
+            } else {
+                print("Document does not exist")
+            }
+        })
+        
     }
+
 }
+
