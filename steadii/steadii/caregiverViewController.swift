@@ -201,9 +201,7 @@ class caregiverViewController : UIViewController{
     
     //Func get list of names and emails for all of the managed players
     func getPlayersAndEmails(){
-        //update playerlist and emaillist
-        //self.playerList = ?
-        //self.emailList = ?
+
         let db = Firestore.firestore()
         //direct to the games page if account is for players
         if Auth.auth().currentUser != nil {
@@ -218,11 +216,28 @@ class caregiverViewController : UIViewController{
                 db.collection("carers").document(email!).getDocument { (document, error) in
                     if error == nil{
                         if document != nil && document!.exists{
-                           self.emailList = document!.data()!["caree"] as! [String]
-                            print("playerlist1:")
-                            print(self.emailList)
+                            self.emailList = document!.data()!["caree"] as! [String]
+                            for caree in self.emailList{
+                                print(caree)
+                                db.collection("users").document(caree).getDocument(completion: { (document, error) in
+                                if error == nil{
+                                    let data = document!.data()
+                                    let firstName = String(data!["firstName"] as? String ?? "")
+                                    let lastName =  String(data!["lastName"] as? String ?? "")
+                                    let fullName = firstName+" "+lastName
+                                    
+                                    self.playerList.append(fullName)
+                                }
+                                else{
+                                    
+                                }
+                                
+                            })
+                            }
                         }
-                    }}}}
+                    }}
+
+            }}
         
     }
     
@@ -305,12 +320,13 @@ class caregiverViewController : UIViewController{
                 let data = document.data()
                 let date = self.getDate()
                 for i in 0..<30{
-                    var d = Double(i)
-                    var  dateNew = self.getDateMinus1(dateOld:date,i:d)
-                    var performance1 = data![dateNew] as? Double ?? 0.0
-                    //print(performance1)
-                    ballScores.append(performance1)
-                    ballDates.append(dateNew)
+                    let d = Double(i)
+                    let  dateNew = self.getDateMinus1(dateOld:date,i:d)
+                    let performance1 = data![dateNew] as? Double ?? 0.0
+                    if performance1 != 0{
+                        ballScores.append(performance1)
+                        ballDates.append(dateNew)
+                    }
                 }
                 print(ballDates)
                 print(ballScores)
@@ -323,11 +339,14 @@ class caregiverViewController : UIViewController{
                 let data = document.data()
                 let date = self.getDate()
                 for i in 0..<30{
-                    var d = Double(i)
-                    var  dateNew = self.getDateMinus1(dateOld:date,i:d)
-                    var performance1 = data![dateNew] as? Double ?? 0.0
-                    wordScores.append(performance1)
-                    wordDates.append(dateNew)
+                    let d = Double(i)
+                    let  dateNew = self.getDateMinus1(dateOld:date,i:d)
+                    let performance1 = data![dateNew] as? Double ?? 0.0
+                     if performance1 != 0{
+                        wordScores.append(performance1)
+                        wordDates.append(dateNew)
+                        
+                    }
                 }
                 print(wordScores)
                 print(wordDates)
