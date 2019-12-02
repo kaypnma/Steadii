@@ -43,6 +43,7 @@ class careGiverSettingsViewController: UIViewController {
                 //print(emailp)
                 db.collection("carers").document(emailc!).updateData([                    "caree": FieldValue.arrayRemove([emailp])])
             }}
+        self.performSegue(withIdentifier: "caregiverMainSegue", sender: self)
        
     }
     
@@ -50,6 +51,7 @@ class careGiverSettingsViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            loggedOut = true
             self.performSegue(withIdentifier: "signinMainSegue", sender: self)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)

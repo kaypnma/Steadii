@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="CorbelBold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -481,6 +481,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="6bM-Pj-OUs" id="tag-MB-ph8"/>
                         <segue destination="UtE-xq-3NZ" kind="show" identifier="signinMainSegue" id="Hce-7r-os8"/>
+                        <segue destination="lp7-4X-f7B" kind="show" identifier="caregiverMainSegue" id="dLw-xZ-AbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX2-jZ-k1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -504,6 +505,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VrN-Tx-ESC"/>
-        <segue reference="itv-D2-n2A"/>
+        <segue reference="dLw-xZ-AbU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -220,6 +220,7 @@ class caregiverViewController : UIViewController{
                                     let fullName = firstName+" "+lastName
                                     
                                     self.playerList.append(fullName)
+                                    print(self.playerList)
                                 }
                                 else{
                                     
