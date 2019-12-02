@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-EG-dbe">
-                                <rect key="frame" x="360" y="591.5" width="183" height="25"/>
+                                <rect key="frame" x="360" y="591.5" width="392" height="25"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-7N-nQq" customClass="DLRadioButton">
                                         <rect key="frame" x="0.0" y="0.0" width="24" height="25"/>
@@ -47,9 +47,12 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rememberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0HF-wg-qHH"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
-                                        <rect key="frame" x="39" y="0.0" width="144" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Account and Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
+                                        <rect key="frame" x="39" y="0.0" width="353" height="25"/>
                                         <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -124,6 +127,7 @@
                         <outlet property="emailTextField" destination="OWs-QH-KWK" id="YIR-by-oyX"/>
                         <outlet property="loginButton" destination="Uuf-oi-OSX" id="Xpa-cf-20A"/>
                         <outlet property="passwordTextField" destination="AM5-4N-taJ" id="kkt-sO-upe"/>
+                        <outlet property="rememberButton" destination="6iX-7N-nQq" id="5Tf-G2-Bk6"/>
                         <segue destination="U0Z-i1-xO9" kind="show" identifier="CarerView" id="nHs-3w-bWK"/>
                         <segue destination="9fv-d2-uVi" kind="show" identifier="PlayerView" id="NcQ-xS-m8m"/>
                     </connections>
@@ -549,10 +553,10 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="DpA-eb-Nds">
-                                <rect key="frame" x="296" y="131" width="178" height="44.5"/>
+                                <rect key="frame" x="299" y="131" width="172" height="44.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9o-F3-a0B" userLabel="PlayerButton" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="44.5"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -562,7 +566,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUk-cn-eQT">
-                                        <rect key="frame" x="55" y="0.0" width="123" height="44.5"/>
+                                        <rect key="frame" x="49" y="0.0" width="123" height="44.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44.5" id="Tps-fB-HVd"/>
                                         </constraints>
@@ -573,10 +577,10 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TVo-u8-jAf">
-                                <rect key="frame" x="681" y="131" width="218.5" height="44.5"/>
+                                <rect key="frame" x="684" y="131" width="212.5" height="44.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-ZU-bW1" userLabel="CaregiverButton" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="44.5"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -590,7 +594,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caregiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSk-Ig-jr1">
-                                        <rect key="frame" x="55" y="0.0" width="163.5" height="44.5"/>
+                                        <rect key="frame" x="49" y="0.0" width="163.5" height="44.5"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
