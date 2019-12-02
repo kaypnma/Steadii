@@ -92,18 +92,15 @@ class caregiverViewController : UIViewController{
         super.viewDidLoad()
         //Must be called before display for obvious reasons
         getPlayersAndEmails()
-        //dispNamesOnButtons()
-        //updateData(email: "cc@gmail.com", name: "test")
     }
     
     //Jack: don't worry about these
     @IBAction func but1Clicked(_ sender: Any) {
         //Pass the username and the email of my button to the updatedata function
         //The username and email for each button should be known inside of the class
-        //updateData(email: "p3@gmail.com")
         print(1)
         resetGlobal()
-        updateData(email: self.emailList[0], playerName: "ayy"/*self.playerList[0]*/)
+        updateData(email: self.emailList[0], playerName: self.playerList[0])
     }
     
     @IBAction func but2Clicked(_ sender: Any) {
@@ -138,6 +135,8 @@ class caregiverViewController : UIViewController{
     
     //Function to display names on buttons
     func dispNamesOnButtons(){
+        print(self.playerList)
+        self.playerList.reverse()
         switch playerList.count {
             case 0:
                 Player1.isHidden = true
@@ -217,9 +216,8 @@ class caregiverViewController : UIViewController{
                     if error == nil{
                         if document != nil && document!.exists{
                             self.emailList = document!.data()!["caree"] as! [String]
-                            //print(emailList)
                             for caree in self.emailList{
-                                //print(caree)
+                                print(caree)
                                 db.collection("users").document(caree).getDocument(completion: { (document, error) in
                                 if error == nil{
                                     let data = document!.data()
@@ -232,7 +230,10 @@ class caregiverViewController : UIViewController{
                                 else{
                                     
                                 }
-                                    
+                                    if (caree == self.emailList[0]){
+                                        print(self.playerList)
+                                        self.dispNamesOnButtons()
+                                    }
                             })
                                 
                             }
@@ -267,6 +268,9 @@ class caregiverViewController : UIViewController{
     func linReg(x: [Double], y: [Double], lowEnd: Double, highEnd: Double) -> [Double]{
         //y=mx+b
         //m=sum((x-xmean)(y-ymean)/sum((x-xmean)^2)
+        if x.count == 1 {
+            return [y[0], y[0]]
+        }
         var numerator = 0.0
         var denominator = 0.0
         let xmean = mean(input: x)
@@ -326,13 +330,40 @@ class caregiverViewController : UIViewController{
                     let d = Double(i)
                     let  dateNew = self.getDateMinus1(dateOld:date,i:d)
                     let performance1 = data![dateNew] as? Double ?? 0.0
-                    if performance1 != 0{
+                    //if performance1 != 0{
                         ballScores.append(performance1)
                         ballDates.append(dateNew)
-                    }
+                    //}
                 }
                 print(ballDates)
                 print(ballScores)
+                var weekScores = [ballScores[0], ballScores[1], ballScores[2], ballScores[3], ballScores[4], ballScores[5], ballScores[6]]
+                ballScores.reverse()
+                //ballDates.reverse()
+                weekScores.reverse()
+                
+                var monthDatesIndex = [0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0]
+                var weekDatesIndex = [0.0,1.0,2.0,3.0,4.0,5.0,6.0]
+                for i in (0..<30).reversed(){
+                    if ballScores[i] == 0.0 {
+                        ballScores.remove(at: i)
+                        monthDatesIndex.remove(at: i)
+                    }
+                }
+                for i in (0..<7).reversed(){
+                    if weekScores[i] == 0.0 {
+                        weekScores.remove(at: i)
+                        weekDatesIndex.remove(at: i)
+                    }
+                }
+                GlobalAccountInfo.monthlyBallScore = ballScores
+                GlobalAccountInfo.monthlyBallX = monthDatesIndex
+                GlobalAccountInfo.weeklyBallScore = weekScores
+                GlobalAccountInfo.weeklyBallX = weekDatesIndex
+                GlobalAccountInfo.name = playerName
+                GlobalAccountInfo.email = email
+                GlobalAccountInfo.weeklyBallYTrend = self.linReg(x: weekDatesIndex, y: weekScores, lowEnd: 0.0, highEnd: 6.0)
+                GlobalAccountInfo.monthlyBallYTrend = self.linReg(x: monthDatesIndex, y: ballScores, lowEnd: 0.0, highEnd: 29.0)
             } else {
                 print("Document does not exist")
             }
@@ -345,19 +376,43 @@ class caregiverViewController : UIViewController{
                     let d = Double(i)
                     let  dateNew = self.getDateMinus1(dateOld:date,i:d)
                     let performance1 = data![dateNew] as? Double ?? 0.0
-                     if performance1 != 0{
+                     //if performance1 != 0{
                         wordScores.append(performance1)
-                        wordDates.append(dateNew)
-                        
-                    }
+                        wordDates.append(dateNew)  
+                    //}
                 }
                 print(wordScores)
                 print(wordDates)
+                
+                var weekScores = [wordScores[0], wordScores[1], wordScores[2], wordScores[3], wordScores[4], wordScores[5], wordScores[6]]
+                wordScores.reverse()
+                //ballDates.reverse()
+                weekScores.reverse()
+                
+                var monthDatesIndex = [0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0]
+                var weekDatesIndex = [0.0,1.0,2.0,3.0,4.0,5.0,6.0]
+                for i in (0..<30).reversed(){
+                    if wordScores[i] == 0.0 {
+                        wordScores.remove(at: i)
+                        monthDatesIndex.remove(at: i)
+                    }
+                }
+                for i in (0..<7).reversed(){
+                    if weekScores[i] == 0.0 {
+                        weekScores.remove(at: i)
+                        weekDatesIndex.remove(at: i)
+                    }
+                }
+                GlobalAccountInfo.monthlyWordScore = wordScores
+                GlobalAccountInfo.monthlyWordX = monthDatesIndex
+                GlobalAccountInfo.weeklyWordScore = weekScores
+                GlobalAccountInfo.weeklyWordX = weekDatesIndex
+                GlobalAccountInfo.weeklyWordYTrend = self.linReg(x: weekDatesIndex, y: weekScores, lowEnd: 0.0, highEnd: 6.0)
+                GlobalAccountInfo.monthlyWordYTrend = self.linReg(x: monthDatesIndex, y: wordScores, lowEnd: 0.0, highEnd: 29.0)
             } else {
                 print("Document does not exist")
             }
         })
-        
     }
 
 }
