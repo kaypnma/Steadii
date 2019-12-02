@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CORBELB.TTF">
+        <array key="CorbelBold.ttf">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -55,18 +55,6 @@
                                     <action selector="but2Clicked:" destination="lp7-4X-f7B" eventType="touchUpInside" id="di4-BQ-QdM"/>
                                     <segue destination="XLc-Ji-cjO" kind="show" id="ggR-hR-Az7"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBg-DT-VnX" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="90" y="-562" width="445" height="125"/>
-                                <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="445" id="rlm-6E-AYt"/>
-                                    <constraint firstAttribute="height" constant="125" id="w4I-fb-LEI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Kay Arellano">
-                                    <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-cn-co3" customClass="LButton" customModule="steadii" customModuleProvider="target">
                                 <rect key="frame" x="659" y="374" width="445" height="125"/>
@@ -162,7 +150,6 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7II-su-W9o" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="21G-6Y-tVp"/>
-                            <constraint firstItem="pBg-DT-VnX" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="2n4-C5-eje"/>
                             <constraint firstItem="R0L-sR-Dss" firstAttribute="centerX" secondItem="ew1-bA-5wX" secondAttribute="centerX" id="3dc-NY-49G"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="kaV-SZ-BeP" secondAttribute="trailing" constant="90" id="4UW-0t-mGU"/>
                             <constraint firstItem="APU-Yk-jUi" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="6aw-VF-Eel"/>
@@ -170,7 +157,6 @@
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="8Tj-gn-Z1u" secondAttribute="trailing" constant="90" id="Hu5-50-7tA"/>
                             <constraint firstItem="gDB-wc-MxB" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="25" id="Jau-4Y-AdW"/>
                             <constraint firstItem="eZ9-ma-88H" firstAttribute="top" secondItem="7II-su-W9o" secondAttribute="bottom" constant="70" id="LiC-71-irB"/>
-                            <constraint firstItem="pBg-DT-VnX" firstAttribute="top" secondItem="ZYP-eF-lJG" secondAttribute="top" constant="-586" id="VTr-cT-tsh"/>
                             <constraint firstItem="eZ9-ma-88H" firstAttribute="leading" secondItem="ZYP-eF-lJG" secondAttribute="leading" constant="90" id="WUc-WJ-y6A"/>
                             <constraint firstItem="7II-su-W9o" firstAttribute="top" secondItem="APU-Yk-jUi" secondAttribute="bottom" constant="70" id="XmS-hq-ICw"/>
                             <constraint firstItem="ZYP-eF-lJG" firstAttribute="trailing" secondItem="OtG-cn-co3" secondAttribute="trailing" constant="90" id="cas-E8-NrT"/>

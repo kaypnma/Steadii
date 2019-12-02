@@ -6,12 +6,12 @@
 //  Description/Purpose: defines view controller
 
 //  Created by Dustin Seah on 11/3/19
-//  Last Updated by Dustin Seah on 11/29/2019
+//  Last Updated by Chris Keilbart on 12/01/2019
 //  Worked on by  Dustin Seah, Jack Guo, and Chris Keilbart
 
 //  Updates from Previous Commit:
 /*
- - no data case done
+ - Functional graphs
  */
 
 //  Known Bugs:
@@ -21,7 +21,7 @@
 
 //  To do:
 /*
- - Intake data from firebase.
+None
  */
 
 //  Copyright © 2019 ii Studio. All rights reserved.
@@ -37,12 +37,12 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var nameTitle: UILabel!
     
     func graphDisplay(){
-        // assuming the data have been processed into the following arrays
         
         // rotate the YAxis Labels
         monthlyYAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         weeklyYAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         
+        //Variables used to hold the entries for the graph
         var monthlyBallEntries : [ChartDataEntry] = []
         var monthlyWordEntries : [ChartDataEntry] = []
         var weeklyBallEntries : [ChartDataEntry] = []
@@ -52,76 +52,54 @@ class GraphViewController: UIViewController {
         var weeklyBallTrendEntries : [ChartDataEntry] = []
         var weeklyWordTrendEntries : [ChartDataEntry] = []
         
-        /*
-        // fake monthly data
-        GlobalAccountInfo.monthlyBallX = [0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0]
-        GlobalAccountInfo.monthlyBallScore = [15.23,15.22,17.514,19.66,16.52,16.47,19.55,20.55,14.21,16.57,19.55]
-        GlobalAccountInfo.monthlyWordX = [0.0,1.0,4.0,6.0,8.0,12.0,15.0,17.0,20.0,25.0,29.0]
-        GlobalAccountInfo.monthlyWordScore = [19.55,20.55,14.21,16.57,19.55,15.23,15.22,17.514,19.66,16.52,16.47]
+        //Handle cases when there isn't enough data, we shouldn't create trendlines in places where there is no data
+        let monthlyWordTrendLoop = GlobalAccountInfo.monthlyWordScore.count != 0 ? 2 : 0
+        let monthlyBallTrendLoop = GlobalAccountInfo.monthlyBallScore.count != 0 ? 2: 0
+        let weeklyWordTrendLoop = GlobalAccountInfo.weeklyWordScore.count != 0 ? 2 : 0
+        let weeklyBallTrendLoop = GlobalAccountInfo.weeklyBallScore.count != 0 ? 2 : 0
         
-        
-        //fake weekly data
-        GlobalAccountInfo.weeklyBallX = [0.0,1.0,4.0,6.0]
-        GlobalAccountInfo.weeklyBallScore = [16.52,16.47,17.88,19.55]
-        GlobalAccountInfo.weeklyWordX = [0.0,1.0,4.0,6.0]
-        GlobalAccountInfo.weeklyWordScore = [19.55,14.21,16.57,19.66]
-        
-        
-        // fake trendline data
-        GlobalAccountInfo.monthlyBallYTrend = [15.23,19.55]
-        GlobalAccountInfo.monthlyWordYTrend = [19.55,16.47]
-        GlobalAccountInfo.weeklyBallYTrend = [16.52,19.55]
-        GlobalAccountInfo.weeklyWordYTrend = [19.55,19.66]
-         */
-        
-        //Handle cases when there isn't enough data
-        var monthlyDataLoop = 2
-        var weeklyDataLoop = 2
-    //If no data is present in the monthly graph for both games, the chart must therefore be totally empty
+        //If no data is present in the monthly graph for both games, the chart must therefore be totally empty
         if(GlobalAccountInfo.monthlyBallScore.count == 0 && GlobalAccountInfo.monthlyWordScore.count == 0){
             //No data
-            monthlyDataLoop = 0
-            weeklyDataLoop = 0
             nameTitle.text = GlobalAccountInfo.name + " has no data available"
         }
         else if(GlobalAccountInfo.weeklyBallScore.count == 0 && GlobalAccountInfo.weeklyWordScore.count == 0){
             //Monthly, but not weekly data
-            weeklyDataLoop = 0
             nameTitle.text = GlobalAccountInfo.name + " has no weekly data available"
         }
-        else{
-            nameTitle.text = GlobalAccountInfo.name
-        }
-        print(1)
-        // for monthly
-        for n in 0...29 {
-            if GlobalAccountInfo.monthlyBallX.count <= n || GlobalAccountInfo.monthlyWordX.count <= n{
-                break
-            }
-            monthlyBallEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyBallX[n], y:GlobalAccountInfo.monthlyBallScore[n]))
+        
+        //Monthly word entries
+        for n in 0..<GlobalAccountInfo.monthlyWordX.count {
             monthlyWordEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyWordX[n], y:GlobalAccountInfo.monthlyWordScore[n]))
         }
-        
-        // for weekly
-        for n in 0...6{
-            if GlobalAccountInfo.weeklyBallX.count <= n || GlobalAccountInfo.weeklyWordX.count <= n{
-                break
-            }
+        //Monthly ball entries
+        for n in 0..<GlobalAccountInfo.monthlyBallX.count {
+            monthlyBallEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyBallX[n], y:GlobalAccountInfo.monthlyBallScore[n]))
+        }
+        //Weekly word entries
+        for n in 0..<GlobalAccountInfo.weeklyBallX.count{
             weeklyBallEntries.append(ChartDataEntry(x: GlobalAccountInfo.weeklyBallX[n], y:GlobalAccountInfo.weeklyBallScore[n]))
+        }
+        // for weekly word
+        for n in 0..<GlobalAccountInfo.weeklyWordX.count{
             weeklyWordEntries.append(ChartDataEntry(x: GlobalAccountInfo.weeklyWordX[n], y:GlobalAccountInfo.weeklyWordScore[n]))
         }
         
         // for trendlines
-        for n in 0..<weeklyDataLoop{
-            weeklyBallTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.weeklyXTrend[n], y:GlobalAccountInfo.weeklyBallYTrend[n]))
+        for n in 0..<weeklyWordTrendLoop{
             weeklyWordTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.weeklyXTrend[n], y:GlobalAccountInfo.weeklyWordYTrend[n]))
         }
-        for n in 0..<monthlyDataLoop{
-            monthlyBallTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyXTrend[n], y:GlobalAccountInfo.monthlyBallYTrend[n]))
+        for n in 0..<weeklyBallTrendLoop{
+            weeklyBallTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.weeklyXTrend[n], y:GlobalAccountInfo.weeklyBallYTrend[n]))
+        }
+        for n in 0..<monthlyWordTrendLoop{
             monthlyWordTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyXTrend[n], y:GlobalAccountInfo.monthlyWordYTrend[n]))
         }
+        for n in 0..<monthlyBallTrendLoop{
+            monthlyBallTrendEntries.append(ChartDataEntry(x: GlobalAccountInfo.monthlyXTrend[n], y:GlobalAccountInfo.monthlyBallYTrend[n]))
+        }
         
-        // set monthly data
+        //Set monthly data
         let monthlyBallDataSet = LineChartDataSet(entries: monthlyBallEntries, label: "Ball Tilting Game")
         monthlyBallDataSet.setCircleColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
         monthlyBallDataSet.setColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
@@ -130,8 +108,7 @@ class GraphViewController: UIViewController {
         monthlyWordDataSet.setCircleColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         monthlyWordDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         
-        
-        // set weekly data
+        //Set weekly data
         let weeklyBallDataSet = LineChartDataSet(entries: weeklyBallEntries, label: "Ball Tilting Game")
         weeklyBallDataSet.setCircleColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
         weeklyBallDataSet.setColor(UIColor(red: 0.511, green: 0.686, blue: 0.980, alpha: 1.00))
@@ -140,8 +117,7 @@ class GraphViewController: UIViewController {
         weeklyWordDataSet.setCircleColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         weeklyWordDataSet.setColor(UIColor(red: 1.00, green: 0.686, blue: 0.980, alpha: 1.00))
         
-        
-        // set trendlines
+        //Set monthly trendlines
         let monthlyBallTrendDataSet = LineChartDataSet(entries: monthlyBallTrendEntries, label: "Ball Tilting Game Trend")
         monthlyBallTrendDataSet.setCircleColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         monthlyBallTrendDataSet.setColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
@@ -150,7 +126,7 @@ class GraphViewController: UIViewController {
         monthlyWordTrendDataSet.setCircleColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         monthlyWordTrendDataSet.setColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         
-        
+        //Set weekly trendlines
         let weeklyBallTrendDataSet = LineChartDataSet(entries: weeklyBallTrendEntries, label: "Ball Tilting Game Trend")
         weeklyBallTrendDataSet.setCircleColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
         weeklyBallTrendDataSet.setColor(UIColor(red: 0.0, green: 0.1, blue: 1.0, alpha: 1.00))
@@ -158,32 +134,30 @@ class GraphViewController: UIViewController {
         let weeklyWordTrendDataSet = LineChartDataSet(entries: weeklyWordTrendEntries, label: "Word Association Game Trend")
         weeklyWordTrendDataSet.setCircleColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
         weeklyWordTrendDataSet.setColor(UIColor(red: 1.0, green: 0.0, blue: 0.15, alpha: 1.00))
-        
-        //weeklyWordTrendDataSet.valueFont = (name: "Verdana", size: 14.0)
-        // doesn't work because "no such module UIFont"
-        
+
+        //Plot them
         let monthlyData = LineChartData(dataSets: [monthlyBallDataSet,monthlyWordDataSet,monthlyBallTrendDataSet,monthlyWordTrendDataSet])
         let weeklyData = LineChartData(dataSets: [weeklyBallDataSet,weeklyWordDataSet,weeklyBallTrendDataSet,weeklyWordTrendDataSet])
         
-        monthlyData.setDrawValues(false) // don't label points
+        monthlyData.setDrawValues(false) //No labelling
         weeklyData.setDrawValues(false)
         
-        monthlyWordTrendDataSet.circleRadius = 0.0 // no individual points for plotting for trendline
+        monthlyWordTrendDataSet.circleRadius = 0.0 //Do not display individual points in trendlines
         monthlyBallTrendDataSet.circleRadius = 0.0
         weeklyWordTrendDataSet.circleRadius = 0.0
         weeklyBallTrendDataSet.circleRadius = 0.0
         
-        monthlyGraph.data = monthlyData // feed data into object
+        monthlyGraph.data = monthlyData //Give the graph the data
         weeklyGraph.data = weeklyData
         
         monthlyGraph.chartDescription?.text = "Performance over last month" //Description of Graphs
         weeklyGraph.chartDescription?.text = "Performance over last week"
         
         
-        weeklyGraph.rightAxis.enabled = false // disable the right axis
+        weeklyGraph.rightAxis.enabled = false //Disable right axis
         monthlyGraph.rightAxis.enabled = false
         
-        weeklyGraph.xAxis.enabled = false // disable the x axis
+        weeklyGraph.xAxis.enabled = false //Disable x axis
         monthlyGraph.xAxis.enabled = false
         
         monthlyGraph.notifyDataSetChanged()
@@ -192,9 +166,9 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let seconds = 1.0
+        //For synchronization issues with the database
+        let seconds = 0.5
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            // Put your code which should be executed with a delay here
             self.graphDisplay()
         }
         // Do any additional setup after loading the view, typically from a nib.
