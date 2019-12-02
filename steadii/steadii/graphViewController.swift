@@ -11,7 +11,7 @@
 
 //  Updates from Previous Commit:
 /*
- - Functional graphs
+ - Forgot the label last time
  */
 
 //  Known Bugs:
@@ -66,6 +66,9 @@ class GraphViewController: UIViewController {
         else if(GlobalAccountInfo.weeklyBallScore.count == 0 && GlobalAccountInfo.weeklyWordScore.count == 0){
             //Monthly, but not weekly data
             nameTitle.text = GlobalAccountInfo.name + " has no weekly data available"
+        }
+        else{
+            nameTitle.text = GlobalAccountInfo.name
         }
         
         //Monthly word entries
