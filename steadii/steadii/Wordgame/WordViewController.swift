@@ -6,12 +6,12 @@
 //  Description/Purpose: Defines states of UI
 
 //  Created by Denyse Tran on 11/08/2019
-//  Last Updated by Chris Keilbart on 11/18/2019
+//  Last Updated by Chris Keilbart on 12/01/2019
 //  Worked on by Kay Arellano, Chris Keilbart and Denyse Tran
 
 //  Updates from Previous Commit:
 /*
-    Math changes
+    field -> silo
 */
 
 //  Known Bugs:
@@ -77,7 +77,7 @@ class categoryManager{
         categoryNames.append(catName)
         
         catName = "Farming"
-        listOfWords = ["Agriculture", "Barn", "Plow", "Fertilizer", "Livestock", "Hay", "Bale", "Tractor", "Fields", "Crops"]
+        listOfWords = ["Agriculture", "Barn", "Plow", "Fertilizer", "Livestock", "Hay", "Bale", "Tractor", "Silo", "Crops"]
         containedCategories.append(individualCategory(catName: catName, assocWords: listOfWords))
         categoryNames.append(catName)
         
