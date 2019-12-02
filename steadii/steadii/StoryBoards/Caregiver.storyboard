@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -418,8 +418,32 @@
                                     <action selector="removeButtonTapped:" destination="J0P-TV-JIU" eventType="touchUpInside" id="eTJ-Cv-OJx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1c-k1-afm" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="472" y="624" width="250" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-6y-Xqj">
+                                <rect key="frame" x="377" y="74" width="440" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="440" id="0Ya-Cf-aDL"/>
+                                    <constraint firstAttribute="height" constant="60" id="moU-Ep-1L3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 3.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPO-mk-b4N">
+                                <rect key="frame" x="371" y="713" width="136" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iiStudio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-Xz-jYz">
+                                <rect key="frame" x="705.5" y="713" width="91" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1c-k1-afm" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="472" y="530" width="250" height="80"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="edg-lm-Z7G"/>
@@ -433,16 +457,6 @@
                                     <action selector="logoutButtonTapped:" destination="J0P-TV-JIU" eventType="touchUpInside" id="gOF-Rr-6VZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-6y-Xqj">
-                                <rect key="frame" x="377" y="74" width="440" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="440" id="0Ya-Cf-aDL"/>
-                                    <constraint firstAttribute="height" constant="60" id="moU-Ep-1L3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="40"/>
-                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -481,12 +495,12 @@
     </scenes>
     <resources>
         <image name="Icon feather-plus" width="39" height="39"/>
-        <image name="back_arrow" width="52" height="34.5"/>
+        <image name="back_arrow" width="52" height="34"/>
         <image name="opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VrN-Tx-ESC"/>
-        <segue reference="DLY-ur-UU0"/>
+        <segue reference="A7z-YL-llJ"/>
     </inferredMetricsTieBreakers>
 </document>
