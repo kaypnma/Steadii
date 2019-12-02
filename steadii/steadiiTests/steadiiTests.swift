@@ -34,6 +34,7 @@ class steadiiTests: XCTestCase {
 
     var sut: GameScene!
     var sut2: WordViewController!
+    var sut3: caregiverViewController!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -42,12 +43,14 @@ class steadiiTests: XCTestCase {
         sut = GameScene(size: CGSize(width: 1000, height: 1000),
                         planeDxDyRandom: false)
         sut2 = WordViewController()
+        sut3 = caregiverViewController()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         sut = nil
         sut2 = nil
+        sut3 = nil
         super.tearDown()
     }
 
@@ -163,6 +166,46 @@ class steadiiTests: XCTestCase {
         XCTAssert(answerInt.contains(0) && answerInt.contains(1) && answerInt.contains(2), "Always the same correct answer")
     }
     //Testing if the game properly determines if the answer is correct or not is done in the UI Tests.
+    
+    //Tests to see if resetGlobal correctly empties the class
+    func testResetGlobal(){
+        sut3.resetGlobal()
+        XCTAssert(GlobalAccountInfo.email != "pls@gmail.com" && GlobalAccountInfo.name != "kmn" && GlobalAccountInfo.weeklyBallYTrend != [1.0] && GlobalAccountInfo.monthlyXTrend == [0.0,29.0], "GlobalAccountInfo not reset properly")
+    }
+    
+    //The testing of getPlayersAndEmails and dispNamesOnButtons is done in the UI testing
+    
+    //Tests to see if linReg acts correctly
+    func testLinReg(){
+        let oneDataPoint = sut3.linReg(x: [0.1], y: [32.5], lowEnd: 0.7, highEnd: 22.1)
+        XCTAssert(oneDataPoint == [32.5, 32.5], "Linear regression function does not handle one data point case")
+        let realTestData = sut3.linReg(x: [0.0,0.3,0.7,1.1,1.2], y: [2.5,5.2,6.2,7.2,7.1], lowEnd: 0.0, highEnd: 1.0)
+        //I used an online calculator to check the results
+        XCTAssert(abs(realTestData[0]-3.301) < 0.01 && abs(realTestData[1]-(3.544+3.301)) < 0.01, "Linear regression calculation is incorrect")
+    }
+    
+    //Tests to see if we can get a mean
+    func testMean(){
+        let oneValue = sut3.mean(input: [1.0])
+        XCTAssert(oneValue == 1.0, "Mean cannot handle one value")
+        
+        let threeValues = sut3.mean(input: [0.0,1.0,2.0])
+        XCTAssert(threeValues == 1.0, "Mean value gives incorrect answer")
+    }
+    
+    //I cannot test getDate directly because it depends on the current date, which is always changing
+    //So I will test if we can subtract days from an arbitrary string
+    func testGetDateMinus1(){
+        let yearRollover = sut3.getDateMinus1(dateOld: "20190101", i: 1.0)
+        XCTAssert(yearRollover == "20181231", "Cannot calculate over year wraparound")
+        
+        let monthRollover = sut3.getDateMinus1(dateOld: "20181101", i: 1.0)
+        XCTAssert(monthRollover == "20181031", "Cannot calculate over month wraparound")
+        
+        let threeDays = sut3.getDateMinus1(dateOld: "20191010", i: 3.0)
+        XCTAssert(threeDays == "20191007", "Cannot subtract more than one day")
+    }
+    //Testing of updateData will be done in the UI testing
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

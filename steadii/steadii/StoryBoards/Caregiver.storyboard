@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <array key="CORBEL.TTF">
             <string>Corbel</string>
         </array>
-        <array key="CorbelBold.ttf">
+        <array key="CORBELB.TTF">
             <string>Corbel-Bold</string>
         </array>
     </customFonts>
@@ -216,16 +216,6 @@
                                     <constraint firstAttribute="height" constant="14" id="hQp-zA-zzL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-HJ-o6B">
-                                <rect key="frame" x="377" y="74" width="440" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="440" id="3SH-K0-L0a"/>
-                                    <constraint firstAttribute="height" constant="60" id="EU9-Oy-z3a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="38"/>
-                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUk-uB-h9a">
                                 <rect key="frame" x="263" y="182" width="151" height="57"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
@@ -261,10 +251,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-HJ-o6B">
+                                <rect key="frame" x="122" y="54" width="950" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="950" id="3SH-K0-L0a"/>
+                                    <constraint firstAttribute="height" constant="92" id="EU9-Oy-z3a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="38"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DUk-uB-h9a" firstAttribute="top" secondItem="KRa-HJ-o6B" secondAttribute="bottom" constant="48" id="2Df-f3-PAi"/>
+                            <constraint firstItem="DUk-uB-h9a" firstAttribute="top" secondItem="KRa-HJ-o6B" secondAttribute="bottom" constant="36" id="2Df-f3-PAi"/>
                             <constraint firstItem="8hg-QW-TTg" firstAttribute="trailing" secondItem="ZZK-4V-bRH" secondAttribute="trailing" constant="291" id="7aM-tr-HPI"/>
                             <constraint firstItem="e9m-nC-gUh" firstAttribute="leading" secondItem="DUk-uB-h9a" secondAttribute="trailing" constant="176" id="QWV-cR-6lW"/>
                             <constraint firstItem="maF-fq-u5E" firstAttribute="top" secondItem="8hg-QW-TTg" secondAttribute="top" constant="30" id="Ss9-4H-3gS"/>
@@ -273,9 +273,9 @@
                             <constraint firstItem="maF-fq-u5E" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="40" id="Zv4-PK-I9Z"/>
                             <constraint firstItem="e9m-nC-gUh" firstAttribute="centerX" secondItem="jf6-Tk-nAp" secondAttribute="centerX" id="f2h-jP-NTT"/>
                             <constraint firstItem="DUk-uB-h9a" firstAttribute="leading" secondItem="8hg-QW-TTg" secondAttribute="leading" constant="263" id="nRX-Tz-pCm"/>
-                            <constraint firstItem="KRa-HJ-o6B" firstAttribute="top" secondItem="8hg-QW-TTg" secondAttribute="top" constant="50" id="qMh-aw-xhy"/>
-                            <constraint firstItem="ZZK-4V-bRH" firstAttribute="top" secondItem="KRa-HJ-o6B" secondAttribute="bottom" constant="48" id="rFe-kQ-HRL"/>
-                            <constraint firstItem="e9m-nC-gUh" firstAttribute="top" secondItem="KRa-HJ-o6B" secondAttribute="bottom" constant="69" id="uhZ-Sk-61p"/>
+                            <constraint firstItem="KRa-HJ-o6B" firstAttribute="top" secondItem="8hg-QW-TTg" secondAttribute="top" constant="30" id="qMh-aw-xhy"/>
+                            <constraint firstItem="ZZK-4V-bRH" firstAttribute="top" secondItem="KRa-HJ-o6B" secondAttribute="bottom" constant="36" id="rFe-kQ-HRL"/>
+                            <constraint firstItem="e9m-nC-gUh" firstAttribute="top" secondItem="KRa-HJ-o6B" secondAttribute="bottom" constant="57" id="uhZ-Sk-61p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8hg-QW-TTg"/>
                     </view>
@@ -342,7 +342,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-Ud-9SJ">
-                                <rect key="frame" x="641" y="182" width="408" height="54"/>
+                                <rect key="frame" x="638" y="188" width="408" height="54"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -355,9 +355,9 @@
                             <constraint firstItem="BY5-GF-bxE" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="40" id="U2f-4V-Lla"/>
                             <constraint firstItem="Qg5-iM-j4j" firstAttribute="bottom" secondItem="LJQ-BS-wXf" secondAttribute="bottom" constant="164" id="XKY-cS-0Wb"/>
                             <constraint firstItem="a5p-fd-dpB" firstAttribute="leading" secondItem="Qg5-iM-j4j" secondAttribute="leading" constant="313" id="Y6G-Ir-xjC"/>
-                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="I8Q-Ud-9SJ" secondAttribute="trailing" constant="145" id="bW8-CS-A3b"/>
-                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="leading" secondItem="a5p-fd-dpB" secondAttribute="trailing" constant="99.5" id="iwL-0l-hPL"/>
-                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="top" secondItem="A3y-EI-9rp" secondAttribute="bottom" constant="48" id="kiH-Ik-O2X"/>
+                            <constraint firstItem="Qg5-iM-j4j" firstAttribute="trailing" secondItem="I8Q-Ud-9SJ" secondAttribute="trailing" constant="148" id="bW8-CS-A3b"/>
+                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="leading" secondItem="a5p-fd-dpB" secondAttribute="trailing" constant="96.5" id="iwL-0l-hPL"/>
+                            <constraint firstItem="I8Q-Ud-9SJ" firstAttribute="top" secondItem="A3y-EI-9rp" secondAttribute="bottom" constant="54" id="kiH-Ik-O2X"/>
                             <constraint firstItem="A3y-EI-9rp" firstAttribute="top" secondItem="Qg5-iM-j4j" secondAttribute="top" constant="50" id="px3-aM-axT"/>
                             <constraint firstItem="A3y-EI-9rp" firstAttribute="centerX" secondItem="vd0-1x-ecq" secondAttribute="centerX" id="rpE-Gv-qB7"/>
                             <constraint firstItem="BY5-GF-bxE" firstAttribute="top" secondItem="Qg5-iM-j4j" secondAttribute="top" constant="30" id="zeI-yY-kPS"/>
@@ -392,19 +392,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Player" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggv-Rx-2cD">
-                                <rect key="frame" x="216" y="182" width="320" height="67.5"/>
+                                <rect key="frame" x="216" y="182" width="320" height="68"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="50"/>
                                 <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-Pj-OUs">
-                                <rect key="frame" x="640.5" y="182" width="124" height="68"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-Pj-OUs">
+                                <rect key="frame" x="641" y="182" width="460" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="460" id="KaP-d1-fnj"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7G-5h-ry2" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="457" y="335.5" width="280" height="80"/>
+                                <rect key="frame" x="457" y="336" width="280" height="80"/>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="AWm-j9-kQt"/>
@@ -436,14 +439,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iiStudio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-Xz-jYz">
-                                <rect key="frame" x="705.5" y="713" width="91" height="35"/>
+                                <rect key="frame" x="706" y="713" width="91" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1c-k1-afm" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="472" y="530" width="250" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1c-k1-afm" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="472" y="624" width="250" height="80"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.90588235289999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="edg-lm-Z7G"/>
@@ -465,12 +468,12 @@
                             <constraint firstItem="Ggv-Rx-2cD" firstAttribute="top" secondItem="fM7-6y-Xqj" secondAttribute="bottom" constant="48" id="B1c-cw-Z2i"/>
                             <constraint firstItem="J1c-k1-afm" firstAttribute="centerX" secondItem="Tyw-vk-9fd" secondAttribute="centerX" id="E4I-Ck-L9Q"/>
                             <constraint firstItem="fM7-6y-Xqj" firstAttribute="centerX" secondItem="Tyw-vk-9fd" secondAttribute="centerX" id="Hhh-CR-giK"/>
-                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="6bM-Pj-OUs" secondAttribute="trailing" constant="429.5" id="TF7-Kg-rlP"/>
                             <constraint firstItem="d7G-5h-ry2" firstAttribute="top" secondItem="Ggv-Rx-2cD" secondAttribute="bottom" constant="86" id="Y5v-2m-55Y"/>
+                            <constraint firstItem="sA8-we-4i4" firstAttribute="trailing" secondItem="6bM-Pj-OUs" secondAttribute="trailing" constant="93" id="dQW-Qw-Nky"/>
                             <constraint firstItem="gIJ-Sd-Mw2" firstAttribute="leading" secondItem="sA8-we-4i4" secondAttribute="leading" constant="40" id="dQt-eC-86r"/>
+                            <constraint firstItem="6bM-Pj-OUs" firstAttribute="baseline" secondItem="Ggv-Rx-2cD" secondAttribute="baseline" id="ddb-hp-eXa"/>
                             <constraint firstItem="fM7-6y-Xqj" firstAttribute="top" secondItem="sA8-we-4i4" secondAttribute="top" constant="50" id="eGQ-90-tkF"/>
                             <constraint firstItem="gIJ-Sd-Mw2" firstAttribute="top" secondItem="sA8-we-4i4" secondAttribute="top" constant="30" id="ssh-Cd-wT8"/>
-                            <constraint firstItem="6bM-Pj-OUs" firstAttribute="top" secondItem="fM7-6y-Xqj" secondAttribute="bottom" constant="48" id="tca-E0-k8g"/>
                             <constraint firstItem="d7G-5h-ry2" firstAttribute="centerX" secondItem="Tyw-vk-9fd" secondAttribute="centerX" id="uPc-cv-Hqa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sA8-we-4i4"/>
@@ -482,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX2-jZ-k1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="1551"/>
+            <point key="canvasLocation" x="-20.100502512562816" y="1550.359712230216"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="5Aa-yZ-2FO">
@@ -495,12 +498,12 @@
     </scenes>
     <resources>
         <image name="Icon feather-plus" width="39" height="39"/>
-        <image name="back_arrow" width="52" height="34"/>
+        <image name="back_arrow" width="52" height="34.5"/>
         <image name="opt" width="24" height="24"/>
         <image name="settings" width="54" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VrN-Tx-ESC"/>
-        <segue reference="A7z-YL-llJ"/>
+        <segue reference="itv-D2-n2A"/>
     </inferredMetricsTieBreakers>
 </document>

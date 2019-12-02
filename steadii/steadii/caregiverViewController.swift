@@ -31,7 +31,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Foundation
 
-//The global graph information class, we must construct it with garbage data
+//The global graph information class, we must construct it with garbage data do not change this garbage data
 var GlobalAccountInfo = accountInfo (name:"kmn", email:"pls@gmail.com", monthlyBallScore: [1.0], weeklyBallScore : [1.0], monthlyWordScore : [1.0], weeklyWordScore : [1.0], monthlyBallX : [1.0], weeklyBallX : [1.0], monthlyWordX : [1.0], weeklyWordX : [1.0], monthlyBallYTrend : [1.0], weeklyBallYTrend : [1.0], monthlyWordYTrend : [1.0], weeklyWordYTrend : [1.0] )
 
 //This is the global graph information, it is passed to the graphing function and displayed
@@ -94,6 +94,12 @@ class caregiverViewController : UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         getPlayersAndEmails()
+        let seconds = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            if self.playerList.count == 0 {
+                self.dispNamesOnButtons()
+            }
+        }
     }
     
     @IBAction func but1Clicked(_ sender: Any) {
@@ -192,7 +198,6 @@ class caregiverViewController : UIViewController{
     
     //Function to get list of names and emails for all of the managed players
     func getPlayersAndEmails(){
-
         let db = Firestore.firestore()
         //direct to the games page if account is for players
         if Auth.auth().currentUser != nil {
@@ -205,7 +210,7 @@ class caregiverViewController : UIViewController{
                 db.collection("carers").document(email!).getDocument { (document, error) in
                     if error == nil{
                         if document != nil && document!.exists{
-                            self.emailList = document!.data()!["caree"] as! [String]
+                            self.emailList = document!.data()?["caree"] as? [String] ?? []
                             for caree in self.emailList{
                                 db.collection("users").document(caree).getDocument(completion: { (document, error) in
                                 if error == nil{
@@ -228,7 +233,6 @@ class caregiverViewController : UIViewController{
                             
                         }
                     }}
-
             }}
         
     }
