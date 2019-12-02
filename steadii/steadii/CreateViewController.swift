@@ -51,7 +51,7 @@ class CreateViewController: UIViewController {
     func validateFields() ->String?{
         //chceck that all fields are filled in
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||emailTextField .text?.trimmingCharacters(in:.whitespacesAndNewlines)==""||passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""{
-            return "Please fill in all the fileds"
+            return "Please fill in all the fields"
         }
         if passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines){
             return "the confirm password and password should be the same!"
