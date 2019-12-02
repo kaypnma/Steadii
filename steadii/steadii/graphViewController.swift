@@ -37,27 +37,6 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var nameTitle: UILabel!
     
     func graphDisplay(){
-        //data will come to us as the following structure?
-        
-        // [Ball Game Performances]
-        // [Date]   [Score/Time]
-        // Nov 12   25.345
-        // Nov 24   22.556
-        // Nov 25   15.842
-        // ..
-        
-        // [Word Game Performances]
-        // Nov 17   13.257
-        // Nov 20   23.233
-        // Nov 23   26.554
-        // ..
-        
-        // To do:
-        // retieve data.
-        
-        // split data into past week and month.
-        // is there a date type we can use?
-        
         // assuming the data have been processed into the following arrays
         
         // rotate the YAxis Labels
@@ -94,32 +73,6 @@ class GraphViewController: UIViewController {
         GlobalAccountInfo.weeklyBallYTrend = [16.52,19.55]
         GlobalAccountInfo.weeklyWordYTrend = [19.55,19.66]
          */
-        
-        /*// if the data has not been altered, i.e. no data, set everything to nil
-        if(GlobalAccountInfo.monthlyBallScore == [1.0] && GlobalAccountInfo.weeklyBallScore == [1.0] && GlobalAccountInfo.monthlyWordScore == [1.0] && GlobalAccountInfo.weeklyWordScore == [1.0] && GlobalAccountInfo.monthlyBallX == [1.0] && GlobalAccountInfo.weeklyBallX == [1.0] && GlobalAccountInfo.monthlyWordX == [1.0] && GlobalAccountInfo.weeklyWordX == [1.0] && GlobalAccountInfo.monthlyBallYTrend == [1.0] && GlobalAccountInfo.weeklyBallYTrend == [1.0] && GlobalAccountInfo.monthlyWordYTrend == [1.0] && GlobalAccountInfo.weeklyWordYTrend == [1.0]){
-            
-            // set monthly data to empty
-            GlobalAccountInfo.monthlyBallX = []
-            GlobalAccountInfo.monthlyBallScore = []
-            GlobalAccountInfo.monthlyWordX = []
-            GlobalAccountInfo.monthlyWordScore = []
-            
-            
-            // set weekly data to empty
-            GlobalAccountInfo.weeklyBallX = []
-            GlobalAccountInfo.weeklyBallScore = []
-            GlobalAccountInfo.weeklyWordX = []
-            GlobalAccountInfo.weeklyWordScore = []
-            
-            
-            // set trendline data to empty
-            GlobalAccountInfo.monthlyBallYTrend = []
-            GlobalAccountInfo.monthlyWordYTrend = []
-            GlobalAccountInfo.weeklyBallYTrend = []
-            GlobalAccountInfo.weeklyWordYTrend = []
-            
-            trendlineStop = 0
-        }*/
         
         //Handle cases when there isn't enough data
         var monthlyDataLoop = 2

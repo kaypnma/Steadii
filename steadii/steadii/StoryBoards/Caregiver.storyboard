@@ -47,8 +47,8 @@
                                     <constraint firstAttribute="height" constant="125" id="dgL-kE-c4c"/>
                                     <constraint firstAttribute="width" constant="445" id="phs-6E-Wbe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="John Qu">
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="34"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.28627450980392155" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -75,8 +75,8 @@
                                     <constraint firstAttribute="width" constant="445" id="7F9-Q6-Rbm"/>
                                     <constraint firstAttribute="height" constant="125" id="J0u-bI-Zke"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Dustin Seah">
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="34"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -91,8 +91,8 @@
                                     <constraint firstAttribute="height" constant="125" id="6oI-4g-uGF"/>
                                     <constraint firstAttribute="width" constant="445" id="NIi-xK-xbi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Denyse Tran">
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="33"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -107,8 +107,8 @@
                                     <constraint firstAttribute="height" constant="125" id="Gm2-cz-APR"/>
                                     <constraint firstAttribute="width" constant="445" id="S7u-58-mBj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Jack Guo">
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="34"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -123,8 +123,8 @@
                                     <constraint firstAttribute="width" constant="445" id="Se3-0g-aNh"/>
                                     <constraint firstAttribute="height" constant="125" id="cML-XX-eo7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Chris Keilbart">
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="33"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -142,15 +142,15 @@
                                 <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APU-Yk-jUi" customClass="LButton" customModule="steadii" customModuleProvider="target">
-                                <rect key="frame" x="90" y="178" width="445" height="125"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APU-Yk-jUi" customClass="LButton" customModule="steadii" customModuleProvider="target">
+                                <rect key="frame" x="90" y="179" width="445" height="125"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="JtD-D5-C36"/>
                                     <constraint firstAttribute="width" constant="445" id="MIm-DL-knl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="40"/>
-                                <state key="normal" title="Kay Arellano">
+                                <fontDescription key="fontDescription" name="Corbel-Bold" family="Corbel" pointSize="34"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.28627450980000002" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -230,13 +230,13 @@
                                     <constraint firstAttribute="height" constant="14" id="hQp-zA-zzL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denyse's statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-HJ-o6B">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-HJ-o6B">
                                 <rect key="frame" x="377" y="74" width="440" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="440" id="3SH-K0-L0a"/>
                                     <constraint firstAttribute="height" constant="60" id="EU9-Oy-z3a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="38"/>
                                 <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -500,7 +500,7 @@
         <image name="settings" width="54" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U2I-Xb-8Km"/>
+        <segue reference="VrN-Tx-ESC"/>
         <segue reference="DLY-ur-UU0"/>
     </inferredMetricsTieBreakers>
 </document>

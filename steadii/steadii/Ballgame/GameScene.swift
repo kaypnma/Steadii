@@ -229,7 +229,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 // The user's ID, unique to the Firebase project.
                 // Do NOT use this value to authenticate with your backend server,
                 // if you have one. Use getTokenWithCompletion:completion: instead.
-                let uid = user.uid
+                //let uid = user.uid
                 let email = user.email
                 let dateString = self.getDate()
             db.collection("users").document(email!).collection("performances").document("ballgame").setData([dateString:score],merge:true)
