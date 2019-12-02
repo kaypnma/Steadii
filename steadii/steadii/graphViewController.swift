@@ -139,7 +139,7 @@ class GraphViewController: UIViewController {
         else{
             nameTitle.text = GlobalAccountInfo.name
         }
-        
+        print(1)
         // for monthly
         for n in 0...29 {
             if GlobalAccountInfo.monthlyBallX.count <= n || GlobalAccountInfo.monthlyWordX.count <= n{
@@ -239,7 +239,12 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let seconds = 1.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            // Put your code which should be executed with a delay here
+            self.graphDisplay()
+        }
         // Do any additional setup after loading the view, typically from a nib.
-        graphDisplay()
+        
     }
 }
