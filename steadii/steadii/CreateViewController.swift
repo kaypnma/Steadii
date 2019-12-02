@@ -93,13 +93,14 @@ class CreateViewController: UIViewController {
                 }
                 else{
                     //user was created successfully, now store the firstname, lastname, email to database
-                    let data: [String: Any] = ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid]
+                    let datac: [String: Any] = ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid,"caree":[]]
+                    let datap: [String: Any] = ["firstName":firstname,"lastName":lastname,"email":email,"password":password,"uid":result!.user.uid]
                    
                     let db = Firestore.firestore()
                     //if carer button is selectd
                     
                     if self.careGiverButton.isSelected {
-                        db.collection("carers").document(email).setData(data){(error)in
+                        db.collection("carers").document(email).setData(datac){(error)in
                             if error != nil{
                                 //show error
                                 self.showError("Error saving user data")
@@ -110,7 +111,7 @@ class CreateViewController: UIViewController {
                     //if player button is selected
                     if self.playerButton.isSelected{
                     db.collection("users").document(email)
-                        .setData(data){(error)in
+                        .setData(datap){(error)in
                         if error != nil{
                             //show error
                             self.showError("Error saving user data")

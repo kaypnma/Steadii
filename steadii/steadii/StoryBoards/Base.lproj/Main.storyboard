@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad11_0rounded" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,10 +37,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-EG-dbe">
-                                <rect key="frame" x="360" y="591.5" width="392" height="25"/>
+                                <rect key="frame" x="360" y="582.5" width="398" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-7N-nQq" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="icon" value="opt"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="selected_opt"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Account and Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96A-O4-w61">
-                                        <rect key="frame" x="39" y="0.0" width="353" height="25"/>
+                                        <rect key="frame" x="45" y="0.0" width="353" height="34"/>
                                         <fontDescription key="fontDescription" name="Corbel" family="Corbel" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -60,13 +60,13 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-4N-taJ">
-                                <rect key="frame" x="365" y="522.5" width="464" height="54"/>
+                                <rect key="frame" x="365" y="513.5" width="464" height="54"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-QH-KWK">
-                                <rect key="frame" x="365" y="451.5" width="464" height="56"/>
+                                <rect key="frame" x="365" y="442.5" width="464" height="56"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -161,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esV-jg-BYD">
-                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <rect key="frame" x="40" y="54" width="16" height="22"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="9fv-d2-uVi" kind="show" id="ZfO-qu-PKS"/>
@@ -174,7 +174,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="trj-cK-LBM">
-                                <rect key="frame" x="502" y="230.5" width="206" height="6"/>
+                                <rect key="frame" x="502" y="230.5" width="206" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep the ball within the confinement by tilting your device to move the ball to stay within the blue bounds." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK9-0V-JOg">
                                 <rect key="frame" x="234" y="124" width="726.5" height="71.5"/>
@@ -254,14 +254,14 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-o4-dfO">
-                                <rect key="frame" x="40" y="54" width="52" height="34"/>
+                                <rect key="frame" x="40" y="54" width="16" height="22"/>
                                 <state key="normal" image="back_arrow"/>
                                 <connections>
                                     <segue destination="9fv-d2-uVi" kind="show" id="q03-3O-Rue"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 40 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="0du-9h-1h6">
-                                <rect key="frame" x="103" y="388.5" width="461" height="346"/>
+                                <rect key="frame" x="103" y="398.5" width="461" height="346"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="346" id="VXu-FQ-Zzm"/>
                                     <constraint firstAttribute="width" constant="461" id="yUX-8g-YZ2"/>
@@ -274,7 +274,7 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_line" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-RZ-TzC">
-                                <rect key="frame" x="477" y="230.5" width="240" height="6"/>
+                                <rect key="frame" x="477" y="230.5" width="240" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match ten words to its corresponding category. There is no time limit, so keep trying until you get the answer right!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-bb-6GO">
                                 <rect key="frame" x="188" y="124" width="818" height="71.5"/>
@@ -283,7 +283,7 @@ Watch out as the game may get hard as the blue circle moves and gets smaller!</s
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsL-on-6ow">
-                                <rect key="frame" x="636" y="271.5" width="473" height="491"/>
+                                <rect key="frame" x="636" y="281.5" width="473" height="491"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="491" id="CQf-sK-Oiw"/>
                                     <constraint firstAttribute="width" constant="473" id="f5y-3U-jpQ"/>
@@ -302,7 +302,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASKETBALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KE-8T-1gx">
-                                <rect key="frame" x="119" y="271.5" width="429" height="91"/>
+                                <rect key="frame" x="119" y="281.5" width="429" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="Rgc-ae-A4J"/>
                                 </constraints>
@@ -698,7 +698,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="Play Button-1" width="240" height="240"/>
         <image name="Rectangle 4" width="446" height="442"/>
         <image name="Rectangle 7" width="446" height="442"/>
-        <image name="back_arrow" width="52" height="34"/>
+        <image name="back_arrow" width="52" height="34.5"/>
         <image name="moving_ball_tut1" width="217" height="217"/>
         <image name="moving_ball_tut2" width="241" height="217"/>
         <image name="opt" width="24" height="24"/>
@@ -708,7 +708,7 @@ If it is wrong, it will be indicated in red with a cross.</string>
         <image name="text_line" width="206" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q03-3O-Rue"/>
+        <segue reference="NcQ-xS-m8m"/>
         <segue reference="nHs-3w-bWK"/>
     </inferredMetricsTieBreakers>
 </document>

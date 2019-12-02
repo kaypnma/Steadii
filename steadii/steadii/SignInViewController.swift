@@ -18,20 +18,23 @@ class SignInViewController: UIViewController {
         static let keyTwo = "secondStringKey"
     }
     @IBOutlet weak var passwordTextField: UITextField!
+    var remember = false
     
     @IBOutlet weak var loginButton: LButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBAction func rememberButtonTapped(_ sender: Any) {
-        if self.rememberButton.isSelected{
+        if remember{
             print("yes")
             self.rememberButton.isSelected = false
+            remember = false
             print("set to false")
             
             return
         }
-        else if !self.rememberButton.isSelected{
+        else if !remember{
             print("not")
             self.rememberButton.isSelected = true
+            remember = true
             print("set to true")
             return
         }
@@ -43,7 +46,9 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var rememberButton: DLRadioButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        rememberButton.isSelected = false
+        rememberButton.isSelected = true
+        remember = true
+        
 
         // Do any additional setup after loading the view.
         let defaults = UserDefaults.standard
@@ -71,7 +76,10 @@ class SignInViewController: UIViewController {
             
             if error != nil {
                 // Couldn't sign in
-
+                
+                    let alert = UIAlertController(title: "Warning", message: "Incorrect account or password!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true)
             }
             else {
                 // go to firestore to check for the account type
@@ -88,8 +96,6 @@ class SignInViewController: UIViewController {
                             self.performSegue(withIdentifier: "PlayerView", sender: self)
                         }
                     }
-                    
-                    
                 })
                 //direct to the carers' view for carers accounts
                 db.collection("carers").document(email).getDocument(completion: { (document, error) in
@@ -102,17 +108,10 @@ class SignInViewController: UIViewController {
                                 defaults.set(password, forKey: defaultsKeys.keyTwo)
                                 
                             }
-                            //print(defaultsKeys.keyOne)
-                            //print(defaultsKeys.keyTwo)
                             self.performSegue(withIdentifier: "CarerView", sender: self)
                         }
                     }
-                    
-                    
                 })
-
-                
-            
             }
         }
     }
