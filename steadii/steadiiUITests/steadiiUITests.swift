@@ -120,7 +120,6 @@ class steadiiUITests: XCTestCase {
         emailTextField2.typeText("Player1@gmail.com")
         XCTAssert(emailTextField2.value as! String == "Player1@gmail.com", "Typed value does not match")
         app.buttons["REMOVE"].tap()
-        app.buttons["back arrow"].tap()
         let title = XCUIApplication().staticTexts["Player"]
         XCTAssert(title.exists && title.isHittable, "No list of players visible in caretaker view after returning from add player")
         //XCTAssert(app.buttons["Player1 Player1"].exists && app.buttons["Player1 Player1"].isHittable, "Cannot remove player")
