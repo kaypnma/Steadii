@@ -47,7 +47,7 @@ class steadiiUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    //Determine if stay logged in can be toggled on and off
+    //Determine if stay logged in can be toggled on and off, fails rn
     func testStayLoggedInOnOff() {
         let optButton = XCUIApplication().buttons["opt"]
         XCTAssert(!optButton.isSelected, "Stay logged in is not off by default")
@@ -354,7 +354,7 @@ class steadiiUITests: XCTestCase {
         sleep(1)
         
         //Will fail if it cannot find the elements
-        let title = XCUIApplication().staticTexts["Player"]
+        let title = app.staticTexts["Player"]
         let addplayerbutton = app.buttons["Icon feather plus"]
         let settings = app.buttons["settings"]
         //Will fail if it can find the player label but it is not visible (hittable)
