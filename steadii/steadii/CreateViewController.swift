@@ -60,7 +60,7 @@ class CreateViewController: UIViewController {
         //check if the password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if CreateViewController.isPasswordValid(cleanedPassword)==false{
-            return"Please make sure your password is valid, with capital letter, number and sign"
+            return"Please make sure your password is valid, with at least 8 charactrers and sign"
         }
         if !self.careGiverButton.isSelected && !self.playerButton.isSelected{
             return("Please select an account type")
@@ -106,6 +106,7 @@ class CreateViewController: UIViewController {
                                 self.showError("Error saving user data")
                             }
                         }
+                        self.signIN()
                         self.performSegue(withIdentifier: "CarerView1", sender: self)
                     }
                     //if player button is selected
@@ -121,6 +122,7 @@ class CreateViewController: UIViewController {
                         let dateString = self.getDate()
                     db.collection("users").document(email).collection("performances").document("ballgame").setData([dateString: 0.0])
                     db.collection("users").document(email).collection("performances").document("wordgame").setData([dateString: 0.0])
+                        self.signIN()
                         self.performSegue(withIdentifier: "PlayerView1", sender: self)
                     }
                     //check if user selected an account type
@@ -148,6 +150,20 @@ class CreateViewController: UIViewController {
         return dateString
         
     }
+    func signIN(){
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil {
+                // Couldn't sign in
+                
+            }
+            else {
+                // go to firestore to check for the account type
+               
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -158,4 +174,4 @@ class CreateViewController: UIViewController {
     }
     */
 
-}
+    }}
